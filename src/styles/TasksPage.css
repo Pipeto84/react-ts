@@ -1,0 +1,8 @@
+.tasks {
+  margin: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  gap: 1.25rem;
+}
