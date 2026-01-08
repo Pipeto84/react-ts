@@ -1,11 +1,14 @@
 .tasks {
   background-color: gray;
-  margin: 1.25rem;
+  margin: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem 4rem 1fr;
   justify-items: center;
   gap: 1.25rem;
+}
+h1 {
+  margin: 1rem 0 0.5rem 0;
 }
 .tasksCard {
   width: 300px;
