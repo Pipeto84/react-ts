@@ -10,25 +10,22 @@ export const TaskList = () => {
   const navigate = useNavigate();
   const newList: TasksList = {
     name: "",
-    items: [
-      {
-        name: "",
-        completed: false,
-      },
-    ],
+    items: [],
   };
-  var indexTask = newList.items.length - 1;
+  const newTasks: Task[] = [{ name: "", completed: false },{ name: "", completed: false }];
+  var indexTask = newList.items.length;
   const addTask = () => {
+    newList.items.push(newTasks[indexTask]);
     indexTask = indexTask + 1;
-    newList.items.push({ name: "", completed: false });
   };
   const handleChangeListName = (e: React.ChangeEvent<HTMLInputElement>) => {
     newList.name = e.target.value;
   };
   const handleNameTaskChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    newList.items[indexTask].name = e.target.value;
+    newTasks[indexTask].name = e.target.value;
   };
   const saveList = () => {
+    newList.items.push(newTasks[indexTask]);
     dispatch(addTaskList(newList));
     navigate("/tasks");
   };
@@ -40,6 +37,7 @@ export const TaskList = () => {
         className="nameList"
         // value={newList.name}
         onChange={handleChangeListName}
+        autoFocus
       />
       <div className="newTasks">
         {newList.items.map((task, index) => (
@@ -47,7 +45,7 @@ export const TaskList = () => {
             <input
               type="checkbox"
               key={index}
-              // value={task.name}
+              value={task.name}
               id={task.name}
               className="inputTask"
             />
