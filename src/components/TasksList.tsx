@@ -1,7 +1,7 @@
 import "../styles/TasksPage.css";
 import type { TasksList, Task } from "../features/tasks/taskSlice";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 import { addTaskList } from "../features/tasks/taskSlice";
 
 export const TaskList = () => {
@@ -27,10 +27,10 @@ export const TaskList = () => {
   };
   const handleNameTaskChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     newList.items[indexTask].name = e.target.value;
-  }
+  };
   const saveList = () => {
     dispatch(addTaskList(newList));
-    navigate('/tasks');
+    navigate("/tasks");
   };
   return (
     <div className="list">
@@ -42,11 +42,25 @@ export const TaskList = () => {
         onChange={handleChangeListName}
       />
       <div className="newTasks">
+        {newList.items.map((task, index) => (
+          <div className="tasksList">
+            <input
+              type="checkbox"
+              key={index}
+              // value={task.name}
+              id={task.name}
+              className="inputTask"
+            />
+            <label key={index} htmlFor={task.name} className="labelTask">
+              {task.name}
+            </label>
+          </div>
+        ))}
         <input
           type="text"
           placeholder=" task..."
           className="nameTask"
-          // value={newList.items[indexTask].name}
+          // value={newList.items[index].name}
           onChange={handleNameTaskChange}
         />
         <button className="addTask" onClick={addTask}>
