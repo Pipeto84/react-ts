@@ -8,8 +8,8 @@ export const TasksCard = (list: TasksList) => {
       <div>
         {list.items.map((item, index) => (
           <div>
-            <input type="checkbox" key={index} checked={item.completed} />
-            <label key={index}>{item.name}</label>
+            <input type="checkbox" key={index} value={item.name} id={item.name} />
+            <label key={index} htmlFor={item.name}>{item.name}</label>
           </div>
         ))}
       </div>

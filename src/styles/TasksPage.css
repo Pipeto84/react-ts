@@ -1,11 +1,12 @@
 .tasks {
-  background-color: gray;
+  background-color: white;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem 4rem 1fr;
   justify-items: center;
   gap: 1.25rem;
+  color: black;
 }
 h1 {
   margin: 1rem 0 0.5rem 0;
@@ -13,12 +14,14 @@ h1 {
 .tasksCard {
   width: 300px;
   height: 150px;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 10px;
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  color: black;
+  font-size: 20px;
 }
 .tasksGrid {
   display: flex;
