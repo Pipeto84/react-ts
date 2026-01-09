@@ -34,9 +34,9 @@ export const taskSlice = createSlice({
   name: "tasks",
   initialState,
   reducers: {
-    // addTaskList: (state, action: PayloadAction<TasksList>) => {
-    //   state.push(action.payload);
-    // },
+    addTaskList: (state, action: PayloadAction<TasksList>) => {
+      state.push(action.payload);
+    },
     // removeTaskList: (state, action: PayloadAction<string>) => {
     //   return state.filter((tasksList) => tasksList.name !== action.payload);
     // },
@@ -70,8 +70,7 @@ export const taskSlice = createSlice({
   },
 });
 
-// export const { addTaskList, removeTaskList, addTask, toggleTaskCompletion } =
-  // taskSlice.actions;
+export const { addTaskList } = taskSlice.actions;
 
 export const selectTasks = (state: RootState) => state.tasks;
 
