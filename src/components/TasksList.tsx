@@ -20,21 +20,20 @@ export const TaskList = () => {
   var indexTask = newList.items.length - 1;
   const addTask = () => {
     indexTask = indexTask + 1;
+    newList.items.push({ name: "", completed: false });
   };
-  const saveList = () => {};
   const handleChangeListName = (e: React.ChangeEvent<HTMLInputElement>) => {
     newList.name = e.target.value;
   };
   const handleNameTaskChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     newList.items[indexTask].name = e.target.value;
   }
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const saveList = () => {
     dispatch(addTaskList(newList));
     navigate('/tasks');
   };
   return (
-    <form className="list" onSubmit={handleSubmit}>
+    <div className="list">
       <input
         type="text"
         placeholder=" name list..."
@@ -54,9 +53,9 @@ export const TaskList = () => {
           +
         </button>
       </div>
-      <button type="submit" className="saveTask" onClick={saveList}>
+      <button className="saveTask" onClick={saveList}>
         Save
       </button>
-    </form>
+    </div>
   );
 };
