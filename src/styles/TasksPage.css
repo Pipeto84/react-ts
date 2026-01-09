@@ -1,4 +1,5 @@
 .tasks {
+  height: 800px;
   background-color: white;
   margin: 0;
   display: grid;
@@ -11,31 +12,43 @@
 h1 {
   margin: 1rem 0 0.5rem 0;
 }
-.tasksCard {
-  width: 300px;
-  height: 150px;
-  border: 1px solid #000000;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 10px;
-  padding: 20px;
+.newList {
+  background-color: #1976d2;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  color: black;
-  font-size: 20px;
 }
 .tasksGrid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 20px;
 }
-.newList {
-  background-color: #1976d2;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  font-size: 1.25rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+.tasksCard {
+  width: auto;
+  height: auto;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  color: black;
+  font-size: 20px;
+  background-color: beige;
+}
+.tasksList {
+  margin-top: 10px;
+}
+.inputTask {
+  height: 30px;
+  width: 30px;
+}
+.labelTask {
+  margin-left: 10px;
+  font-size: 30px;
 }

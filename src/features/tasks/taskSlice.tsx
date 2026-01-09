@@ -25,6 +25,7 @@ const initialState: TasksList[] = [
       { name: "Task A", completed: false },
       { name: "Task B", completed: false },
       { name: "Task C", completed: false },
+      { name: "Task D", completed: false },
     ],
   },
 ];

@@ -7,14 +7,15 @@ export const TasksCard = (list: TasksList) => {
       <h2>{list.name}</h2>
       <div>
         {list.items.map((item, index) => (
-          <div>
+          <div className="tasksList">
             <input
               type="checkbox"
               key={index}
               value={item.name}
               id={item.name}
+              className="inputTask"
             />
-            <label key={index} htmlFor={item.name}>
+            <label key={index} htmlFor={item.name} className="labelTask">
               {item.name}
             </label>
           </div>
