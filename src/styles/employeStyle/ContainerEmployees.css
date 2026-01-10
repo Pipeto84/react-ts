@@ -1,0 +1,39 @@
+.containerEmployees {
+  background-color: rgb(216, 212, 212);
+  border: 0.125rem solid #ffffff8c;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  height: auto;
+  width: 100%;
+}
+.containerEmployees > p {
+  border-radius: 0.3125rem;
+  background-color: black;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.all {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding-bottom: 1rem;
+}
+@media screen and (max-width: 640px) {
+  .containerEmployees {
+    height: 300px;
+  }
+  .all {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .containerEmployees {
+    height: 500px;
+  }
+  .all {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,27 @@
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1rem 0 1rem;
+  background-color: rgb(81, 81, 83);
+  border-radius: 0.3125rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-in-out;
+  width: 10rem;
+  box-shadow: 0 0 20px 5px rgba(3, 3, 3, 0.4);
+}
+.card-container > p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.cancel {
+  height: 1.5625rem;
+  width: 1.5625rem;
+  font-weight: 500;
+  background-color: rgb(231, 15, 15);
+  border-radius: 0.3125rem;
+  border: black solid 0.0625rem;
+  cursor: pointer;
+  box-shadow: 0 0 3px 0.3px rgba(0, 0, 0, .6);
+}

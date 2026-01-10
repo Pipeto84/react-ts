@@ -10,6 +10,9 @@ export const NavBar = () => {
       <NavLink className="active" to="/tasks">
         Tasks
       </NavLink>
+      <NavLink className="active" to="/employes">
+        Employes
+      </NavLink>
     </div>
   );
 };
