@@ -12,11 +12,12 @@ export const TaskList = () => {
     name: "",
     items: [],
   };
-  const newTasks: Task[] = [{ name: "", completed: false },{ name: "", completed: false }];
+  const newTasks: Task[] = [{ name: "", completed: false }];
   var indexTask = newList.items.length;
   const addTask = () => {
     newList.items.push(newTasks[indexTask]);
     indexTask = indexTask + 1;
+    newTasks.push({ name: "", completed: false });
   };
   const handleChangeListName = (e: React.ChangeEvent<HTMLInputElement>) => {
     newList.name = e.target.value;
@@ -40,7 +41,7 @@ export const TaskList = () => {
         autoFocus
       />
       <div className="newTasks">
-        {newList.items.map((task, index) => (
+        {/* {newList.items.map((task, index) => (
           <div className="tasksList">
             <input
               type="checkbox"
@@ -53,7 +54,7 @@ export const TaskList = () => {
               {task.name}
             </label>
           </div>
-        ))}
+        ))} */}
         <input
           type="text"
           placeholder=" task..."
