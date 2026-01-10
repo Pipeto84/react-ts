@@ -1,0 +1,23 @@
+.employeesPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  /* padding: 2rem 0; */
+}
+.newEmployee {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #0d6066;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.newEmployee:hover {
+  background-color: #0b4d52;
+}

@@ -24,7 +24,7 @@ export const DragAndDrop = () => {
       <div className="titleSheduling flex">
         <h1 className="titleFont">Scheduling Employees</h1>
       </div>
-      <div className="employees">
+      <div className="employeesSheduling">
         <ContainerEmployees
           items={employees}
           hanleDragging={handleDragging}
