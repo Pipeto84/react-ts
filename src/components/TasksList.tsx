@@ -4,6 +4,7 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { useNavigate } from "react-router-dom";
 import { addTaskList } from "../features/tasks/taskSlice";
 import { useState } from "react";
+import { v4 as uuid } from "uuid";
 
 export const TaskList = () => {
   const dispatch = useAppDispatch();
@@ -52,15 +53,15 @@ export const TaskList = () => {
       <div className="newTasks">
         <div className="newTasksList">
           {newTasks.map((task, index) => (
-            <div className="tasksList">
+            <div className="tasksList" key={uuid()}>
               <input
                 type="checkbox"
-                key={index}
+                key={uuid()}
                 value={task.name}
                 id={task.name}
                 className="inputTask"
               />
-              <label key={index} htmlFor={task.name} className="labelTask">
+              <label key={uuid()} htmlFor={task.name} className="labelTask">
                 {task.name}
               </label>
             </div>
