@@ -3,40 +3,49 @@ import type { TasksList, Task } from "../features/tasks/taskSlice";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { useNavigate } from "react-router-dom";
 import { addTaskList } from "../features/tasks/taskSlice";
+import { useState } from "react";
 
 export const TaskList = () => {
   const dispatch = useAppDispatch();
   const tasks = useAppSelector((state) => state.tasks);
   const navigate = useNavigate();
+  const [nameList, setNameList] = useState("");
+  const [nameTask, setNameTask] = useState("");
+  const [newTasks, setNewTasks] = useState<Task[]>([]);
   const newList: TasksList = {
     name: "",
     items: [],
   };
-  const newTasks: Task[] = [{ name: "", completed: false }];
   var indexTask = newList.items.length;
   const addTask = () => {
-    newList.items.push(newTasks[indexTask]);
+    newList.name = nameList;
+    setNewTasks((list) => [...list, { name: nameTask, completed: false }]);
     indexTask = indexTask + 1;
-    newTasks.push({ name: "", completed: false });
+    setNameTask("");
   };
   const handleChangeListName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    newList.name = e.target.value;
+    setNameList(e.target.value);
   };
   const handleNameTaskChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    newTasks[indexTask].name = e.target.value;
+    setNameTask(e.target.value);
   };
   const saveList = () => {
-    newList.items.push(newTasks[indexTask]);
+    setNewTasks((list) => [...list, { name: nameTask, completed: false }]);
+  };
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    newList.name = nameList;
+    newList.items.push(...newTasks);
     dispatch(addTaskList(newList));
     navigate("/tasks");
   };
   return (
-    <div className="list">
+    <form className="list" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder=" name list..."
         className="nameList"
-        // value={newList.name}
+        value={nameList}
         onChange={handleChangeListName}
         autoFocus
       />
@@ -59,16 +68,16 @@ export const TaskList = () => {
           type="text"
           placeholder=" task..."
           className="nameTask"
-          // value={newList.items[index].name}
+          value={nameTask}
           onChange={handleNameTaskChange}
         />
-        <button className="addTask" onClick={addTask}>
+        <button className="addTask" onClick={addTask} type="button">
           +
         </button>
       </div>
-      <button className="saveTask" onClick={saveList}>
+      <button className="saveTask" type="submit" onClick={saveList}>
         Save
       </button>
-    </div>
+    </form>
   );
 };

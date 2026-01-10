@@ -2,6 +2,7 @@ import "../styles/TasksPage.css";
 import { TasksCard } from "../components/TasksCard";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { NavLink } from "react-router-dom";
+import { v4 as uuid } from "uuid";
 
 export const TasksPage = () => {
   const tasks = useAppSelector((state) => state.tasks);
@@ -13,7 +14,7 @@ export const TasksPage = () => {
       </NavLink>
       <div className="tasksGrid">
         {tasks.map((tasks) => (
-          <TasksCard key={tasks.name} {...tasks} />
+          <TasksCard key={uuid()} {...tasks} />
         ))}
       </div>
     </div>
