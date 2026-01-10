@@ -50,20 +50,22 @@ export const TaskList = () => {
         autoFocus
       />
       <div className="newTasks">
-        {/* {newList.items.map((task, index) => (
-          <div className="tasksList">
-            <input
-              type="checkbox"
-              key={index}
-              value={task.name}
-              id={task.name}
-              className="inputTask"
-            />
-            <label key={index} htmlFor={task.name} className="labelTask">
-              {task.name}
-            </label>
-          </div>
-        ))} */}
+        <div className="newTasksList">
+          {newTasks.map((task, index) => (
+            <div className="tasksList">
+              <input
+                type="checkbox"
+                key={index}
+                value={task.name}
+                id={task.name}
+                className="inputTask"
+              />
+              <label key={index} htmlFor={task.name} className="labelTask">
+                {task.name}
+              </label>
+            </div>
+          ))}
+        </div>
         <input
           type="text"
           placeholder=" task..."

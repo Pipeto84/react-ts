@@ -60,7 +60,7 @@ h1 {
   background-color: rgb(184, 168, 101);
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 100px;
   justify-content: center;
   align-items: center;
   border: none solid 2px;
@@ -79,6 +79,12 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.newTasksList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
 }
 .nameTask {
   font-size: 30px;
