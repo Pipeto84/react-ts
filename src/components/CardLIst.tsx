@@ -1,4 +1,4 @@
-import "../styles/employeStyle/CardLIst.css";
+import "../styles/employeStyle/CardList.css";
 import type { Data } from "../interfaces/index";
 import { Link } from "react-router-dom";
 import { useAppDispatch } from "../app/hooks";
@@ -14,7 +14,7 @@ export const CardLIst = ({ data }: Props) => {
     dispatch(deleteEmployee(employee));
   };
   return (
-    <div className="card-list">
+    <div className="cardList">
       <p>{data.alias + " - " + data.name + " ( " + data.date + " )"}</p>
       <div className="buttonsList">
         <Link className="edit" to={`/edit/${data.id}`}>

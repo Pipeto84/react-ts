@@ -7,6 +7,7 @@
   min-height: 3rem;
   width: 12.5rem;
   padding-bottom: 1rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .layout-cards > p {
   border-radius: 0.3125rem;

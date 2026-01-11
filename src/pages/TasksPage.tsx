@@ -9,7 +9,7 @@ export const TasksPage = () => {
   return (
     <div className="tasks">
       <h1>Tasks</h1>
-      <NavLink className="newList" to="/newList">
+      <NavLink className="newListButton" to="/newList">
         Create new list
       </NavLink>
       <div className="tasksGrid">

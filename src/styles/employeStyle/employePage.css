@@ -17,6 +17,7 @@
   color: white;
   cursor: pointer;
   text-decoration: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .newEmployee:hover {
   background-color: #0b4d52;

@@ -9,7 +9,7 @@ export const Scheduling = () => {
       <DragAndDrop />
       <NavLink className="newEmployee" to="/new">
         New employe
-      </NavLink>;
+      </NavLink>
       <List />
     </div>
   );

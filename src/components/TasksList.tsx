@@ -41,7 +41,7 @@ export const TaskList = () => {
     navigate("/tasks");
   };
   return (
-    <form className="list" onSubmit={handleSubmit}>
+    <form className="newList" onSubmit={handleSubmit}>
       <input
         type="text"
         placeholder=" name list..."
