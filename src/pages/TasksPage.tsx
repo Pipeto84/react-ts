@@ -1,6 +1,6 @@
 import "../styles/TasksPage.css";
 import { TasksCard } from "../components/TasksCard";
-import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { useAppSelector } from "../app/hooks";
 import { NavLink } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 

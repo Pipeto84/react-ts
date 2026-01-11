@@ -8,6 +8,8 @@
   justify-items: center;
   gap: 1.25rem;
   color: black;
+  border: 2px solid #000000;
+  border-radius: 10px;
 }
 h1 {
   margin: 1rem 0 0.5rem 0;
