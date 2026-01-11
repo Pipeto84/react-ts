@@ -52,7 +52,7 @@ export const TaskList = () => {
       />
       <div className="newTasks">
         <div className="newTasksList">
-          {newTasks.map((task, index) => (
+          {newTasks.map((task) => (
             <div className="tasksList" key={uuid()}>
               <input
                 type="checkbox"

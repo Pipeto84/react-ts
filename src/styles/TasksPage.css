@@ -1,7 +1,7 @@
 .tasks {
-  height: 800px;
+  height: 600px;
   background-color: white;
-  margin: 0;
+  margin: 10px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 4rem 4rem 1fr;
@@ -66,7 +66,7 @@ h1 {
   justify-content: center;
   align-items: center;
   border: none solid 2px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .nameList {
@@ -95,12 +95,12 @@ h1 {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .addTask {
-  font-size: 25px;
+  font-size: 35px;
   margin: 20px;
   border-radius: 8px;
   background-color: #1dac00;
   color: white;
-  padding: 0.5rem 1.5rem;
+  padding: 0.3rem 1.5rem 0.6rem 1.5rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .saveTask {
@@ -111,4 +111,6 @@ h1 {
   color: white;
   padding: 0.5rem 1.5rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
 }
