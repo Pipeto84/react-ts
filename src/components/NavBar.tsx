@@ -13,6 +13,9 @@ export const NavBar = () => {
       <NavLink className="active" to="/employes">
         Employes
       </NavLink>
+      <NavLink className="active" to="/store">
+        Store
+      </NavLink>
     </div>
   );
 };
