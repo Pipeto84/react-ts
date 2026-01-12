@@ -22,7 +22,7 @@ export const CarPage = () => {
   return (
     <div className="carrito">
       <h1 className="tituloCarrito" hidden={shoppingList.length < 1}>Productos agregados</h1>
-      <h3 className="sinCompras" hidden={shoppingList.length > 0}>No tienes <a className="linkCompras" hidden={shoppingList.length > 0} href="/compras">Productos</a> agregados</h3>
+      <h3 className="sinCompras" hidden={shoppingList.length > 0}>No tienes <a className="linkCompras" hidden={shoppingList.length > 0} href="/store">Productos</a> agregados</h3>
       <table className="table table-striped" hidden={shoppingList.length < 1}>
         <thead>
           <tr>
