@@ -14,7 +14,9 @@ export const StorePage = () => {
       const response = await fetch("https://fakestoreapi.com/products");
       const data: ProductosStore[] = await response.json();
       data.map((item) => ((item.agregar = false), (item.amount = 0)));
-      dispatch(setStore(data));
+      if (products.length === 0) {
+        dispatch(setStore(data));
+      }
     } catch (error) {
       console.error("El error es: ", error);
     }
@@ -23,7 +25,6 @@ export const StorePage = () => {
   useEffect(() => {
     fetchProductos();
   }, []);
-  console.log(products);
   return (
     <div className="contenedor-compras">
       <h1 className="tituloProductos">Productos</h1>

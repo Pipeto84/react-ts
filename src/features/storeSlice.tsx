@@ -32,6 +32,7 @@ export const storeSlice = createSlice({
           item.agregar = !item.agregar;
         }
       });
+      return state;
     },
   },
 });
