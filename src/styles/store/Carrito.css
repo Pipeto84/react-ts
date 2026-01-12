@@ -10,10 +10,11 @@
 }
 .linkCompras {
   font-size: 1.875rem;
-  color: green;
+  color: black;
   margin: auto;
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 .sinCompras {
   color: rgb(43, 144, 226);

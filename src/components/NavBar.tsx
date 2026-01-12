@@ -8,19 +8,19 @@ export const NavBar = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
   return (
     <div className="topnav">
-      <NavLink className="active" to="/">
+      <NavLink className="linkNav" to="/">
         Home
       </NavLink>
-      <NavLink className="active" to="/tasks">
+      <NavLink className="linkNav" to="/tasks">
         Tasks
       </NavLink>
-      <NavLink className="active" to="/employes">
+      <NavLink className="linkNav" to="/employes">
         Employes
       </NavLink>
-      <NavLink className="active" to="/store">
+      <NavLink className="linkNav" to="/store">
         Store
       </NavLink>
-      <NavLink to="/car">
+      <NavLink to="/car" className="linkNav">
         <Badge badgeContent={shoppingList.length} color="secondary">
           <ShoppingCartIcon color="inherit" />
         </Badge>

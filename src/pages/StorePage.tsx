@@ -27,7 +27,7 @@ export const StorePage = () => {
   }, []);
   return (
     <div className="contenedor-compras">
-      <h1 className="tituloProductos">Productos</h1>
+      <h1 className="tituloProductos">Store</h1>
       <div className="contenedor-productos">
         {products.map((product) => (
           <Card key={product.id} producto={product}></Card>

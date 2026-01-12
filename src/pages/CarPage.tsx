@@ -4,6 +4,7 @@ import {
   lessToShopping,
   moreToShopping,
 } from "../features/shoppingSlice";
+import { addProduct } from "../features/storeSlice";
 import type { ProductosStore } from "../features/storeSlice";
 import "../styles/store/Carrito.css";
 
@@ -21,38 +22,43 @@ export const CarPage = () => {
       )
       .toFixed(2);
   };
-  const handleLessProduct = (product: ProductosStore) => {dispatch(lessToShopping(product));};
-  const handleMoreProduct = (product: ProductosStore) => {dispatch(moreToShopping(product)); };
+  const handleLessProduct = (product: ProductosStore) => {
+    dispatch(lessToShopping(product));
+  };
+  const handleMoreProduct = (product: ProductosStore) => {
+    dispatch(moreToShopping(product));
+  };
   const handleDeleteProduct = (product: ProductosStore) => {
     dispatch(removeToShopping(product));
+    dispatch(addProduct(product.id));
   };
   return (
     <div className="carrito">
       <h1 className="tituloCarrito" hidden={shoppingList.length < 1}>
-        Productos agregados
+        Shopping cart
       </h1>
       <h3 className="sinCompras" hidden={shoppingList.length > 0}>
-        No tienes{" "}
+        You have no{" "}
         <a
           className="linkCompras"
           hidden={shoppingList.length > 0}
           href="/store"
         >
-          Productos
+          products
         </a>{" "}
-        agregados
+        in your shopping cart.
       </h3>
       <table className="table table-striped" hidden={shoppingList.length < 1}>
         <thead>
           <tr>
             <th scope="col" className="column">
-              Nombre
+              Name
             </th>
             <th scope="col" className="column">
-              Precio
+              Price
             </th>
             <th scope="col" className="column">
-              Cantidad
+              Amount
             </th>
             <th scope="col"></th>
           </tr>
@@ -85,7 +91,7 @@ export const CarPage = () => {
                   type="button"
                   onClick={() => handleDeleteProduct(compra)}
                 >
-                  Eliminar
+                  Delete
                 </button>
               </td>
             </tr>
@@ -105,7 +111,7 @@ export const CarPage = () => {
           onClick={handlePrint}
           hidden={shoppingList.length < 1}
         >
-          Comprar
+          Buy
         </button>
       </div>
     </div>
