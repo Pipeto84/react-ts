@@ -12,9 +12,11 @@ const shoppingSlice = createSlice({
     addToShopping: (state, action: PayloadAction<ProductosStore>) => {
       state.push({...action.payload, agregar: true, amount: 1});
     },
+    removeToShopping: (state, action: PayloadAction<ProductosStore>) => {
+      return state.filter(item => item.id !== action.payload.id);},
   },
 });
-export const { addToShopping } = shoppingSlice.actions;
+export const { addToShopping, removeToShopping } = shoppingSlice.actions;
 
 export const selectShopping = (state: RootState) => state.shopping;
 

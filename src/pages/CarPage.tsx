@@ -1,9 +1,11 @@
-import { useAppSelector } from "../app/hooks";
+import { useAppSelector,useAppDispatch } from "../app/hooks";
+import { removeToShopping } from "../features/shoppingSlice";
 import type { ProductosStore } from "../features/storeSlice";
 import "../styles/store/Carrito.css";
 
 export const CarPage = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
+  const dispatch = useAppDispatch();
 
   const handlePrint = () => print();
   localStorage.clear();
@@ -14,7 +16,9 @@ export const CarPage = () => {
   };
   const handleLessProduct = (id: number) => {};
   const handleMoreProduct = (id: number) => {};
-  const handleDeleteProduct = (id: number) => {};
+  const handleDeleteProduct = (product: ProductosStore) => {
+    dispatch(removeToShopping(product));
+  };
   return (
     <div className="carrito">
       <h1 className="tituloCarrito" hidden={shoppingList.length < 1}>Productos agregados</h1>
@@ -50,7 +54,7 @@ export const CarPage = () => {
                 <button 
                   className="btn btn-danger"
                   type="button"
-                  onClick={()=>handleDeleteProduct(compra.id)}
+                  onClick={()=>handleDeleteProduct(compra)}
                 >Eliminar</button>
               </td>
             </tr>           

@@ -3,7 +3,7 @@ import {useAppDispatch} from '../app/hooks';
 import "../styles/store/CardCompras.css";
 
 import { addProduct, type ProductosStore } from "../features/storeSlice";
-import { addToShopping } from "../features/shoppingSlice";
+import { addToShopping, removeToShopping } from "../features/shoppingSlice";
 interface Props {
   producto: ProductosStore;
 }
@@ -17,8 +17,10 @@ export const Card = ({ producto }: Props) => {
     dispatch(addToShopping(product));
     dispatch(addProduct(product.id));
   };
-  const clickQuitar = () => {
+  const clickQuitar = (product: ProductosStore) => {
     setAgregado(false);
+    dispatch(removeToShopping(product));
+    dispatch(addProduct(product.id));
   };
   return (
     <div className="tarjeta">
@@ -32,7 +34,7 @@ export const Card = ({ producto }: Props) => {
             <button
               className="boton-quitar"
               type="button"
-              onClick={() => clickQuitar()}
+              onClick={() => clickQuitar(producto)}
             >
               Quitar del carrito
             </button>
