@@ -1,16 +1,21 @@
 import { useState } from "react";
+import {useAppDispatch} from '../app/hooks';
 import "../styles/store/CardCompras.css";
 
-import type { ProductosStore } from "../features/storeSlice";
+import { addProduct, type ProductosStore } from "../features/storeSlice";
+import { addToShopping } from "../features/shoppingSlice";
 interface Props {
   producto: ProductosStore;
 }
 
 export const Card = ({ producto }: Props) => {
   const [agregado, setAgregado] = useState<boolean>(producto.agregar);
+  const dispatch = useAppDispatch();
 
-  const clickAgregar = () => {
+  const clickAgregar = (product: ProductosStore) => {
     setAgregado(true);
+    dispatch(addToShopping(product));
+    dispatch(addProduct(product.id));
   };
   const clickQuitar = () => {
     setAgregado(false);
@@ -35,7 +40,7 @@ export const Card = ({ producto }: Props) => {
             <button
               className="boton-agregar"
               type="button"
-              onClick={() => clickAgregar()}
+              onClick={() => clickAgregar(producto)}
             >
               Agregar al carrito
             </button>

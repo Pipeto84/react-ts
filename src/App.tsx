@@ -8,6 +8,7 @@ import { Scheduling } from "./pages/employesPages/EmployeScheduling";
 import { New } from "./pages/employesPages/EmployeNew";
 import { Edit } from "./pages/employesPages/EmployeEdit";
 import { StorePage } from "./pages/StorePage";
+import { CarPage } from "./pages/CarPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/new" element={<New />} />
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/store" element={<StorePage />} />
+          <Route path="/car" element={<CarPage />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

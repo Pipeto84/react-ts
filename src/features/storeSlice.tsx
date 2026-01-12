@@ -14,11 +14,9 @@ export type ProductosStore = {
     count: number;
   };
   agregar: boolean;
+  amount: number;
 };
-const response = await fetch("https://fakestoreapi.com/products");
-const data: ProductosStore[] = await response.json();
-data.map((item) => (item.agregar = false));
-const initialState: ProductosStore[] = data;
+const initialState: ProductosStore[] = [];
 
 export const storeSlice = createSlice({
   name: "products",
@@ -28,9 +26,16 @@ export const storeSlice = createSlice({
       state = action.payload;
       return state;
     },
+    addProduct: (state, action: PayloadAction<number>) => {
+      state.map((item) => {
+        if (item.id === action.payload) {
+          item.agregar = !item.agregar;
+        }
+      });
+    },
   },
 });
-export const { setStore } = storeSlice.actions;
+export const { setStore, addProduct } = storeSlice.actions;
 
 export const selectStore = (state: RootState) => state.products;
 
