@@ -13,6 +13,7 @@ export const TaskList = () => {
   const [nameTask, setNameTask] = useState("");
   const [newTasks, setNewTasks] = useState<Task[]>([]);
   const newList: TasksList = {
+    id: uuid(),
     name: "",
     items: [],
   };

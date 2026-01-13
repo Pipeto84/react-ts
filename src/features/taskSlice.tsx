@@ -9,11 +9,13 @@ export interface Task {
   completed: boolean;
 }
 export interface TasksList {
+  id: string;
   name: string;
   items: Task[];
 }
 const initialState: TasksList[] = [
   {
+    id: uuid(),
     name: "Daily Tasks",
     items: [
       { name: "Task 1", completed: false, id: uuid() },
@@ -22,6 +24,7 @@ const initialState: TasksList[] = [
     ],
   },
   {
+    id: uuid(),
     name: "Work Tasks",
     items: [
       { name: "Task A", completed: false, id: uuid() },
@@ -44,9 +47,6 @@ export const taskSlice = createSlice({
         list.items.forEach((item) => {
           if (item.id === action.payload) {
             item.completed = true;
-            console.log(item.completed);
-          } else {
-            console.log(item.completed);
           }
         });
       });
@@ -56,10 +56,14 @@ export const taskSlice = createSlice({
         list.items = list.items.filter((item) => item.id !== action.payload);
       });
     },
+    deleteList: (state, action: PayloadAction<string>) => {
+      state.filter((list) => list.id !== action.payload);
+      return state.filter((list) => list.id !== action.payload);
+    },
   },
 });
 
-export const { addTaskList, clickTask, deleteTask } = taskSlice.actions;
+export const { addTaskList, clickTask, deleteTask, deleteList } = taskSlice.actions;
 
 export const selectTasks = (state: RootState) => state.tasks;
 
