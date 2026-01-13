@@ -19,9 +19,9 @@
   height: 1.5625rem;
   width: 1.5625rem;
   font-weight: 500;
-  background-color: rgb(231, 15, 15);
+  background-color:#dc3545;
   border-radius: 0.3125rem;
-  border: black solid 0.0625rem;
+  border: #dc3545 solid 0.0625rem;
   cursor: pointer;
-  box-shadow: 0 0 3px 0.3px rgba(0, 0, 0, .6);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }

@@ -6,7 +6,7 @@ import {
 } from "../features/shoppingSlice";
 import { addProduct } from "../features/storeSlice";
 import type { ProductosStore } from "../features/storeSlice";
-import "../styles/store/Carrito.css";
+import "../styles/store/Shopping.css";
 
 export const CarPage = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
@@ -46,7 +46,7 @@ export const CarPage = () => {
         >
           products
         </a>{" "}
-        in your shopping cart.
+        in your shopping cart
       </h3>
       <table className="table table-striped" hidden={shoppingList.length < 1}>
         <thead>
@@ -76,7 +76,7 @@ export const CarPage = () => {
                 >
                   -
                 </button>
-                <button className="btn btn-primary">{compra.amount}</button>
+                <button className="btn btn-primary shadowButton">{compra.amount}</button>
                 <button
                   className="btn btn-ouline"
                   type="button"
@@ -87,7 +87,7 @@ export const CarPage = () => {
               </td>
               <td>
                 <button
-                  className="btn btn-danger"
+                  className="btn btn-danger shadowButton"
                   type="button"
                   onClick={() => handleDeleteProduct(compra)}
                 >

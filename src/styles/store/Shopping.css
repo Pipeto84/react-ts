@@ -24,3 +24,6 @@
 .column {
   text-align: center;
 }
+.shadowButton {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}

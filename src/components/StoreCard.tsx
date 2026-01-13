@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {useAppDispatch} from '../app/hooks';
-import "../styles/store/CardCompras.css";
+import "../styles/store/CardStore.css";
 
 import { addProduct, type ProductosStore } from "../features/storeSlice";
 import { addToShopping, removeToShopping } from "../features/shoppingSlice";

@@ -13,6 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: start;
+  margin-top: 6.25rem;
+  margin-left: 28rem;
 }
 .form {
   display: flex;

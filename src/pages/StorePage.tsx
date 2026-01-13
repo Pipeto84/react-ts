@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card } from "../components/StoreCard";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import "../styles/store/Compras.css";
+import "../styles/store/Store.css";
 import { setStore } from "../features/storeSlice";
 import type { ProductosStore } from "../features/storeSlice";
 
