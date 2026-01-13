@@ -8,7 +8,7 @@ interface Props {
   data: Data;
 }
 
-export const CardLIst = ({ data }: Props) => {
+export const CardList = ({ data }: Props) => {
   const dispatch = useAppDispatch();
   const handleDelete = (employee: Data) => {
     dispatch(deleteEmployee(employee));

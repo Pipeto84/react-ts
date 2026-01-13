@@ -19,7 +19,7 @@ export const TaskList = () => {
   var indexTask = newList.items.length;
   const addTask = () => {
     newList.name = nameList;
-    setNewTasks((list) => [...list, { name: nameTask, completed: false }]);
+    setNewTasks((list) => [...list, { name: nameTask, completed: false, id: uuid() }]);
     indexTask = indexTask + 1;
     setNameTask("");
   };
@@ -30,7 +30,7 @@ export const TaskList = () => {
     setNameTask(e.target.value);
   };
   const saveList = () => {
-    setNewTasks((list) => [...list, { name: nameTask, completed: false }]);
+    setNewTasks((list) => [...list, { name: nameTask, completed: false, id: uuid() }]);
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

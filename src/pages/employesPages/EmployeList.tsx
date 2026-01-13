@@ -1,5 +1,5 @@
 import "../../styles/employeStyle/List.css";
-import { CardLIst } from "../../components/CardLIst";
+import { CardList } from "../../components/CardList";
 import { useAppSelector } from "../../app/hooks";
 
 export const List = () => {
@@ -9,7 +9,7 @@ export const List = () => {
       <p>Employees List</p>
       <div className="employees">
         {employeesList.map((item) => (
-          <CardLIst data={item} key={item.id} />
+          <CardList data={item} key={item.id} />
         ))}
       </div>
     </div>

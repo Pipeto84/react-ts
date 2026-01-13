@@ -1,4 +1,5 @@
 .card-container {
+  height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,6 +15,7 @@
 .card-container > p {
   font-weight: bold;
   font-size: 1rem;
+  margin: 0 0 0 1rem;
 }
 .cancel {
   height: 1.5625rem;

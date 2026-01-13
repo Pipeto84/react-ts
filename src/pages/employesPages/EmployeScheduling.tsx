@@ -8,7 +8,7 @@ export const Scheduling = () => {
     <div className="employeesPage">
       <DragAndDrop />
       <NavLink className="newEmployee" to="/new">
-        New employe
+        New Employe
       </NavLink>
       <List />
     </div>
