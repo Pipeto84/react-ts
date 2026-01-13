@@ -1,6 +1,6 @@
 import "../styles/TasksPage.css";
 import type { TasksList, Task } from "../features/tasks/taskSlice";
-import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { useAppDispatch } from "../app/hooks";
 import { useNavigate } from "react-router-dom";
 import { addTaskList } from "../features/tasks/taskSlice";
 import { useState } from "react";
@@ -8,7 +8,6 @@ import { v4 as uuid } from "uuid";
 
 export const TaskList = () => {
   const dispatch = useAppDispatch();
-  const tasks = useAppSelector((state) => state.tasks);
   const navigate = useNavigate();
   const [nameList, setNameList] = useState("");
   const [nameTask, setNameTask] = useState("");
@@ -69,7 +68,7 @@ export const TaskList = () => {
         </div>
         <input
           type="text"
-          placeholder=" task..."
+          placeholder=" name task..."
           className="nameTask"
           value={nameTask}
           onChange={handleNameTaskChange}
