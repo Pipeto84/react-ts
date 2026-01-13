@@ -49,15 +49,30 @@ h1 {
 .tasksList {
   margin: 10px;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .inputTask {
   height: 30px;
   width: 30px;
 }
 .labelTask {
-  height: 30px;
+  height: 40px;
   margin-left: 10px;
   font-size: 30px;
+}
+.deleteTask {
+  margin-left: 15px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 .newList {
   margin: 20px auto 20px auto;
