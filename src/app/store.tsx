@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import taskReducer from "../features/tasks/taskSlice";
-import employeReducer from '../features/employes/employeSlice'
+import taskReducer from "../features/taskSlice";
+import employeReducer from '../features/employeSlice'
 import storeReducer from '../features/storeSlice'
 import shoppingReducer from '../features/shoppingSlice'
 

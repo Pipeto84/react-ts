@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../../app/store";
-import type { Data, Date } from "../../interfaces/index";
+import type { RootState } from "../app/store";
+import type { Data, Date } from "../interfaces/index";
 
 type idData = {
   id: string;

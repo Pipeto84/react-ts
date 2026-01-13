@@ -1,6 +1,6 @@
 import "../styles/TasksPage.css";
-import type { TasksList } from "../features/tasks/taskSlice";
-import  { clickTask } from "../features/tasks/taskSlice";
+import type { TasksList } from "../features/taskSlice";
+import  { clickTask } from "../features/taskSlice";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { v4 as uuid } from "uuid";
 

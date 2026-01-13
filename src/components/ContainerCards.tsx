@@ -2,7 +2,7 @@ import React from "react";
 import type { Date, Data } from "../interfaces";
 import { CardItem } from "./CardItem";
 import "../styles/employeStyle/ContainerCards.css";
-import { dragEmployee } from "../features/employes/employeSlice";
+import { dragEmployee } from "../features/employeSlice";
 import { useAppDispatch } from "../app/hooks";
 
 interface Props {

@@ -2,7 +2,7 @@ import "../styles/employeStyle/CardList.css";
 import type { Data } from "../interfaces/index";
 import { Link } from "react-router-dom";
 import { useAppDispatch } from "../app/hooks";
-import { deleteEmployee } from "../features/employes/employeSlice";
+import { deleteEmployee } from "../features/employeSlice";
 
 interface Props {
   data: Data;

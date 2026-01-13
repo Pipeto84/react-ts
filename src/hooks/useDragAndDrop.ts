@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { Date } from "../interfaces";
 import { useAppDispatch } from "../app/hooks";
-import { dragEmployee } from "../features/employes/employeSlice";
+import { dragEmployee } from "../features/employeSlice";
 
 export const useDragAndDrop = () => {
   const [isDragging, setIsDragging] = useState(false);

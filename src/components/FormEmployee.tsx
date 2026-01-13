@@ -6,7 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import {
   addEmployee,
   editingEmployee,
-} from "../features/employes/employeSlice";
+} from "../features/employeSlice";
 import { v4 as uuid } from "uuid";
 
 export const FormEmployee = () => {

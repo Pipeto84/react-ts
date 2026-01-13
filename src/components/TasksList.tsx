@@ -1,8 +1,8 @@
 import "../styles/TasksPage.css";
-import type { TasksList, Task } from "../features/tasks/taskSlice";
+import type { TasksList, Task } from "../features/taskSlice";
 import { useAppDispatch } from "../app/hooks";
 import { useNavigate } from "react-router-dom";
-import { addTaskList } from "../features/tasks/taskSlice";
+import { addTaskList } from "../features/taskSlice";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 
