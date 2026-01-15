@@ -3,6 +3,7 @@ import type { TasksList } from "../features/taskSlice";
 import { clickTask, deleteTask, deleteList } from "../features/taskSlice";
 import { useAppDispatch } from "../app/hooks";
 import { v4 as uuid } from "uuid";
+import {NavLink} from 'react-router-dom'
 import trash from '../assets/borrar.png'
 import edit from '../assets/edit2.png'
 
@@ -27,13 +28,13 @@ export const TasksCard = (list: TasksList) => {
     <div className="tasksCard" id={list.id} key={uuid()} onClick={() => handleClick(list.id)}>
       <div className="nameDeleteList">
         <h2 >{list.name}</h2>
-        <a onClick={() => handleEditList()}>
+        <NavLink onClick={() => handleEditList()} to="/newlist">
           <img
             className="iconoEdit"
             src={edit}
             alt="icono edit"
           />
-        </a>
+        </NavLink>
         <a onClick={() => handleDeleteList(list.id)}>
           <img
             className="iconoTrash"
