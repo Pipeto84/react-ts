@@ -46,6 +46,7 @@ h1 {
   color: black;
   font-size: 20px;
   background-color: beige;
+  cursor: pointer;
 }
 .nameDeleteList {
   display: flex;
@@ -56,6 +57,7 @@ h1 {
   height: 30px;
   margin-right: 10px;
   text-align: center;
+  cursor: pointer;
 }
 .iconoTrash {
   width: 35px;
@@ -72,11 +74,13 @@ h1 {
 .inputTask {
   height: 30px;
   width: 30px;
+  cursor: pointer;
 }
 .labelTask {
   height: 40px;
   margin-left: 10px;
   font-size: 30px;
+  cursor: pointer;
 }
 .deleteTask {
   margin-left: 15px;

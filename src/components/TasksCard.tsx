@@ -1,27 +1,28 @@
 import "../styles/TasksPage.css";
 import type { TasksList } from "../features/taskSlice";
 import { clickTask, deleteTask, deleteList } from "../features/taskSlice";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useAppDispatch } from "../app/hooks";
 import { v4 as uuid } from "uuid";
 import trash from '../assets/borrar.png'
 
 export const TasksCard = (list: TasksList) => {
   const dispatch = useAppDispatch();
-  const tasks = useAppSelector((state) => state.tasks);
   const handleTaskClick = (taskId: string) => {
     dispatch(clickTask(taskId));
-    console.log(tasks);
   };
   const handleDeleteTask = (taskId: string) => {
     dispatch(deleteTask(taskId));
   };
   const handleDeleteList = (listId: string) => {
     dispatch(deleteList(listId));
-  }
+  };
+  const handleClick = (listId: string) => {
+    console.log("el id es: ", listId);
+  };
   return (
-    <div className="tasksCard" key={uuid()}>
+    <div className="tasksCard" id={list.id} key={uuid()} onClick={() => handleClick(list.id)}>
       <div className="nameDeleteList">
-        <h2>{list.name}</h2>
+        <h2 >{list.name}</h2>
         <a onClick={() => handleDeleteList(list.id)}>
           <img
             className="iconoTrash"
@@ -40,6 +41,7 @@ export const TasksCard = (list: TasksList) => {
               id={item.name}
               className="inputTask"
               onChange={() => handleTaskClick(item.id)}
+              checked={item.completed}
             />
             <label key={uuid()} htmlFor={item.name} className="labelTask">
               {item.name}

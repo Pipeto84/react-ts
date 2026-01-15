@@ -6,6 +6,8 @@ import { v4 as uuid } from "uuid";
 
 export const TasksPage = () => {
   const tasks = useAppSelector((state) => state.tasks);
+  const idList = uuid();
+  // console.log(idList)
   return (
     <div className="tasks">
       <h1>Tasks</h1>
