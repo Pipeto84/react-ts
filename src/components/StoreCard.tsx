@@ -36,7 +36,7 @@ export const Card = ({ producto }: Props) => {
               type="button"
               onClick={() => clickQuitar(producto)}
             >
-              Quitar del carrito
+              Remove from cart
             </button>
           ) : (
             <button
@@ -44,7 +44,7 @@ export const Card = ({ producto }: Props) => {
               type="button"
               onClick={() => clickAgregar(producto)}
             >
-              Agregar al carrito
+              Add to cart
             </button>
           )}
         </div>
