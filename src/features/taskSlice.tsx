@@ -63,7 +63,8 @@ export const taskSlice = createSlice({
   },
 });
 
-export const { addTaskList, clickTask, deleteTask, deleteList } = taskSlice.actions;
+export const { addTaskList, clickTask, deleteTask, deleteList } =
+  taskSlice.actions;
 
 export const selectTasks = (state: RootState) => state.tasks;
 

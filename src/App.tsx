@@ -19,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/tasks" element={<TasksPage />} />
           <Route path="/newList" element={<TaskList />} />
+          <Route path="/editList/:id" element={<TaskList />} />
           <Route path="/employes" element={<Scheduling />} />
           <Route path="/new" element={<New />} />
           <Route path="/edit/:id" element={<Edit />} />
