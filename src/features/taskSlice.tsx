@@ -46,7 +46,7 @@ export const taskSlice = createSlice({
       state.forEach((list) => {
         list.items.forEach((item) => {
           if (item.id === action.payload) {
-            item.completed = true;
+            item.completed = !item.completed;
           }
         });
       });
