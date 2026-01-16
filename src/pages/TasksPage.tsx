@@ -7,11 +7,11 @@ import type {Task, TasksList} from '../features/taskSlice'
 
 export const TasksPage = () => {
   const tasks = useAppSelector((state) => state.tasks);
-  // const tasksSort:TasksList[]  = tasks.map((list) =>
-  //   list.items.sort((a, b) => 
-  //     (b.completed as any) - (a.completed as any)
-  //   )
-  // );
+  // const tasksSort  = tasks.map((list)=>{
+  //   list.items.sort((a,b)=>Number(b.completed) - Number(a.completed))
+  // })
+  // console.log(tasksSort)
+
   return (
     <div className="tasks">
       <h1>Tasks</h1>

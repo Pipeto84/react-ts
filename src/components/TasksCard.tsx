@@ -18,18 +18,15 @@ export const TasksCard = (list: TasksList) => {
   const handleDeleteList = (listId: string) => {
     dispatch(deleteList(listId));
   };
-  const handleClick = (listId: string) => {};
-  const handleEditList = () => {};
   return (
     <div
       className="tasksCard"
       id={list.id}
       key={uuid()}
-      onClick={() => handleClick(list.id)}
     >
       <div className="nameDeleteList">
         <h2>{list.name}</h2>
-        <NavLink onClick={() => handleEditList()} to={`/editList/${list.id}`}>
+        <NavLink to={`/editList/${list.id}`}>
           <img className="iconoEdit" src={edit} alt="icono edit" />
         </NavLink>
         <a onClick={() => handleDeleteList(list.id)}>
