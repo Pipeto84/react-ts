@@ -9,7 +9,7 @@ export const StorePage = () => {
   const dispatch = useAppDispatch();
   const products = useAppSelector((state) => state.products);
 
-  const fetchProductos = async () => {
+  const fetchProducts = async () => {
     try {
       const response = await fetch("https://fakestoreapi.com/products");
       const data: ProductosStore[] = await response.json();
@@ -23,7 +23,7 @@ export const StorePage = () => {
   };
 
   useEffect(() => {
-    fetchProductos();
+    fetchProducts();
   }, []);
   return (
     <div className="contenedor-compras">

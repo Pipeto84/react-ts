@@ -1,0 +1,28 @@
+.movieList {
+  margin: auto;
+  padding: 0 1.25rem;
+  background-color: #57a1dd;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  gap: 1.25rem;
+}
+.movieCard {
+  background-color: #fff;
+  padding: 1.25rem;
+  border-radius: .25rem;
+  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5);
+}
+.movieCard img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width:48rem) {
+  .movieList {
+    grid-template-columns: repeat(2, minmax(15.625rem, 1fr));
+  }
+}
+@media screen and (max-width:33.75rem) {
+  .movieList {
+    grid-template-columns: repeat(1, minmax(15.625rem, 1fr));
+  }
+}
