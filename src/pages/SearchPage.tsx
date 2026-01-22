@@ -25,7 +25,7 @@ export const SearchPage = () => {
     inputRef.current?.focus();
   };
   const movie = () => {
-    setSelector("Weather");
+    setSelector("Movie");
     setThemeIcon(true);
     setSend("");
     inputRef.current?.focus();
@@ -56,7 +56,7 @@ export const SearchPage = () => {
           </a>
           <a href="#" onClick={movie}>
             <img
-              className="iconMOvie1"
+              className="iconMovie1"
               src={iconMovieColor}
               alt="icono pelicula"
             />
@@ -171,7 +171,7 @@ export const SearchPage = () => {
           </ul>
           <input
             type="text"
-            className="form-control , inputText"
+            className="form-control inputText"
             value={dataInput}
             onChange={handleChanges}
             placeholder={handlePlaceHolder()}
