@@ -1,10 +1,9 @@
-import { useAppSelector } from '../app/hooks'
+import type {infoWeather} from '../interfaces/index'
 import '../styles/SearchPage.css'
 
-export const Weather = () => {
+export const Weather = (infoCity: infoWeather) => {
   const Kelvin = 273.15
   const urlImg = 'https://openweathermap.org/img/wn/'
-  const infoCity = useAppSelector((state) => state.infoCity);
   return (
     <div>
       {

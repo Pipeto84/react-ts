@@ -1,9 +1,7 @@
 import { useState, useRef } from "react";
 import { Weather } from "../components/Weather";
 import { Movie } from "../components/Movie";
-import { useAppDispatch } from "../app/hooks";
-import { searchWeather } from "../features/weatherSlice";
-import { searchMovie } from "../features/movieSlice";
+import type { infoMovie, infoWeather } from "../interfaces/index";
 import iconWeatherColor from "../assets/weatherColor.svg";
 import iconThermometer from "../assets/thermometer.svg";
 import iconMovieColor from "../assets/movieColor.svg";
@@ -16,7 +14,6 @@ export const SearchPage = () => {
   const [send, setSend] = useState("");
   const [themeIcon, setThemeIcon] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const dispatch = useAppDispatch();
 
   const weather = () => {
     setSelector("Weather");
@@ -95,32 +92,59 @@ export const SearchPage = () => {
   const handleChanges = (e: any) => {
     setDataInput(e.target.value);
   };
+  var infoCity: infoWeather = {} as infoWeather;
+  const urlBasicWeather = "https://api.openweathermap.org/data/2.5/weather?";
+  const API_KEY_Weather = "747159ad5510f324c5f01542f5cdf40c";
+  const fetchWeather = async (city: string) => {
+    try {
+      const response = await fetch(
+        `${urlBasicWeather}q=${city}&appid=${API_KEY_Weather}&lang=es`,
+      );
+      const data: infoWeather = await response.json();
+      infoCity = data;
+    } catch (error) {
+      console.error("el error del clima es: ", error);
+    }
+  };
+  var infoMovie: infoMovie[] = [];
+  const urlBaseMovie = "https://api.themoviedb.org/3/search/movie?";
+  const API_KEY_Movie = "d6bd2332172452f8a7ef7c9b84b03443";
+  const fetchMovie = async (movie: string) => {
+    try {
+      const response = await fetch(
+        `${urlBaseMovie}query=${movie}&api_key=${API_KEY_Movie}`,
+      );
+      const data = await response.json();
+      infoMovie = data.results;
+    } catch (error) {
+      console.error("el error en las peliculas es: ", error);
+    }
+  };
   const handleSubmit = (e: any) => {
     e.preventDefault();
     setSend(dataInput);
     setThemeIcon(false);
     if (selector === "Weather") {
-      dispatch(searchWeather(dataInput));
+      fetchWeather(dataInput);
       setDataInput("");
     } else if (selector === "Movie") {
-      dispatch(searchMovie(dataInput));
+      fetchMovie(dataInput);
       setDataInput("");
     }
   };
-
   const selected = () => {
     switch (selector) {
       case "Searcher":
         return infoSearch;
       case "Weather":
         if (send.length > 0) {
-          return <Weather></Weather>;
+          return <Weather infoCity={infoCity}/>;
         } else {
           return;
         }
       case "Movie":
         if (send.length > 0) {
-          return <Movie></Movie>;
+          return <Movie infoMovie={infoMovie}/>;
         } else {
           return;
         }
