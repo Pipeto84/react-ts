@@ -28,14 +28,13 @@ export const SearchPage = () => {
   };
   const infoSearch = (
     <h4 className="textoSearcher">
-      Busca el{" "}
+      Find the current{" "}
       <a className="toWeather" href="#" onClick={weather}>
-        Clima{" "}
+        Weather{" "}
       </a>
-      actual de una ciudad o busca información de una
+      in a city or find information about a {""}
       <a className="toMovie" href="#" onClick={movie}>
-        {" "}
-        Película.
+        Movie
       </a>
     </h4>
   );
