@@ -1,9 +1,33 @@
 import type {infoWeather} from '../interfaces/index'
+import { useEffect, useState } from 'react'
 import '../styles/SearchPage.css'
 
-export const Weather = (infoCity: infoWeather) => {
+interface Props {
+  dataInput: string
+}
+
+export const Weather = ({ dataInput }: Props) => {
+  const [infoCity, setInfoCity] = useState<infoWeather>({} as infoWeather);
+  const urlBasicWeather = "https://api.openweathermap.org/data/2.5/weather?";
+  const API_KEY_Weather = "747159ad5510f324c5f01542f5cdf40c";
+  const fetchWeather = async (city: string) => {
+    try {
+      const response = await fetch(
+        `${urlBasicWeather}q=${city}&appid=${API_KEY_Weather}&lang=es`,
+      );
+      const data: infoWeather = await response.json();
+      setInfoCity(data);
+      console.log(infoCity)
+    } catch (error) {
+      console.error("el error del clima es: ", error);
+    }
+  };
+  console.log(dataInput)
   const Kelvin = 273.15
   const urlImg = 'https://openweathermap.org/img/wn/'
+  useEffect(() => {
+    fetchWeather(dataInput);
+  }, [dataInput]);
   return (
     <div>
       {
