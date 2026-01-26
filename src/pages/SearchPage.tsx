@@ -96,9 +96,9 @@ export const SearchPage = () => {
     setSend(dataInput);
     setThemeIcon(false);
     if (selector === "Weather") {
-      // setDataInput("");
+      setDataInput("");
     } else if (selector === "Movie") {
-      // setDataInput("");
+      setDataInput("");
     }
   };
   const selected = () => {
@@ -107,13 +107,13 @@ export const SearchPage = () => {
         return infoSearch;
       case "Weather":
         if (send.length > 0) {
-          return <Weather dataInput={dataInput} />;
+          return <Weather dataInput={send} />;
         } else {
           return;
         }
       case "Movie":
         if (send.length > 0) {
-          return <Movie dataInput={dataInput} />;
+          return <Movie dataInput={send} />;
         } else {
           return;
         }
