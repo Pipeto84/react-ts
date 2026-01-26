@@ -13,7 +13,7 @@ export const Weather = ({ dataInput }: Props) => {
   const fetchWeather = async (city: string) => {
     try {
       const response = await fetch(
-        `${urlBasicWeather}q=${city}&appid=${API_KEY_Weather}&lang=es`,
+        `${urlBasicWeather}q=${city}&appid=${API_KEY_Weather}&lang=en`,
       );
       const data = await response.json();
       setInfoCity(data);
@@ -31,8 +31,8 @@ export const Weather = ({ dataInput }: Props) => {
       {infoCity && (
         <div className="infoWeather">
           <h2>{infoCity.name + ", " + infoCity.sys.country}</h2>
-          <h5>Temperatura: {(infoCity.main.temp - Kelvin).toFixed(0)} ॰C</h5>
-          <h5>Descripcion meteorologica: {infoCity.weather[0].description}</h5>
+          <h5>Temperature: {(infoCity.main.temp - Kelvin).toFixed(0)} ॰C</h5>
+          <h5>Meteorological description: {infoCity.weather[0].description}</h5>
           <img src={`${urlImg}${infoCity.weather[0].icon}@2x.png`} />
         </div>
       )}
