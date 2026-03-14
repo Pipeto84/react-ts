@@ -4,6 +4,7 @@ import { TasksPage } from "./pages/TasksPage";
 import "./styles/App.css";
 import { TaskList } from "./components/TasksList";
 import { ErrorUser } from './components/ErrorUser'
+import {Register} from './components/Register'
 import { HomePage } from "./pages/HomePage";
 import { Scheduling } from "./pages/employesPages/EmployeScheduling";
 import { New } from "./pages/employesPages/EmployeNew";
@@ -31,6 +32,7 @@ function App() {
           <Route path="/search" element={<SearchPage/>} />
           <Route path="/user" element={<User />} />
           <Route path="/errorUser" element={<ErrorUser />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

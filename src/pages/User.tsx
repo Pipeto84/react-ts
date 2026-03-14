@@ -63,7 +63,7 @@ export function User() {
           <button className="boton-ingresar" onClick={handleSubmit}>
             Sign in
           </button>
-          <NavLink to="/registrar" className="registro-link">
+          <NavLink to="/register" className="registro-link">
             Register
           </NavLink>
           <button className="boton-cerrar" onClick={handleCerrar}>
