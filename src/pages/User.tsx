@@ -5,9 +5,8 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { setLogIn } from "../features/user/logInSlice";
 
 export function User() {
-  const [acceso, setAcceso] = useState(false);
+  const [acces, setAcces] = useState(false);
   const dispatch = useAppDispatch();
-  const logIn = useAppSelector((state) => state.logIn);
   const users = useAppSelector((state) => state.users);
   const [user, setUser] = useState({
     name: "",
@@ -21,12 +20,12 @@ export function User() {
     });
   };
   const handleSubmit = () => {
-    const usuarioEncontrado = users.find(
+    const userFinded = users.find(
       (u) =>
         u.name === user.name && u.password === user.password,
     );
-    if (usuarioEncontrado) {
-      setAcceso(true);
+    if (userFinded) {
+      setAcces(true);
       setUser({ ...user, acces: true });
       dispatch(setLogIn({ ...user, acces: true }));
     } else {
@@ -34,50 +33,50 @@ export function User() {
     }
   };
   const handleCerrar = () => {
-    setAcceso(false);
+    setAcces(false);
     setUser({ name: "", password: "", acces: false });
     dispatch(setLogIn({ name: "", password: "", acces: false }));
   };
   return (
     <div className="ingresar">
-      {!acceso && (
+      {!acces && (
         <div className="contenido-ingresar">
-          <h3 className="titulo-ingresar">Iniciar Sesion</h3>
+          <h3 className="titulo-ingresar">Sign in</h3>
           <div className="formulario-ingresar">
-            <label className="label-ingresar1">Usuario</label>
+            <label className="label-ingresar1">Name</label>
             <input
               type="text"
-              placeholder="Escribe tu usuario"
+              placeholder="Write your name"
               className="input-ingresar1"
               onChange={handleChange}
               name="name"
             />
-            <label className="label-ingresar2">Contraseña</label>
+            <label className="label-ingresar2">Password</label>
             <input
               type="text"
-              placeholder="Escribe tu contraseña"
+              placeholder="Write your password"
               className="input-ingresar2"
               onChange={handleChange}
               name="password"
             />
           </div>
           <button className="boton-ingresar" onClick={handleSubmit}>
-            Ingresar
+            Sign in
           </button>
           <NavLink to="/registrar" className="registro-link">
-            Registrarse
+            Register
           </NavLink>
           <button className="boton-cerrar" onClick={handleCerrar}>
-            Cerrar sesion
+            Sign out
           </button>
         </div>
       )}
-      {acceso && (
+      {acces && (
         <div className="contenido-ingresoU">
-          <h3 className="titulo-ingresoU">Bienvenido</h3>
-          <p className="texto-ingresoU">Tu ingreso fue exitoso</p>
+          <h3 className="titulo-ingresoU">Welcome</h3>
+          <p className="texto-ingresoU">Your login was successful</p>
           <NavLink to="/" className="boton-ingresoU">
-            Continuar
+            Continue
           </NavLink>
         </div>
       )}
