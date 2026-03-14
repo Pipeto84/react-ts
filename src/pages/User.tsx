@@ -29,7 +29,7 @@ export function User() {
       setUser({ ...user, acces: true });
       dispatch(setLogIn({ ...user, acces: true }));
     } else {
-      window.location.href = "/ErrorU";
+      window.location.href = "/errorUser";
     }
   };
   const handleCerrar = () => {
