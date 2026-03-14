@@ -23,6 +23,9 @@ export const NavBar = () => {
       <NavLink className="linkNav" to="/store">
         Store
       </NavLink>
+      <NavLink className="linkNav" to="/user">
+        Log in
+      </NavLink>
       <NavLink to="/car" className="linkNav">
         <Badge badgeContent={shoppingList.length} color="secondary">
           <ShoppingCartIcon color="inherit" />

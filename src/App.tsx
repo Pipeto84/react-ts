@@ -10,6 +10,7 @@ import { Edit } from "./pages/employesPages/EmployeEdit";
 import { StorePage } from "./pages/StorePage";
 import { CarPage } from "./pages/CarPage";
 import { SearchPage } from "./pages/SearchPage";
+import { User } from "./pages/User";  
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/store" element={<StorePage />} />
           <Route path="/car" element={<CarPage />} />
           <Route path="/search" element={<SearchPage/>} />
+          <Route path="/user" element={<User />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
