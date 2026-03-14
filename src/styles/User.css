@@ -1,0 +1,132 @@
+.ingresar {
+  background-color: rgb(224, 224, 224);
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.contenido-ingresar {
+  background-color: #a4b6c5;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-top: 100px;
+}
+.titulo-ingresar {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-top: 25px;
+} 
+.formulario-ingresar {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+}
+.label-ingresar1 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+}
+.input-ingresar1 {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: rgb(68, 68, 68);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.label-ingresar2 {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+}
+.input-ingresar2 {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: rgb(68, 68, 68);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.boton-ingresar {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4682B4;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+    text-decoration: none;
+}
+.registro-link {
+  margin-top: 40px;
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.boton-cerrar {
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  background-color: #a4b6c5;
+  color: rgba(255, 0, 0, 0.774);
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.ingresoU {
+  background-color: rgb(224, 224, 224);
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.contenido-ingresoU {
+  background-color: #87C19B;
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-top: 100px;
+}
+.titulo-ingresoU {
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-top: 25px;
+  margin-bottom: 50px;
+} 
+.texto-ingresoU {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  margin-top: 15px;
+}
+.boton-ingresoU {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #07c449ea;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  margin-top: 60px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 10px;
+}
