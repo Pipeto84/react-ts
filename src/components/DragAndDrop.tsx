@@ -4,6 +4,7 @@ import { ContainerEmployees } from "./ContainerEmployees";
 import { useDragAndDrop } from "../hooks/useDragAndDrop";
 import "../styles/employeStyle/DragAndDrop.css";
 import { useAppSelector } from "../app/hooks";
+import { NavLink } from "react-router-dom";
 
 const dayWork: Date[] = [
   "Monday",
@@ -23,6 +24,9 @@ export const DragAndDrop = () => {
     <>
       <div className="titleSheduling flex">
         <h1 className="titleFont">Scheduling Employees</h1>
+        <NavLink className="newEmployee" to="/new">
+          New Employe
+        </NavLink>
       </div>
       <div className="employeesSheduling">
         <ContainerEmployees
