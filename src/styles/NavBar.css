@@ -24,6 +24,21 @@
   color: white;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
+.nav-link-user {
+  text-decoration: none;
+  padding: 5px 8px 5px 8px;
+  background-color: #a4b6c5;
+  color: black;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-link-user:hover {
+  background-color: #c09a33;
+  color: white;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
 .linkNav {
   display: flex;
   align-items: center;

@@ -3,6 +3,7 @@ import "../styles/Register.css";
 import { useAppDispatch } from "../app/hooks";
 import { NavLink } from "react-router-dom";
 import { addUser } from "../features/user/usersSlice";
+import { setLogIn } from "../features/user/logInSlice";
 
 export function Register() {
   const dispatch = useAppDispatch();
@@ -24,6 +25,7 @@ export function Register() {
     } else {
       setAdded(true);
       dispatch(addUser(newUser));
+      dispatch(setLogIn({ ...newUser, acces: true }));
       setNewUser({ name: "", password: "" });
     }
   };
