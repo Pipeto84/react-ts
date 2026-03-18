@@ -10,6 +10,12 @@
 .aTitulo {
   text-decoration-line: none;
 }
+.infoHome {
+  font-size: 1.3rem;
+  color: #fff;
+  max-width: 650px;
+  margin: 0 auto;
+}
 .h1Home {
   font-size: 3.2em;
   color: gray;
