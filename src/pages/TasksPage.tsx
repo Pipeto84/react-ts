@@ -10,7 +10,7 @@ export const TasksPage = () => {
   return (
     <div className="tasks">
       <NavLink className="newListButton" to="/newList">
-        Create new list
+        New list
       </NavLink>
       <div className="tasksGrid">
         {tasks.map((tasks) => (

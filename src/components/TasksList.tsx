@@ -74,46 +74,48 @@ export const TaskList = () => {
   }, [params.id, tasks]);
 
   return (
-    <form className="newList" onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder=" name list..."
-        className="nameList"
-        value={nameList}
-        onChange={handleChangeListName}
-        autoFocus
-      />
-      <div className="newTasks">
-        <div className="newTasksList">
-          {newTasks.map((task) => (
-            <div className="tasksList" key={uuid()}>
-              <input
-                type="checkbox"
-                key={uuid()}
-                value={task.name}
-                id={task.name}
-                className="inputTask"
-              />
-              <label key={uuid()} htmlFor={task.name} className="labelTask">
-                {task.name}
-              </label>
-            </div>
-          ))}
-        </div>
+    <div className="taskList">
+      <form className="newList" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder=" name task..."
-          className="nameTask"
-          value={nameTask}
-          onChange={handleNameTaskChange}
+          placeholder=" name list..."
+          className="nameList"
+          value={nameList}
+          onChange={handleChangeListName}
+          autoFocus
         />
-        <button className="addTask" onClick={addTask} type="button">
-          +
+        <div className="newTasks">
+          <div className="newTasksList">
+            {newTasks.map((task) => (
+              <div className="tasksList" key={uuid()}>
+                <input
+                  type="checkbox"
+                  key={uuid()}
+                  value={task.name}
+                  id={task.name}
+                  className="inputTask"
+                />
+                <label key={uuid()} htmlFor={task.name} className="labelTask">
+                  {task.name}
+                </label>
+              </div>
+            ))}
+          </div>
+          <input
+            type="text"
+            placeholder=" name task..."
+            className="nameTask"
+            value={nameTask}
+            onChange={handleNameTaskChange}
+          />
+          <button className="addTask" onClick={addTask} type="button">
+            +
+          </button>
+        </div>
+        <button className="saveTask" type="submit" onClick={saveList}>
+          Save
         </button>
-      </div>
-      <button className="saveTask" type="submit" onClick={saveList}>
-        Save
-      </button>
-    </form>
+      </form>
+    </div>
   );
 };

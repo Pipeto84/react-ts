@@ -6,6 +6,7 @@ import {
 } from "../features/shoppingSlice";
 import { addProduct } from "../features/storeSlice";
 import type { ProductosStore } from "../features/storeSlice";
+import { NavLink } from "react-router-dom";
 import "../styles/store/Shopping.css";
 
 export const CarPage = () => {
@@ -18,7 +19,7 @@ export const CarPage = () => {
     return shoppingList
       .reduce(
         (total, item: ProductosStore) => total + item.price * item.amount,
-        0
+        0,
       )
       .toFixed(2);
   };
@@ -37,17 +38,22 @@ export const CarPage = () => {
       <h1 className="tituloCarrito" hidden={shoppingList.length < 1}>
         Shopping cart
       </h1>
-      <h3 className="sinCompras" hidden={shoppingList.length > 0}>
-        You have no{" "}
-        <a
-          className="linkCompras"
-          hidden={shoppingList.length > 0}
-          href="/store"
-        >
-          products
-        </a>{" "}
-        in your shopping cart
-      </h3>
+      <div className="containerCar" hidden={shoppingList.length > 0}>
+        <h3 className="sinCompras" hidden={shoppingList.length > 0}>
+          You have no{" "}
+          <a
+            className="linkCompras"
+            hidden={shoppingList.length > 0}
+            href="/store"
+          >
+            products
+          </a>{" "}
+          in your shopping cart
+        </h3>
+      <NavLink className="btnStore" to="/store">
+        Store
+      </NavLink>
+      </div>
       <table className="table table-striped" hidden={shoppingList.length < 1}>
         <thead>
           <tr>
@@ -76,7 +82,9 @@ export const CarPage = () => {
                 >
                   -
                 </button>
-                <button className="btn btn-primary shadowButton">{compra.amount}</button>
+                <button className="btn btn-primary shadowButton">
+                  {compra.amount}
+                </button>
                 <button
                   className="btn btn-ouline"
                   type="button"
@@ -106,7 +114,7 @@ export const CarPage = () => {
       </table>
       <div className="d-grid gap-2">
         <button
-          className="btn btn-primary"
+          className="btnBuy"
           type="button"
           onClick={handlePrint}
           hidden={shoppingList.length < 1}

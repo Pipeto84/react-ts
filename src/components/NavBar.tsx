@@ -12,8 +12,8 @@ export const NavBar = () => {
       <NavLink className="linkNav" to="/">
         Home
       </NavLink>
-      <NavLink className="linkNav" to="/tasks">
-        Tasks
+      <NavLink className="linkNav" to="/store">
+        Store
       </NavLink>
       <NavLink className="linkNav" to="/employes">
         Employees
@@ -21,8 +21,8 @@ export const NavBar = () => {
       <NavLink className="linkNav" to="/search">
         Search
       </NavLink>
-      <NavLink className="linkNav" to="/store">
-        Store
+      <NavLink className="linkNav" to="/tasks">
+        Tasks
       </NavLink>
       {user.acces && (
         <NavLink to="/user" className="nav-link-user">

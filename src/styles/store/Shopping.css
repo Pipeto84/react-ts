@@ -1,7 +1,19 @@
 .carrito {
   max-width: 50rem;
-  /* min-width: 25rem; */
-  margin:1.875rem auto;
+  height: 74vh;
+  margin: 1.875rem auto;
+}
+.containerCar {
+  background-color: white;
+  width: 22rem;
+  height: 14rem;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .tituloCarrito {
   text-align: center;
@@ -17,13 +29,41 @@
   text-decoration: none;
 }
 .sinCompras {
-  color: rgb(43, 144, 226);
+  color: rgb(0, 0, 0);
   text-align: center;
-  margin-top: 2.5rem;
+}
+.btnStore {
+  background-color: rgb(88, 88, 88);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: 30%;
+  font-size: 22px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .column {
   text-align: center;
 }
 .shadowButton {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.btnBuy {
+  background-color: rgb(88, 88, 88);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 7px;
+  width: 100%;
+  font-size: 20px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
