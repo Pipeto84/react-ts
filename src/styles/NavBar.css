@@ -20,8 +20,8 @@
   border-radius: 10px;
 }
 .topnav a:hover {
-  background-color: #c09a33;
-  color: white;
+  background-color: white;
+  color: black;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .nav-link-user {
@@ -35,8 +35,8 @@
   justify-content: center;
 }
 .nav-link-user:hover {
-  background-color: #c09a33;
-  color: white;
+  background-color: #ffffff;
+  color: black;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .linkNav {
