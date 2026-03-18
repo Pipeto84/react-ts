@@ -8,7 +8,7 @@ import iconPopcorn from "../assets/popcorn.svg";
 import "../styles/SearchPage.css";
 
 export const SearchPage = () => {
-  const [selector, setSelector] = useState("Searcher");
+  const [selector, setSelector] = useState("Select a theme");
   const [dataInput, setDataInput] = useState("");
   const [send, setSend] = useState("");
   const [themeIcon, setThemeIcon] = useState(false);
@@ -122,7 +122,7 @@ export const SearchPage = () => {
   };
   const handlePlaceHolder = () => {
     switch (selector) {
-      case "Searcher":
+      case "Select a theme":
         return "Select a theme...";
       case "Weather":
         return "Enter a city...";
@@ -136,6 +136,19 @@ export const SearchPage = () => {
   return (
     <div className="search">
       <form onSubmit={handleSubmit}>
+        <div className="dropdown">
+          <button className="dropbtn">{selector}</button>
+          <div className="dropdown-content">
+            <a href="#" onClick={weather}>
+              Weather
+            </a>
+            <a href="#" onClick={movie}>
+              Movies
+            </a>
+          </div>
+        </div>
+      </form>
+      {/* <form onSubmit={handleSubmit}>
         <div className="input-group mb-3 searcher">
           <button type="submit" className="btn btn-outline-dark buttonSearch">
             Search
@@ -172,7 +185,7 @@ export const SearchPage = () => {
             ref={inputRef}
           />
         </div>
-      </form>
+      </form> */}
       {selected()}
       {iconsSearch()}
       {iconsInfoTheme()}
