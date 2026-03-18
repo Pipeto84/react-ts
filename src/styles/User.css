@@ -1,7 +1,7 @@
 .ingresar {
   background-color: rgb(224, 224, 224);
   width: 100%;
-  height: 80vh;
+  height: 82vh;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -70,7 +70,7 @@
 }
 .registro-link {
   margin-top: 40px;
-  font-size: 22px;
+  font-size: 24px;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
@@ -80,7 +80,7 @@
   border: none;
   background-color: #a4b6c5;
   color: rgba(255, 0, 0, 0.774);
-  font-size: 22px;
+  font-size: 24px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -132,7 +132,7 @@
 .error {
   background-color: rgb(224, 224, 224);
   width: 100%;
-  height: 80vh;
+  height: 82vh;
   display: flex;
   align-items: start;
   justify-content: center;
