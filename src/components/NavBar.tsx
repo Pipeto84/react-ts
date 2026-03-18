@@ -26,7 +26,7 @@ export const NavBar = () => {
       </NavLink>
       {user.acces && (
         <NavLink to="/user" className="nav-link-user">
-          {user.name}
+          {user.userName}
         </NavLink>
       )}
       {!user.acces && (

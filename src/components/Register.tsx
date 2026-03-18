@@ -9,7 +9,7 @@ export function Register() {
   const dispatch = useAppDispatch();
   const [added, setAdded] = useState(false);
   const [newUser, setNewUser] = useState({
-    name: "",
+    userName: "",
     password: "",
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -19,14 +19,14 @@ export function Register() {
     });
   };
   const handleSubmit = () => {
-    if (newUser.name === "" || newUser.password === "") {
+    if (newUser.userName === "" || newUser.password === "") {
       alert("Please complete the information");
       return;
     } else {
       setAdded(true);
       dispatch(addUser(newUser));
       dispatch(setLogIn({ ...newUser, acces: true }));
-      setNewUser({ name: "", password: "" });
+      setNewUser({ userName: "", password: "" });
     }
   };
 
@@ -77,7 +77,7 @@ export function Register() {
               placeholder="Write your username"
               className="input-registro5"
               onChange={handleChange}
-              name="name"
+              name="userName"
             />
             <label className="label-registro">Password</label>
             <input

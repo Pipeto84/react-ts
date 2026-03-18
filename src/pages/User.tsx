@@ -9,7 +9,7 @@ export function User() {
   const dispatch = useAppDispatch();
   const users = useAppSelector((state) => state.users);
   const [user, setUser] = useState({
-    name: "",
+    userName: "",
     password: "",
     acces: false,
   });
@@ -22,7 +22,7 @@ export function User() {
   const handleSubmit = () => {
     const userFinded = users.find(
       (u) =>
-        u.name === user.name && u.password === user.password,
+        u.userName === user.userName && u.password === user.password,
     );
     if (userFinded) {
       setAcces(true);
@@ -34,8 +34,8 @@ export function User() {
   };
   const handleCerrar = () => {
     setAcces(false);
-    setUser({ name: "", password: "", acces: false });
-    dispatch(setLogIn({ name: "", password: "", acces: false }));
+    setUser({ userName: "", password: "", acces: false });
+    dispatch(setLogIn({ userName: "", password: "", acces: false }));
   };
   return (
     <div className="ingresar">
@@ -49,7 +49,7 @@ export function User() {
               placeholder="Write your name"
               className="input-ingresar1"
               onChange={handleChange}
-              name="name"
+              name="userName"
             />
             <label className="label-ingresar2">Password</label>
             <input
