@@ -2,9 +2,9 @@ import type { Date } from "../interfaces";
 import { ContainerCards } from "./ContainerCards";
 import { ContainerEmployees } from "./ContainerEmployees";
 import { useDragAndDrop } from "../hooks/useDragAndDrop";
-import "../styles/employeStyle/DragAndDrop.css";
 import { useAppSelector } from "../app/hooks";
 import { NavLink } from "react-router-dom";
+import "../styles/employeStyle/DragAndDrop.css";
 
 const dayWork: Date[] = [
   "Monday",

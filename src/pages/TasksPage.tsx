@@ -1,8 +1,8 @@
-import "../styles/TasksPage.css";
 import { TasksCard } from "../components/TasksCard";
 import { useAppSelector } from "../app/hooks";
 import { NavLink } from "react-router-dom";
 import { v4 as uuid } from "uuid";
+import "../styles/TasksPage.css";
 
 export const TasksPage = () => {
   const tasks = useAppSelector((state) => state.tasks);

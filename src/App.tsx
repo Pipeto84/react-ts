@@ -1,7 +1,6 @@
 import { NavBar } from "./components/NavBar";
 import { Navigate, Route, Routes, BrowserRouter } from "react-router-dom";
 import { TasksPage } from "./pages/TasksPage";
-import "./styles/App.css";
 import { TaskList } from "./components/TasksList";
 import { ErrorUser } from "./components/ErrorUser";
 import { Register } from "./components/Register";
@@ -15,6 +14,7 @@ import { CarPage } from "./pages/CarPage";
 import { SearchPage } from "./pages/SearchPage";
 import { User } from "./pages/User";
 import { Map } from "./pages/Map";
+import "./styles/App.css";
 
 function App() {
   return (
