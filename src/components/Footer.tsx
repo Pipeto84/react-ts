@@ -27,7 +27,7 @@ export const Footer = () => {
           <img src={github} className="github" alt="github" />
         </a>
       </div>
-      <NavLink to="/mapa" className="mapa-link">
+      <NavLink to="/map" className="mapa-link">
         Navigation Map
       </NavLink>
     </div>

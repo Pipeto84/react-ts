@@ -14,6 +14,7 @@ import { StorePage } from "./pages/StorePage";
 import { CarPage } from "./pages/CarPage";
 import { SearchPage } from "./pages/SearchPage";
 import { User } from "./pages/User";
+import { Map } from "./pages/Map";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="/user" element={<User />} />
           <Route path="/errorUser" element={<ErrorUser />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/map" element={<Map />} />
           <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
