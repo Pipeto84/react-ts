@@ -5,8 +5,6 @@ import "../styles/SearchPage.css";
 interface Props {
   dataInput: string
 }
-
-
 export const Movie = ({ dataInput }: Props) => {
   const [infoMovie, setInfoMovie] = useState<infoMovie[]>([]);
   const urlBaseMovie = "https://api.themoviedb.org/3/search/movie?";
@@ -22,7 +20,6 @@ export const Movie = ({ dataInput }: Props) => {
       console.error("el error en las peliculas es: ", error);
     }
   };
-
   const urlImage = "https://image.tmdb.org/t/p/w500";
   useEffect(() => {
     fetchMovie(dataInput);

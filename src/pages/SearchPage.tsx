@@ -12,15 +12,20 @@ export const SearchPage = () => {
   const [dataInput, setDataInput] = useState("");
   const [send, setSend] = useState("");
   const [themeIcon, setThemeIcon] = useState(false);
+  const [clickSearch, setClickSearch] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const weather = () => {
     setSelector("Weather");
     setThemeIcon(true);
     setSend("");
+    setClickSearch(false);
     inputRef.current?.focus();
   };
   const movie = () => {
+    if(selector === "Movie"){
+      setClickSearch(false)
+    }
     setSelector("Movie");
     setThemeIcon(true);
     setSend("");
@@ -39,7 +44,7 @@ export const SearchPage = () => {
     </h4>
   );
   const iconsSearch = () => {
-    if (selector === "Searcher") {
+    if (selector === "Select a theme") {
       return (
         <>
           <a href="#" onClick={weather}>
@@ -96,13 +101,15 @@ export const SearchPage = () => {
     setThemeIcon(false);
     if (selector === "Weather") {
       setDataInput("");
+      setClickSearch(false);
     } else if (selector === "Movie") {
       setDataInput("");
+      setClickSearch(true);
     }
   };
   const selected = () => {
     switch (selector) {
-      case "Searcher":
+      case "Select a theme":
         return infoSearch;
       case "Weather":
         if (send.length > 0) {
@@ -132,12 +139,21 @@ export const SearchPage = () => {
         return "";
     }
   };
-
+  const changeHeight = () => {
+    if (selector === "Movie" && clickSearch === true) {
+      return "searchMovie";
+    } else {
+      return "search";
+    }
+  };
+  const handleClickSearch = () => {
+    setClickSearch(true);
+  };
   return (
-    <div className="search">
+    <div className={changeHeight()}>
       <form onSubmit={handleSubmit}>
         <div className="dropdown">
-          <button className="dropbtn">{selector}</button>
+          <button className="dropbtn" disabled>{selector}</button>
           <div className="dropdown-content">
             <a href="#" onClick={weather}>
               Weather
@@ -147,36 +163,17 @@ export const SearchPage = () => {
             </a>
           </div>
         </div>
-      </form>
-      {/* <form onSubmit={handleSubmit}>
-        <div className="input-group mb-3 searcher">
-          <button type="submit" className="btn btn-outline-dark buttonSearch">
+        <div className="searcher">
+          <button
+            type="submit"
+            className="btnSearch"
+            onClick={handleClickSearch}
+          >
             Search
           </button>
-          <button
-            type="button"
-            className="buttonList dropdown-toggle dropdown-toggle-split"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          ></button>
-          <ul className="dropdown-menu listThemes">
-            <li>
-              <a onClick={weather} className="dropdown-item">
-                Weather
-              </a>
-            </li>
-            <li>
-              <hr className="dropdown-divider" />
-            </li>
-            <li>
-              <a onClick={movie} className="dropdown-item">
-                Movie
-              </a>
-            </li>
-          </ul>
           <input
             type="text"
-            className="form-control inputText"
+            className="inputSearch"
             value={dataInput}
             onChange={handleChanges}
             placeholder={handlePlaceHolder()}
@@ -185,7 +182,7 @@ export const SearchPage = () => {
             ref={inputRef}
           />
         </div>
-      </form> */}
+      </form>
       {selected()}
       {iconsSearch()}
       {iconsInfoTheme()}

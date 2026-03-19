@@ -2,41 +2,20 @@
   text-align: center;
   background-color: #bda683;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   color: rgb(36, 36, 36);
   padding-top: 3rem;
 }
-/* .buttonSearch{
-  background-color: black;
-  color: white;
-  height: 50px;
-} */
-/* .title {
-  padding: 2.5rem 1.25rem 1.25rem;
-  margin: 0;
-  color: rgb(20, 110, 20)
-} */
-/* .searcher {
-  max-width: 37.5rem;
-  margin: 0 auto;
-  box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.5);
-  border-radius: .625rem;
-} */
-/* .buttonList {
-  height: 50px;
-  width: 40px;
+.searchMovie {
+  text-align: center;
+  background-color: #bda683;
+  width: 100%;
+  color: rgb(36, 36, 36);
+  padding-top: 3rem;
 }
-.listThemes {
-  background-color: rgb(151, 150, 150);
-} */
-/* .inputText {
-  max-width: 37.5rem;
-  height: 50px;
-  border: none;
-} */
 .dropdown {
-  /* position: relative; */
   display: inline-block;
+  margin-bottom: 20px;
 }
 .dropbtn {
   width: 200px;
@@ -51,10 +30,9 @@
 }
 .dropdown-content {
   display: none;
-  /* position: absolute; */
   background-color: #f9f9f9;
   width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 8px 8px;
 }
 .dropdown-content a {
@@ -65,13 +43,35 @@
   font-size: 20px;
 }
 .dropdown-content a:hover {
-  background-color: #dbd8d8
+  background-color: #dbd8d8;
 }
 .dropdown:hover .dropdown-content {
   display: block;
 }
 .dropdown:hover .dropbtn {
   background-color: #77634685;
+}
+.searcher {
+  margin-bottom: 20px;
+}
+.btnSearch {
+  height: 50px;
+  width: 100px;
+  background-color: #776346;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px 0 0 8px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.inputSearch {
+  width: 300px;
+  height: 50px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  font-size: 22px;
 }
 .textoSearcher {
   max-width: 37.5rem;
@@ -105,7 +105,7 @@
 .movieList {
   margin: auto;
   padding: 0 1.25rem;
-  background-color: #57a1dd;
+  background-color: #bda683;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
   gap: 1.25rem;
