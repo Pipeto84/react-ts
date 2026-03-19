@@ -8,14 +8,16 @@ export const TasksPage = () => {
   const tasks = useAppSelector((state) => state.tasks);
 
   return (
-    <div className="tasks">
-      <NavLink className="newListButton" to="/newList">
-        New list
-      </NavLink>
-      <div className="tasksGrid">
-        {tasks.map((tasks) => (
-          <TasksCard key={uuid()} {...tasks} />
-        ))}
+    <div className="tasksPage">
+      <div className="tasks">
+        <NavLink className="newListButton" to="/newList">
+          New list
+        </NavLink>
+        <div className="tasksGrid">
+          {tasks.map((tasks) => (
+            <TasksCard key={uuid()} {...tasks} />
+          ))}
+        </div>
       </div>
     </div>
   );
