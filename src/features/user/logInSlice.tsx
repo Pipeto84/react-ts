@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { userAcces } from '../../interfaces/index'
 
-const initialState = {
+const initialState: userAcces = {
   userName: "",
   password: "",
   acces: false,

@@ -66,3 +66,12 @@ export type searchMovies = {
   total_pages: number;
   total_results: number;
 };
+export type userAcces = {
+  userName: string;
+  password: string;
+  acces: boolean;
+};
+export type users = {
+  userName: string;
+  password: string;
+};
