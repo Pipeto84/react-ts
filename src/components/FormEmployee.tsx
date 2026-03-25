@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "../styles/employeStyle/FormEmployee.css";
 import type { Data } from "../interfaces/index";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { useParams, useNavigate } from "react-router-dom";
-import {
-  addEmployee,
-  editingEmployee,
-} from "../features/employeSlice";
+import { addEmployee, editingEmployee } from "../features/employeSlice";
 import { v4 as uuid } from "uuid";
+import "../styles/employeStyle/FormEmployee.css";
 
 export const FormEmployee = () => {
   const employees = useAppSelector((state) => state.employees);
@@ -66,9 +63,9 @@ export const FormEmployee = () => {
   }, [params.id, employees]);
 
   return (
-    <div className="modal">
+    <div className="cardNewEmployee">
       <form className="form" onSubmit={handleSubmit}>
-        <label className="label">Alias:</label>
+        <label className="label">Nickname:</label>
         <input
           name="alias"
           className="inputText"
@@ -77,7 +74,7 @@ export const FormEmployee = () => {
           onChange={handleChangeAlias}
           autoComplete="off"
           autoFocus
-          placeholder="Insert alias..."
+          placeholder="Insert nickname..."
         />
         <label className="label">Name:</label>
         <input

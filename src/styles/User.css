@@ -22,7 +22,7 @@
   font-weight: bold;
   color: rgb(0, 0, 0);
   margin-top: 25px;
-} 
+}
 .formulario-ingresar {
   padding: 35px;
   display: flex;
@@ -61,12 +61,12 @@
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: #4682B4;
+  background-color: #4682b4;
   color: rgb(255, 255, 255);
   font-size: 25px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-    text-decoration: none;
+  text-decoration: none;
 }
 .registro-link {
   margin-top: 40px;
@@ -109,7 +109,7 @@
   color: rgb(0, 0, 0);
   margin-top: 25px;
   margin-bottom: 50px;
-} 
+}
 .texto-ingresoU {
   font-size: 24px;
   color: rgb(0, 0, 0);
@@ -120,7 +120,7 @@
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: #4682B4;
+  background-color: #4682b4;
   color: rgb(255, 255, 255);
   font-size: 25px;
   margin-top: 60px;
@@ -154,7 +154,7 @@
   color: rgb(0, 0, 0);
   margin-top: 25px;
   margin-bottom: 50px;
-} 
+}
 .texto-error {
   font-size: 24px;
   color: rgb(0, 0, 0);

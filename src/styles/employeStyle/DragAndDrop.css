@@ -8,6 +8,19 @@
   color: black;
   margin-bottom: 1rem;
 }
+.btnNewEmployee {
+  width: 13rem;
+  height: 3.3rem;
+  background-color: #35959c;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
 .start-employees {
   display: flex;
   justify-content: flex-end;

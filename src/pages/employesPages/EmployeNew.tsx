@@ -3,7 +3,7 @@ import '../../styles/employeStyle/FormEmployee.css'
 
 export const New = () => {
   return (
-    <div>
+    <div className='container-new-employee'>
       <h1 className='titleEdit'>New Employee</h1>
       <FormEmployee/>
     </div>
