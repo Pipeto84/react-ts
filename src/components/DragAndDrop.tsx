@@ -21,8 +21,8 @@ export const DragAndDrop = () => {
   const { isDragging, handleDragging, handleUpdateList } = useDragAndDrop();
 
   return (
-    <>
-      <div className="titleSheduling flex">
+    <div className="container-employees">
+      <div className="start-employees">
         <h1 className="titleFont">Scheduling Employees</h1>
         <NavLink className="newEmployee" to="/new">
           New Employe
@@ -47,6 +47,6 @@ export const DragAndDrop = () => {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };

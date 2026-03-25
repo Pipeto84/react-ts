@@ -21,9 +21,9 @@
   height: 1.5625rem;
   width: 1.5625rem;
   font-weight: 500;
-  background-color:#dc3545;
+  background-color:#db5865;
   border-radius: 0.3125rem;
-  border: #dc3545 solid 0.0625rem;
+  border: none;
   cursor: pointer;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
