@@ -4,7 +4,7 @@ import reactLogo from "../assets/react.svg";
 export const HomePage = () => {
   return (
     <div className="contenedorHome">
-      <a href="https://github.com/Pipeto84" target="_blank">
+      <a target="_blank">
         <img src={reactLogo} className="logo react" alt="React logo" />
       </a>
       <a href="https://github.com/Pipeto84" target="_blank" className="aTitulo">

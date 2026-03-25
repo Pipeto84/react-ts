@@ -151,7 +151,7 @@ export const SearchPage = () => {
   };
   return (
     <div className={changeHeight()}>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="container-search">
         <div className="dropdown">
           <button className="dropbtn" disabled>{selector}</button>
           <div className="dropdown-content">

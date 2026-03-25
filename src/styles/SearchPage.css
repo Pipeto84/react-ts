@@ -13,15 +13,21 @@
   color: rgb(36, 36, 36);
   padding-top: 3rem;
 }
+.container-search {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 .dropdown {
   display: inline-block;
   margin-bottom: 20px;
 }
 .dropbtn {
   width: 200px;
+  height: 50px;
   background-color: #776346;
   color: white;
-  padding: 16px;
+  padding: 10px;
   font-size: 20px;
   border: none;
   cursor: pointer;
