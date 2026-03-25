@@ -6,6 +6,14 @@
   align-items: center;
   gap: 1.25rem;
 }
+.containerEditEmployee {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.25rem;
+}
 .titleEdit {
   color: black;
   text-align: center;
