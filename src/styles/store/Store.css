@@ -10,7 +10,6 @@
 }
 .contenedor-productos {
   max-width: 76.25rem;
-
   display: grid;
   grid-template-columns: auto 1fr auto 1fr;
   grid-template-rows: auto 1fr auto auto;

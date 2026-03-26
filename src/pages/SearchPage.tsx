@@ -130,11 +130,11 @@ export const SearchPage = () => {
   const handlePlaceHolder = () => {
     switch (selector) {
       case "Select a theme":
-        return "Select a theme...";
+        return " Select a theme...";
       case "Weather":
-        return "Enter a city...";
+        return " Enter a city...";
       case "Movie":
-        return "Enter movie title...";
+        return " Enter movie title...";
       default:
         return "";
     }

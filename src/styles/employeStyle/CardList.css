@@ -20,38 +20,29 @@
   gap: .5rem;
 }
 .edit {
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 1rem;
   color: black;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none; */
   width: 3rem;
   height: 1.6rem;
-  background-color: #7297b6;
+  /* background-color: #7297b6;
   padding: .0625rem;
   border: 0;
   border-radius: .3125rem;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); */
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .delete {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  width: 3.3rem;
+  background-color: #515153;
+  border: none;
+  width: 2rem;
   height: 1.6rem;
-  background-color: #db5865;
-  padding: .0625rem;
-  border: 0;
-  border-radius: .3125rem;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   display: flex;
   justify-content: center;

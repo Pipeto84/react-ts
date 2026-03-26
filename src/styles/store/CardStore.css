@@ -38,7 +38,7 @@
   font-weight: bold;
 }
 .boton-agregar {
-  background-color: #4caf50;
+  background-color: #35959c;
   color: white;
   border: none;
   border-radius: 4px;
@@ -48,7 +48,7 @@
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .boton-agregar:hover {
-  background-color: #45a049;
+  background-color: #35959cbd;
 }
 .boton-quitar {
   background-color: #af4c4c;

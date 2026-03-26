@@ -28,7 +28,7 @@
   background-color: #776346;
   color: white;
   padding: 10px;
-  font-size: 20px;
+  font-size: 22px;
   border: none;
   cursor: pointer;
   border-radius: 8px;
@@ -63,14 +63,17 @@
 }
 .btnSearch {
   height: 50px;
-  width: 100px;
+  width: 110px;
   background-color: #776346;
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   border: none;
   cursor: pointer;
   border-radius: 8px 0 0 8px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.btnSearch:hover {
+  background-color: #776346b0;
 }
 .inputSearch {
   width: 300px;

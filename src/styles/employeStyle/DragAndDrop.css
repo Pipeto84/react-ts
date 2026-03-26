@@ -21,6 +21,9 @@
   text-decoration: none;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
+.btnNewEmployee:hover {
+  background-color: #35959cb7;
+}
 .start-employees {
   display: flex;
   justify-content: flex-end;

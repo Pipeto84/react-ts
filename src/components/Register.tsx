@@ -90,7 +90,7 @@ export function Register() {
             />
           </div>
           <button className="boton-registro" onClick={handleSubmit}>
-            Register for an account
+            Register
           </button>
         </div>
       )}

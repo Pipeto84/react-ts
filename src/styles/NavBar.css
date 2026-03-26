@@ -20,9 +20,7 @@
   border-radius: 10px;
 }
 .topnav a:hover {
-  /* background-color: white; */
   color: white;
-  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); */
 }
 .nav-link-user {
   text-decoration: none;
@@ -36,8 +34,9 @@
 }
 .nav-link-user:hover {
   background-color: black;
-  color: black;
+  color: white;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
 }
 .linkNav {
   display: flex;

@@ -1,6 +1,6 @@
-import "../../styles/employeStyle/List.css";
 import { CardList } from "../../components/CardList";
 import { useAppSelector } from "../../app/hooks";
+import "../../styles/employeStyle/List.css";
 
 export const List = () => {
   const employeesList = useAppSelector((state) => state.employees);

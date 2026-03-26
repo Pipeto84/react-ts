@@ -116,6 +116,9 @@
   font-size: 25px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
+.boton-registro:hover {
+  background-color: #4683b4ab;
+}
 .contenido-agregado {
   background-color: #a4b6c5;
   width: 500px;
