@@ -76,13 +76,14 @@
     top: 50px;
     overflow-y: auto;
     left: 100%;
+    border-radius: 0 0 10px 0;
   }
   .linkNav {
     color: white;
     font-size: 20px;
   }
   .linkNav:hover {
-    color: white;
+    color: black;
   }
   .nav-link-user {
     height: 35px;
@@ -96,12 +97,12 @@
     align-items: center;
     justify-content: center;
   }
-  .nav-link-user:hover {
+  /* .nav-link-user:hover {
     background-color: black;
     color: white;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
     transition: 0.5s;
-  }
+  } */
   .nav-menu_visible {
     left: 0;
   }
