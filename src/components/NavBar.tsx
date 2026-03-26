@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAppSelector } from "../app/hooks";
-import menu from '../assets/menu2.png'
+import menu from "../assets/menu2.png";
 import "../styles/NavBar.css";
 
 export const NavBar = () => {
@@ -10,37 +10,41 @@ export const NavBar = () => {
   const user = useAppSelector((state) => state.logIn);
   return (
     <div className="topnav">
-      <img className="btnMenu" src={menu} alt="icono menu" />
-      <NavLink className="linkNav" to="/">
-        Home
-      </NavLink>
-      <NavLink className="linkNav" to="/store">
-        Store
-      </NavLink>
-      <NavLink className="linkNav" to="/employes">
-        Employees
-      </NavLink>
-      <NavLink className="linkNav" to="/search">
-        Search
-      </NavLink>
-      <NavLink className="linkNav" to="/tasks">
-        Tasks
-      </NavLink>
-      {user.acces && (
-        <NavLink to="/user" className="nav-link-user">
-          {user.userName}
+      <button className="nav-toggle">
+        <img className="iconMenu" src={menu} alt="icono menu" />
+      </button>
+      <div className="nav-menu">
+        <NavLink className="linkNav" to="/">
+          Home
         </NavLink>
-      )}
-      {!user.acces && (
-        <NavLink className="linkNav" to="/user">
-          Log in
+        <NavLink className="linkNav" to="/store">
+          Store
         </NavLink>
-      )}
-      <NavLink to="/car" className="linkNav">
-        <Badge badgeContent={shoppingList.length} color="secondary">
-          <ShoppingCartIcon color="inherit" />
-        </Badge>
-      </NavLink>
+        <NavLink className="linkNav" to="/employes">
+          Employees
+        </NavLink>
+        <NavLink className="linkNav" to="/search">
+          Search
+        </NavLink>
+        <NavLink className="linkNav" to="/tasks">
+          Tasks
+        </NavLink>
+        {user.acces && (
+          <NavLink to="/user" className="nav-link-user">
+            {user.userName}
+          </NavLink>
+        )}
+        {!user.acces && (
+          <NavLink className="linkNav" to="/user">
+            Log in
+          </NavLink>
+        )}
+        <NavLink to="/car" className="linkNav">
+          <Badge badgeContent={shoppingList.length} color="secondary">
+            <ShoppingCartIcon color="inherit" />
+          </Badge>
+        </NavLink>
+      </div>
     </div>
   );
 };
