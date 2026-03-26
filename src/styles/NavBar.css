@@ -22,6 +22,13 @@
 .topnav a:hover {
   color: white;
 }
+.btnMenu {
+  color: white;
+  background: none;
+  height: 3.125rem;
+  width: 3.125rem;
+  display: none;
+}
 .nav-link-user {
   text-decoration: none;
   padding: 5px 8px 5px 8px;
@@ -42,4 +49,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .topnav {
+    height: 50px;
+  }
+  .topnav > a {
+    height: 40px;
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 26px;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+  .topnav a:hover {
+    color: white;
+  }
+  .btnMenu {
+    padding: 0 10px;
+    background: none;
+    height: 40px;
+    width: 60px;
+    display: block;
+  }
+  .nav-link-user {
+    text-decoration: none;
+    padding: 5px 8px 5px 8px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-link-user:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.5s;
+  }
+  .linkNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

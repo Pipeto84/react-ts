@@ -1,14 +1,16 @@
-import "../styles/NavBar.css";
 import { NavLink } from "react-router-dom";
 import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAppSelector } from "../app/hooks";
+import menu from '../assets/menu2.png'
+import "../styles/NavBar.css";
 
 export const NavBar = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
   const user = useAppSelector((state) => state.logIn);
   return (
     <div className="topnav">
+      <img className="btnMenu" src={menu} alt="icono menu" />
       <NavLink className="linkNav" to="/">
         Home
       </NavLink>
