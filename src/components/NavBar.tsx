@@ -46,21 +46,21 @@ export const NavBar = () => {
         <NavLink className="linkNav" to="/tasks">
           Tasks
         </NavLink>
+        <NavLink to="/car" className="linkNav">
+          <Badge badgeContent={shoppingList.length} color="secondary">
+            <ShoppingCartIcon color="inherit" />
+          </Badge>
+        </NavLink>
         {user.acces && (
           <NavLink to="/user" className="nav-link-user">
             {user.userName}
           </NavLink>
         )}
         {!user.acces && (
-          <NavLink className="linkNav" to="/user">
+          <NavLink className="linkNav-user" to="/user">
             Log in
           </NavLink>
         )}
-        <NavLink to="/car" className="linkNav">
-          <Badge badgeContent={shoppingList.length} color="secondary">
-            <ShoppingCartIcon color="inherit" />
-          </Badge>
-        </NavLink>
       </div>
     </div>
   );
