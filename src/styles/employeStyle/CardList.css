@@ -39,12 +39,12 @@
   align-items: center;
 }
 .delete {
-  background-color: #515153;
-  border: none;
   width: 2rem;
   height: 1.6rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: none;
+  border: none;
 }
