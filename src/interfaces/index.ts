@@ -75,3 +75,6 @@ export type users = {
   userName: string;
   password: string;
 };
+export type menu = {
+  active: boolean
+}

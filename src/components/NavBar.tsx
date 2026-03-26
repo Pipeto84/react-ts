@@ -1,18 +1,22 @@
 import { NavLink } from "react-router-dom";
 import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { useAppSelector } from "../app/hooks";
-import menu from "../assets/menu2.png";
+import { useAppSelector, useAppDispatch } from "../app/hooks";
+import { setActive } from "../features/menuSlice";
+import iconMenu from "../assets/menu2.png";
 import "../styles/NavBar.css";
 import { useState } from "react";
 
 export const NavBar = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
   const user = useAppSelector((state) => state.logIn);
-  const [menuActive, setMenuActive] = useState(false);
+  const menu = useAppSelector((state) => state.menu);
+  const dispatch = useAppDispatch();
+  const [menuActive, setMenuActive] = useState(menu.active)
 
   const handleOnclik = () => {
-    setMenuActive(!menuActive);
+    setMenuActive(!menuActive)
+    dispatch(setActive(!menuActive));
   };
   const activeMenu = () => {
     if (menuActive) {
@@ -24,7 +28,7 @@ export const NavBar = () => {
   return (
     <div className="topnav">
       <button className="nav-toggle" onClick={handleOnclik}>
-        <img className="iconMenu" src={menu} alt="icono menu" />
+        <img className="iconMenu" src={iconMenu} alt="icono menu" />
       </button>
       <div className={activeMenu()}>
         <NavLink className="linkNav" to="/">
