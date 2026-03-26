@@ -4,25 +4,29 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAppSelector } from "../app/hooks";
 import menu from "../assets/menu2.png";
 import "../styles/NavBar.css";
+import { useState } from "react";
 
 export const NavBar = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
   const user = useAppSelector((state) => state.logIn);
-
-  const navToggle = document.querySelector(".nav-toggle");
-  const navMenu = document.querySelector(".nav-menu");
+  const [menuActive, setMenuActive] = useState(false);
 
   const handleOnclik = () => {
-    navToggle?.addEventListener("click", () => {
-      navMenu?.classList.toggle("nav-menu_visible");
-    });
+    setMenuActive(!menuActive);
+  };
+  const activeMenu = () => {
+    if (menuActive) {
+      return "nav-menu nav-menu_visible";
+    } else {
+      return "nav-menu";
+    }
   };
   return (
     <div className="topnav">
       <button className="nav-toggle" onClick={handleOnclik}>
         <img className="iconMenu" src={menu} alt="icono menu" />
       </button>
-      <div className="nav-menu">
+      <div className={activeMenu()}>
         <NavLink className="linkNav" to="/">
           Home
         </NavLink>
