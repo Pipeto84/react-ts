@@ -52,6 +52,7 @@ export function Register() {
               type="text"
               placeholder="Write your name"
               className="input-registro"
+              autoFocus
             />
             <label className="label-registro">Last Name</label>
             <input

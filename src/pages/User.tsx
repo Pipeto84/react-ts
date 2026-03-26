@@ -50,6 +50,7 @@ export function User() {
               className="input-ingresar1"
               onChange={handleChange}
               name="userName"
+              autoFocus
             />
             <label className="label-ingresar2">Password</label>
             <input
