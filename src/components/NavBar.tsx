@@ -8,9 +8,18 @@ import "../styles/NavBar.css";
 export const NavBar = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
   const user = useAppSelector((state) => state.logIn);
+
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+
+  const handleOnclik = () => {
+    navToggle?.addEventListener("click", () => {
+      navMenu?.classList.toggle("nav-menu_visible");
+    });
+  };
   return (
     <div className="topnav">
-      <button className="nav-toggle">
+      <button className="nav-toggle" onClick={handleOnclik}>
         <img className="iconMenu" src={menu} alt="icono menu" />
       </button>
       <div className="nav-menu">
