@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  opacity: 0.95;
 }
 .linkNav {
   display: flex;
