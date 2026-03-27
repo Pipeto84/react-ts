@@ -6,7 +6,7 @@
   height: auto;
   width: 100%;
 }
-.containerEmployees > p {
+.titleEmployees {
   border-radius: 0.3125rem;
   background-color: black;
   text-align: center;

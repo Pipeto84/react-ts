@@ -15,7 +15,7 @@ export const ContainerEmployees = ({
 }: Props) => {
   return (
     <div className="containerEmployees">
-      <p>Employees</p>
+      <p className="titleEmployees">Employees</p>
       <div className="all">
         {items.map(
           (item) =>
