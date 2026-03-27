@@ -6,19 +6,3 @@
   justify-content: center;
   gap: 1rem;
 }
-.newEmployee {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-  border: none;
-  border-radius: 5px;
-  background-color: #0d6066;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-}
-.newEmployee:hover {
-  background-color: #0b4d52;
-}

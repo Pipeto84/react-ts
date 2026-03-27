@@ -1,3 +1,10 @@
+.start-employees {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 200px;
+  margin: 30px;
+}
 .titleSheduling {
   text-align: center;
   padding: 1rem;
@@ -10,7 +17,7 @@
 }
 .btnNewEmployee {
   width: 13rem;
-  height: 3.3rem;
+  height: 2.875rem;
   background-color: #35959c;
   color: white;
   font-size: 1.5rem;
@@ -20,16 +27,11 @@
   align-items: center;
   text-decoration: none;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 5px;
 }
 .btnNewEmployee:hover {
   background-color: #35959cb7;
-}
-.start-employees {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 200px;
-  margin: 30px;
 }
 .employeesSheduling {
   display: grid;
@@ -46,8 +48,24 @@
   padding: 0 2rem;
   width: 100%;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 992px) {
+  .start-employees {
+    justify-content: space-between;
+    gap: 100px;
+  }
+  .btnNewEmployee {
+    height: auto;
+    padding: 5px;
+  }
   .grid {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .start-employees {
+    gap: 10px;
+  }
+  .btnNewEmployee {
+    padding: 5px;
   }
 }

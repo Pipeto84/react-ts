@@ -22,18 +22,12 @@
   padding-bottom: 1rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
-@media screen and (max-width: 640px) {
-  .containerEmployees {
-    height: 300px;
-  }
+@media screen and (max-width: 768px) {
   .all {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 450px) {
-  .containerEmployees {
-    height: 500px;
-  }
   .all {
     grid-template-columns: 1fr;
   }
