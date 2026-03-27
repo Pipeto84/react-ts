@@ -69,14 +69,16 @@ export const NavBar = () => {
         </NavLink>
         {user.acces && (
           <NavLink to="/user" className="nav-link-user">
-            {user.userName}
+            <button className="btnLink-user" onClick={handleClickLink}>
+              {user.userName}
+            </button>
           </NavLink>
         )}
         {!user.acces && (
           <NavLink className="linkNav-user" to="/user">
-          <button className="btnLink" onClick={handleClickLink}>
-            Log in
-          </button>
+            <button className="btnLink" onClick={handleClickLink}>
+              Log in
+            </button>
           </NavLink>
         )}
       </div>
