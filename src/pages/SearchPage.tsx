@@ -5,6 +5,7 @@ import iconWeatherColor from "../assets/weatherColor.svg";
 import iconThermometer from "../assets/thermometer.svg";
 import iconMovieColor from "../assets/movieColor.svg";
 import iconPopcorn from "../assets/popcorn.svg";
+import { useAppSelector } from "../app/hooks";
 import "../styles/SearchPage.css";
 
 export const SearchPage = () => {
@@ -14,6 +15,7 @@ export const SearchPage = () => {
   const [themeIcon, setThemeIcon] = useState(false);
   const [clickSearch, setClickSearch] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const menu = useAppSelector((store) => store.menu);
 
   const weather = () => {
     setSelector("Weather");
@@ -23,8 +25,8 @@ export const SearchPage = () => {
     inputRef.current?.focus();
   };
   const movie = () => {
-    if(selector === "Movie"){
-      setClickSearch(false)
+    if (selector === "Movie") {
+      setClickSearch(false);
     }
     setSelector("Movie");
     setThemeIcon(true);
@@ -152,8 +154,16 @@ export const SearchPage = () => {
   return (
     <div className={changeHeight()}>
       <form onSubmit={handleSubmit} className="container-search">
+        {/* {menu && (
+
+        )}
+        {!menu && (
+          
+        )} */}
         <div className="dropdown">
-          <button className="dropbtn" disabled>{selector}</button>
+          <button className="dropbtn" disabled>
+            {selector}
+          </button>
           <div className="dropdown-content">
             <a href="#" onClick={weather}>
               Weather
