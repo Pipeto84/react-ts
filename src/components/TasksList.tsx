@@ -1,10 +1,10 @@
-import "../styles/TasksPage.css";
 import type { TasksList, Task } from "../features/taskSlice";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, NavLink } from "react-router-dom";
 import { addTaskList, deleteList } from "../features/taskSlice";
 import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
+import "../styles/TasksPage.css";
 
 export const TaskList = () => {
   const dispatch = useAppDispatch();
@@ -112,9 +112,17 @@ export const TaskList = () => {
             +
           </button>
         </div>
-        <button className="saveTask" type="submit" onClick={saveList}>
-          Save
-        </button>
+        <div className="saveCancel">
+          <button className="saveTask" type="submit" onClick={saveList}>
+            Save
+          </button>
+          <button className="cancelTask" type="submit">
+            Cancel
+          </button>
+          {/* <NavLink className="cancelTask" to="/tasks">
+            Cancel
+          </NavLink> */}
+        </div>
       </form>
     </div>
   );
