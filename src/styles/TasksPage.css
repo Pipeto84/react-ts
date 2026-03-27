@@ -197,18 +197,11 @@ h1 {
 .addTask:hover {
   background-color: #000000a1;
 }
-.SaveCancel {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
-}
 .saveTask {
   width: 150px;
   height: 54px;
   font-size: 25px;
-  /* margin: 0 10px 20px auto; */
   margin: 15px;
-
   border-radius: 8px;
   background-color: #35959c;
   color: white;
@@ -225,7 +218,6 @@ h1 {
   width: 150px;
   height: 54px;
   font-size: 25px;
-  /* margin: 0 auto 20px 10px; */
   margin: 15px;
   border-radius: 8px;
   background-color: #db5865;

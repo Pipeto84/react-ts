@@ -23,7 +23,7 @@
   text-transform: capitalize;
   font-size: 1.5rem;
 }
-.employees{
+.employees {
   width: 500px;
   display: flex;
   flex-direction: column;

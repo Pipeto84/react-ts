@@ -22,7 +22,7 @@
   font-weight: bold;
   color: rgb(0, 0, 0);
   margin-top: 35px;
-} 
+}
 .formulario-registro {
   padding: 0 30px 30px;
   display: flex;
@@ -111,7 +111,7 @@
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: #4682B4;
+  background-color: #4682b4;
   color: rgb(255, 255, 255);
   font-size: 25px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
@@ -136,7 +136,7 @@
   color: rgb(0, 0, 0);
   margin-top: 25px;
   margin-bottom: 50px;
-} 
+}
 .texto-agregado {
   font-size: 24px;
   color: rgb(0, 0, 0);
@@ -148,7 +148,7 @@
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: #4682B4;
+  background-color: #4682b4;
   color: rgb(255, 255, 255);
   font-size: 25px;
   margin-top: 60px;
@@ -156,4 +156,4 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
- }
+}
