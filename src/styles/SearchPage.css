@@ -89,7 +89,9 @@
 }
 .toWeather,
 .toMovie {
-  color: rgb(202, 40, 40);
+  color: #5f5038;
+  text-decoration: none;
+  font-weight: 550;
 }
 .iconWeather1 {
   max-width: 5rem;

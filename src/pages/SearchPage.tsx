@@ -5,7 +5,6 @@ import iconWeatherColor from "../assets/weatherColor.svg";
 import iconThermometer from "../assets/thermometer.svg";
 import iconMovieColor from "../assets/movieColor.svg";
 import iconPopcorn from "../assets/popcorn.svg";
-import { useAppSelector } from "../app/hooks";
 import "../styles/SearchPage.css";
 
 export const SearchPage = () => {
@@ -15,7 +14,6 @@ export const SearchPage = () => {
   const [themeIcon, setThemeIcon] = useState(false);
   const [clickSearch, setClickSearch] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-  const menu = useAppSelector((store) => store.menu);
 
   const weather = () => {
     setSelector("Weather");
@@ -48,7 +46,7 @@ export const SearchPage = () => {
   const iconsSearch = () => {
     if (selector === "Select a theme") {
       return (
-        <>
+        <div>
           <a href="#" onClick={weather}>
             <img
               className="iconWeather1"
@@ -63,7 +61,7 @@ export const SearchPage = () => {
               alt="icono pelicula"
             />
           </a>
-        </>
+        </div>
       );
     }
   };

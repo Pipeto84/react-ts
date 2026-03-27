@@ -58,25 +58,25 @@ export function Register() {
             <input
               type="text"
               placeholder="Write your last name"
-              className="input-registro2"
+              className="input-registro"
             />
             <label className="label-registro">Phone</label>
             <input
               type="text"
               placeholder="Write your phone number"
-              className="input-registro3"
+              className="input-registro"
             />
             <label className="label-registro">Birth Date</label>
             <input
               type="date"
               placeholder="Write your birth date"
-              className="input-registro4"
+              className="input-registro"
             />
             <label className="label-registro">Username</label>
             <input
               type="text"
               placeholder="Write your username"
-              className="input-registro5"
+              className="input-registro"
               onChange={handleChange}
               name="userName"
             />
@@ -84,7 +84,7 @@ export function Register() {
             <input
               type="text"
               placeholder="Write your password"
-              className="input-registro6"
+              className="input-registro"
               onChange={handleChange}
               name="password"
             />
