@@ -52,7 +52,7 @@
   text-decoration: none;
   padding: 2px 8px 5px 8px;
   background-color: gray;
-  color: black;
+  color: white;
   font-size: 30px;
   border-radius: 7px;
   display: flex;
@@ -107,6 +107,7 @@
     height: 35px;
     font-size: 20px;
     background-color: rgb(212, 212, 212);
+    color: black;
 }
   .nav-menu_visible {
     left: 0;
