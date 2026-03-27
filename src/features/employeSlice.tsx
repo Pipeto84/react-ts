@@ -17,36 +17,12 @@ export const initialState: Data[] = [
   },
   {
     id: "2",
-    alias: "Juancho",
-    name: "Juan",
-    date: "",
-  },
-  {
-    id: "3",
-    alias: "Mauro",
-    name: "Mauricio",
-    date: "",
-  },
-  {
-    id: "4",
-    alias: "Jose",
-    name: "Jose",
-    date: "",
-  },
-  {
-    id: "5",
-    alias: "Sebas",
-    name: "Sebastian",
-    date: "",
-  },
-  {
-    id: "6",
     alias: "Marco",
     name: "Marco",
     date: "",
   },
   {
-    id: "7",
+    id: "3",
     alias: "Rafa",
     name: "Rafael",
     date: "",
