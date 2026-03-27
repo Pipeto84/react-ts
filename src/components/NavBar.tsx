@@ -4,18 +4,18 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { setActive } from "../features/menuSlice";
 import iconMenu from "../assets/menu2.png";
-import "../styles/NavBar.css";
 import { useState } from "react";
+import "../styles/NavBar.css";
 
 export const NavBar = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
   const user = useAppSelector((state) => state.logIn);
   const menu = useAppSelector((state) => state.menu);
   const dispatch = useAppDispatch();
-  const [menuActive, setMenuActive] = useState(menu.active)
+  const [menuActive, setMenuActive] = useState(menu.active);
 
   const handleOnclik = () => {
-    setMenuActive(!menuActive)
+    setMenuActive(!menuActive);
     dispatch(setActive(!menuActive));
   };
   const activeMenu = () => {
@@ -25,6 +25,10 @@ export const NavBar = () => {
       return "nav-menu";
     }
   };
+  const handleClickLink = () => {
+    setMenuActive(false);
+  };
+
   return (
     <div className="topnav">
       <button className="nav-toggle" onClick={handleOnclik}>
@@ -32,24 +36,36 @@ export const NavBar = () => {
       </button>
       <div className={activeMenu()}>
         <NavLink className="linkNav" to="/">
-          Home
+          <button className="btnLink" onClick={handleClickLink}>
+            Home
+          </button>
         </NavLink>
         <NavLink className="linkNav" to="/store">
-          Store
+          <button className="btnLink" onClick={handleClickLink}>
+            Store
+          </button>
         </NavLink>
         <NavLink className="linkNav" to="/employes">
-          Employees
+          <button className="btnLink" onClick={handleClickLink}>
+            Employees
+          </button>
         </NavLink>
         <NavLink className="linkNav" to="/search">
-          Search
+          <button className="btnLink" onClick={handleClickLink}>
+            Search
+          </button>
         </NavLink>
         <NavLink className="linkNav" to="/tasks">
-          Tasks
+          <button className="btnLink" onClick={handleClickLink}>
+            Tasks
+          </button>
         </NavLink>
         <NavLink to="/car" className="linkNav">
-          <Badge badgeContent={shoppingList.length} color="secondary">
-            <ShoppingCartIcon color="inherit" />
-          </Badge>
+          <button className="btnLink" onClick={handleClickLink}>
+            <Badge badgeContent={shoppingList.length} color="secondary">
+              <ShoppingCartIcon color="inherit" />
+            </Badge>
+          </button>
         </NavLink>
         {user.acces && (
           <NavLink to="/user" className="nav-link-user">
@@ -58,7 +74,9 @@ export const NavBar = () => {
         )}
         {!user.acces && (
           <NavLink className="linkNav-user" to="/user">
+          <button className="btnLink" onClick={handleClickLink}>
             Log in
+          </button>
           </NavLink>
         )}
       </div>

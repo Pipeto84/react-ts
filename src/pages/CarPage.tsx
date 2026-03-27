@@ -50,9 +50,9 @@ export const CarPage = () => {
           </a>{" "}
           in your shopping cart
         </h3>
-      <NavLink className="btnStore" to="/store">
-        Store
-      </NavLink>
+        <NavLink className="btnStore" to="/store">
+          Store
+        </NavLink>
       </div>
       <table className="table table-striped" hidden={shoppingList.length < 1}>
         <thead>

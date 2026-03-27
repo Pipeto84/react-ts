@@ -78,7 +78,7 @@ export const TaskList = () => {
       <form className="newList" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder=" name list..."
+          placeholder="Name list..."
           className="nameList"
           value={nameList}
           onChange={handleChangeListName}
@@ -103,7 +103,7 @@ export const TaskList = () => {
           </div>
           <input
             type="text"
-            placeholder=" name task..."
+            placeholder="Name task..."
             className="nameTask"
             value={nameTask}
             onChange={handleNameTaskChange}
