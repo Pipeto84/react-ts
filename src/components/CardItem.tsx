@@ -1,9 +1,9 @@
 import React from "react";
 import type { Data, Date } from "../interfaces/index";
 import copy from "../assets/copy.png";
-import trash from '../assets/borrar2.png'
+import trash from "../assets/borrar2.png";
 import { useAppDispatch } from "../app/hooks";
-import { addEmployee } from "../features/employeSlice";
+import { addEmployee, deleteEmployee } from "../features/employeSlice";
 import "../styles/employeStyle/CardItem.css";
 
 interface Props {
@@ -25,8 +25,11 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
     handleUpdateList(data.id, "");
   };
   const handleCopy = () => {
-    dispatch(addEmployee({ ...data, id: crypto.randomUUID() }));
+    dispatch(addEmployee({ ...data, id: crypto.randomUUID(), date: "" }));
     console.log(data);
+  };
+  const handleDelete = (employee: Data) => {
+    dispatch(deleteEmployee(employee));
   };
 
   return (
@@ -57,8 +60,13 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
           </button>
         )}
         {!data.date && (
-          <button className="btnTrash">
-            <img src={trash} className="iconTrash" alt="Delete item" title="Delete item"/>
+          <button className="btnTrash" onClick={() => handleDelete(data)}>
+            <img
+              src={trash}
+              className="iconTrash"
+              alt="Delete item"
+              title="Delete item"
+            />
           </button>
         )}
       </div>
