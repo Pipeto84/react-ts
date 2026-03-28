@@ -29,7 +29,7 @@ export const FormEmployee = ({data}: Props) => {
       [e.target.name]: e.target.value,
     });
   };
-  const handleChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeName = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setEmployee({
       ...employee,
       [e.target.name]: e.target.value,
@@ -81,14 +81,14 @@ export const FormEmployee = ({data}: Props) => {
           placeholder="Insert item..."
         />
         <label className="label">Description:</label>
-        <input
+        <textarea
           name="name"
           className="inputTextDescription"
-          type="text"
           value={employee.name}
           onChange={handleChangeName}
           autoComplete="off"
           placeholder="Insert description..."
+          rows={3}
         />
         <div className="buttons">
           <button

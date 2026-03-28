@@ -16,7 +16,7 @@
 }
 .cardNewEmployee {
   width: 21rem;
-  height: 350px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -42,7 +42,6 @@
   width: 15.625rem;
   height: 1.25rem;
   font-size: 24px;
-  margin-top: 0.9375rem;
   margin-bottom: 1rem;
 }
 .inputText {
@@ -54,6 +53,7 @@
   border: solid 0.0625rem black;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
   font-size: 1.2rem;
+  margin-bottom: 15px;
 }
 .inputTextDescription {
   width: 15.625rem;
@@ -64,7 +64,7 @@
   border: solid 0.0625rem black;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
   font-size: 1.2rem;
-  text-align: center;
+  text-align: left;
 }
 .buttons {
   width: 15.625rem;
