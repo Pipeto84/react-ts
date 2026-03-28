@@ -23,9 +23,9 @@ export const DragAndDrop = () => {
   return (
     <div className="container-employees">
       <div className="start-employees">
-        <h1 className="titleFont">Scheduling Employees</h1>
+        <h1 className="titleFont">Weekly Schedule</h1>
         <NavLink className="btnNewEmployee" to="/new">
-          New Employee
+          New Item
         </NavLink>
       </div>
       <div className="employeesSheduling">

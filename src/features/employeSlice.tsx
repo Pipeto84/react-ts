@@ -11,20 +11,20 @@ type idData = {
 export const initialState: Data[] = [
   {
     id: "1",
-    alias: "Pipe",
-    name: "Felipe",
+    alias: "Work",
+    name: "Go to the office from 8am to 5pm",
     date: "",
   },
   {
     id: "2",
-    alias: "Marco",
-    name: "Marco",
+    alias: "Bike",
+    name: "Ride a bike for 1 hour",
     date: "",
   },
   {
     id: "3",
-    alias: "Rafa",
-    name: "Rafael",
+    alias: "Shopping",
+    name: "Go shopping at the supermarket",
     date: "",
   },
 ];

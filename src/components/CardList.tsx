@@ -17,7 +17,7 @@ export const CardList = ({ data }: Props) => {
   };
   return (
     <div className="cardList">
-      <p>{data.alias + " - " + data.name + " ( " + data.date + " )"}</p>
+      <p>{data.alias + ": " + data.name + " ( " + data.date + " )"}</p>
       <div className="buttonsList">
         <Link className="edit" to={`/edit/${data.id}`}>
           <img className="iconoEdit" src={edit} alt="icono edit" />

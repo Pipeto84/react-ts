@@ -4,7 +4,7 @@ import "../../styles/employeStyle/FormEmployee.css";
 export const Edit = () => {
   return (
     <div className="containerEditEmployee">
-      <FormEmployee data={"Edit Employee"} />
+      <FormEmployee data={"Edit"} />
     </div>
   );
 };

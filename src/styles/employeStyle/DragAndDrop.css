@@ -1,24 +1,18 @@
 .start-employees {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 200px;
-  margin: 30px;
-}
-.titleSheduling {
-  text-align: center;
-  padding: 1rem;
-  font-size: 2rem;
-  font-weight: 600;
+  flex-direction: column;
+  margin: 25px 0 20px;
+  width: 100%;
+  padding: 0 2rem;
 }
 .titleFont {
   color: black;
-  margin-bottom: 1rem;
   text-align: center;
   font-size: 40px;
+  margin: 0
 }
 .btnNewEmployee {
-  width: 13rem;
+  width: 9rem;
   height: 2.875rem;
   background-color: #35959c;
   color: white;
@@ -52,8 +46,6 @@
 }
 @media screen and (max-width: 992px) {
   .start-employees {
-    justify-content: space-between;
-    gap: 100px;
   }
   .btnNewEmployee {
     height: auto;

@@ -6,7 +6,7 @@ export const List = () => {
   const employeesList = useAppSelector((state) => state.employees);
   return (
     <div className="employeesList">
-      <p className="titleList">Employees List</p>
+      <p className="titleList">Items List</p>
       <div className="employees">
         {employeesList.map((item) => (
           <CardList data={item} key={item.id} />

@@ -69,7 +69,7 @@ export const FormEmployee = ({data}: Props) => {
     <div className="cardNewEmployee">
       <p className="titleNewEmployee">{data}</p>
       <form className="form" onSubmit={handleSubmit}>
-        <label className="label">Nickname:</label>
+        <label className="label">Item:</label>
         <input
           name="alias"
           className="inputText"
@@ -78,17 +78,17 @@ export const FormEmployee = ({data}: Props) => {
           onChange={handleChangeAlias}
           autoComplete="off"
           autoFocus
-          placeholder="Insert nickname..."
+          placeholder="Insert item..."
         />
-        <label className="label">Name:</label>
+        <label className="label">Description:</label>
         <input
           name="name"
-          className="inputText"
+          className="inputTextDescription"
           type="text"
           value={employee.name}
           onChange={handleChangeName}
           autoComplete="off"
-          placeholder="Insert name..."
+          placeholder="Insert description..."
         />
         <div className="buttons">
           <button
