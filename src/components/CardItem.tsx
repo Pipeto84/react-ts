@@ -1,6 +1,8 @@
 import React from "react";
 import type { Data, Date } from "../interfaces/index";
 import copy from "../assets/copy.png";
+import {useAppDispatch} from '../app/hooks'
+import {addEmployee} from '../features/employeSlice'
 import "../styles/employeStyle/CardItem.css";
 
 interface Props {
@@ -10,6 +12,7 @@ interface Props {
 }
 
 export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
+  const dispatch = useAppDispatch();
   const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
     e.dataTransfer.setData("text", `${data.id}`);
     handleDragging(true);
@@ -20,7 +23,10 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
   const handleOnClick = () => {
     handleUpdateList(data.id, "");
   };
-  const handleCopy = () => {};
+  const handleCopy = () => {
+    dispatch(addEmployee({...data, id: crypto.randomUUID()}))
+    console.log(data)
+  };
 
   return (
     <div

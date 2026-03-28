@@ -35,7 +35,6 @@ export const FormEmployee = ({data}: Props) => {
       [e.target.name]: e.target.value,
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (params.id) {
