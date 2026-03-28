@@ -14,21 +14,23 @@
   align-items: center;
   gap: 1.25rem;
 }
-.titleEdit {
-  color: black;
-  text-align: center;
-  margin-top: 1.5625rem;
-  margin-bottom: 1rem;
-}
 .cardNewEmployee {
   width: 21rem;
-  height: 17rem;
+  height: 350px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
   background-color: #35959c;
   border-radius: 0.625rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.titleNewEmployee{
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 .form {
   display: flex;

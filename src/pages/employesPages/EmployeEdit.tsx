@@ -1,11 +1,10 @@
-import {FormEmployee} from '../../components/FormEmployee'
-import '../../styles/employeStyle/FormEmployee.css'
+import { FormEmployee } from "../../components/FormEmployee";
+import "../../styles/employeStyle/FormEmployee.css";
 
 export const Edit = () => {
   return (
-    <div className='containerEditEmployee'>
-      <h1 className='titleEdit'>Edit Employee</h1>
-      <FormEmployee/>
+    <div className="containerEditEmployee">
+      <FormEmployee data={"Edit Employee"} />
     </div>
-  )
-}
+  );
+};

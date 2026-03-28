@@ -6,7 +6,10 @@ import { addEmployee, editingEmployee } from "../features/employeSlice";
 import { v4 as uuid } from "uuid";
 import "../styles/employeStyle/FormEmployee.css";
 
-export const FormEmployee = () => {
+interface Props {
+  data: string;
+}
+export const FormEmployee = ({data}: Props) => {
   const employees = useAppSelector((state) => state.employees);
   const dispatch = useAppDispatch();
   const params = useParams();
@@ -64,6 +67,7 @@ export const FormEmployee = () => {
 
   return (
     <div className="cardNewEmployee">
+      <p className="titleNewEmployee">{data}</p>
       <form className="form" onSubmit={handleSubmit}>
         <label className="label">Nickname:</label>
         <input
