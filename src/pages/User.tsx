@@ -46,7 +46,7 @@ export function User() {
             <label className="label-ingresar">Name</label>
             <input
               type="text"
-              placeholder="Write your name"
+              placeholder="Your name"
               className="input-ingresar"
               onChange={handleChange}
               name="userName"
@@ -55,7 +55,7 @@ export function User() {
             <label className="label-ingresar">Password</label>
             <input
               type="text"
-              placeholder="Write your password"
+              placeholder="Your password"
               className="input-ingresar"
               onChange={handleChange}
               name="password"
