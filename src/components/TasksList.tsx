@@ -1,9 +1,10 @@
 import type { TasksList, Task } from "../features/taskSlice";
+import { addTaskList, deleteList,deleteTask } from "../features/taskSlice";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { useNavigate, useParams } from "react-router-dom";
-import { addTaskList, deleteList } from "../features/taskSlice";
 import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
+
 import "../styles/TasksPage.css";
 
 export const TaskList = () => {
@@ -62,6 +63,10 @@ export const TaskList = () => {
     }
     navigate("/tasks");
   };
+  const handleDeleteTask = (taskId: string) => {
+    dispatch(deleteTask(taskId));
+  };
+
   useEffect(() => {
     if (params.id) {
       const listFound = tasks.find((list) => list.id === params.id);
@@ -98,6 +103,12 @@ export const TaskList = () => {
                 <label key={uuid()} htmlFor={task.name} className="labelTask">
                   {task.name}
                 </label>
+                <button
+                  className="deleteTask"
+                  onClick={() => handleDeleteTask(task.id)}
+                >
+                  x
+                </button>
               </div>
             ))}
           </div>
@@ -108,7 +119,12 @@ export const TaskList = () => {
             value={nameTask}
             onChange={handleNameTaskChange}
           />
-          <button className="addTask" onClick={addTask} type="button" title="Add task">
+          <button
+            className="addTask"
+            onClick={addTask}
+            type="button"
+            title="Add task"
+          >
             +
           </button>
         </div>

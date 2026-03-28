@@ -95,6 +95,7 @@ h1 {
 .labelTask {
   height: 40px;
   margin-left: 10px;
+  padding: 4px 0;
   font-size: 24px;
   cursor: pointer;
 }
