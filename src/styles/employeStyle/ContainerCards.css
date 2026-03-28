@@ -22,3 +22,8 @@
   background-color: rgb(216, 212, 212);
   border: 0.125rem dashed #0202028c;
 }
+@media screen and (max-width: 768px) {
+  .layout-cards > p{
+    padding: .5rem 0;
+  }
+}

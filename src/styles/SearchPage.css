@@ -89,7 +89,7 @@
 }
 .toWeather,
 .toMovie {
-  color: #5f5038;
+  color: #000000;
   text-decoration: none;
   font-weight: 550;
 }
@@ -138,6 +138,9 @@
   }
   .dropdown {
     margin: 0 auto 20px auto;
+  }
+  .textoSearcher {
+    padding: 0 1rem;
   }
 }
 @media screen and (max-width: 420px) {

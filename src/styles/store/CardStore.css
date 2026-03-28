@@ -41,7 +41,7 @@
   background-color: #35959c;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 5px 10px;
   cursor: pointer;
   justify-self: end;
@@ -54,9 +54,10 @@
   background-color: #af4c4c;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   padding: 5px 10px;
   cursor: pointer;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .boton-quitar:hover {
   background-color: #a04545;

@@ -47,7 +47,7 @@ export const NavBar = () => {
         </NavLink>
         <NavLink className="linkNav" to="/employes">
           <button className="btnLink" onClick={handleClickLink}>
-            Employees
+            Schedule
           </button>
         </NavLink>
         <NavLink className="linkNav" to="/search">
