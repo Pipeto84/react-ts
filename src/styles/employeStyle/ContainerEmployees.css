@@ -8,12 +8,13 @@
 }
 .titleEmployees {
   border-radius: 0.3125rem;
-  background-color: black;
+  background-color: #8a775c;
   text-align: center;
   padding: 1rem 0;
   font-weight: bold;
   text-transform: capitalize;
   font-size: 1.5rem;
+  margin: 0;
 }
 .all {
   display: grid;
@@ -21,6 +22,7 @@
   justify-items: center;
   padding-bottom: 1rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  background-color: white;
 }
 @media screen and (max-width: 768px) {
   .all {

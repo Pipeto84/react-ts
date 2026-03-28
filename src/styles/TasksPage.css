@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: start;
-  background-color: white;
+  background-color: rgb(198, 222, 245);
 }
 .tasks {
   height: 60vh;
