@@ -1,5 +1,6 @@
 import React from "react";
 import type { Data, Date } from "../interfaces/index";
+import copy from "../assets/copy.png";
 import "../styles/employeStyle/CardItem.css";
 
 interface Props {
@@ -19,6 +20,7 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
   const handleOnClick = () => {
     handleUpdateList(data.id, "");
   };
+  const handleCopy = () => {};
 
   return (
     <div
@@ -28,10 +30,19 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
       onDragStart={handleDragStart}
       title={data.name}
     >
-      <p >{data.alias}</p>
-      <button className="cancel" onClick={handleOnClick} title="">
-        X
-      </button>
+      <p>{data.alias}</p>
+      <div className="btnsItem">
+        <button className="copy" onClick={handleCopy} title="Copy ">
+          <img className="iconCopy" title="Copy item" src={copy} alt="icon copy" />
+        </button>
+        <button
+          className="cancel"
+          onClick={handleOnClick}
+          title="Remove from day"
+        >
+          X
+        </button>
+      </div>
     </div>
   );
 };

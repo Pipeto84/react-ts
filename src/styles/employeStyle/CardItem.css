@@ -15,7 +15,25 @@
 .card-container > p {
   font-weight: bold;
   font-size: 1rem;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 .4rem;
+}
+.btnsItem {
+  display: flex;
+  gap: 0.5rem;
+}
+.copy {
+  height: 1.5625rem;
+  width: 1.5625rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iconCopy{
+  height: 1.8rem;
+  width: 1.8rem;
 }
 .cancel {
   height: 1.5625rem;
