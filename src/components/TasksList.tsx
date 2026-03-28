@@ -1,5 +1,5 @@
 import type { TasksList, Task } from "../features/taskSlice";
-import { addTaskList, deleteList, deleteTask } from "../features/taskSlice";
+import { addTaskList, deleteList } from "../features/taskSlice";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -63,13 +63,12 @@ export const TaskList = () => {
     navigate("/tasks");
   };
   const handleDeleteTask = (taskId: string) => {
-    dispatch(deleteTask(taskId));
     const newTasksNew = newTasks.filter((task) => task.id !== taskId);
-    setNewTasks(newTasksNew)
+    setNewTasks(newTasksNew);
   };
   const handleCancel = () => {
     navigate("/tasks");
-  }
+  };
   useEffect(() => {
     if (params.id) {
       const listFound = tasks.find((list) => list.id === params.id);
