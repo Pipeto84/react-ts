@@ -26,9 +26,10 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
       draggable
       onDragEnd={handleDragEnd}
       onDragStart={handleDragStart}
+      title={data.name}
     >
-      <p>{data.alias}</p>
-      <button className="cancel" onClick={handleOnClick}>
+      <p >{data.alias}</p>
+      <button className="cancel" onClick={handleOnClick} title="">
         X
       </button>
     </div>
