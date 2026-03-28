@@ -67,6 +67,8 @@ export const NavBar = () => {
             </Badge>
           </button>
         </NavLink>
+      </div>
+      <div className="navUser">
         {user.acces && (
           <NavLink to="/user" className="nav-link-user">
             <button className="btnLink-user" onClick={handleClickLink}>
@@ -76,7 +78,7 @@ export const NavBar = () => {
         )}
         {!user.acces && (
           <NavLink className="linkNav-user" to="/user">
-            <button className="btnLink" onClick={handleClickLink}>
+            <button className="btnLinkLogin" onClick={handleClickLink}>
               Log in
             </button>
           </NavLink>

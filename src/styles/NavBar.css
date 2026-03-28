@@ -34,25 +34,19 @@
 .linkNav:hover {
   color: white;
 }
-.linkNav-user {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  float: left;
-  color: #000000;
-  text-align: center;
-  padding: 14px 26px;
-  text-decoration: none;
-  font-size: 30px;
-  background-color: gray;
-  border-radius: 7px;
+.btnLink {
+  background: none;
+  border: none;
+}
+.btnLink:hover {
+  color: white;
 }
 .nav-link-user {
   height: 45px;
   text-decoration: none;
   padding: 2px 8px 5px 8px;
-  background-color: gray;
+  margin-right: 20px;
+  background-color: black;
   color: white;
   font-size: 30px;
   border-radius: 7px;
@@ -61,19 +55,35 @@
   justify-content: center;
 }
 .nav-link-user:hover {
-  background-color: black;
+  background-color: gray;
   color: white;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
-  transition: 0.5s;
-}
-.btnLink {
-  background: none;
-  border: none;
-}
-.btnLink:hover {
-  color: white;
 }
 .btnLink-user {
+  background: none;
+  border: none;
+  color: white;
+}
+.linkNav-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 130px;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 30px;
+  background-color: black;
+  border-radius: 7px;
+}
+.linkNav-user:hover{
+  background-color: gray;
+}
+.btnLinkLogin {
   background: none;
   border: none;
   color: white;
@@ -108,15 +118,6 @@
   .linkNav {
     font-size: 20px;
   }
-  .linkNav-user {
-    font-size: 20px;
-    background-color: rgb(177, 177, 177);
-  }
-  .nav-link-user {
-    height: 35px;
-    font-size: 20px;
-    background-color: rgb(138, 138, 138);
-  }
   .btnLink {
     background: none;
     border: none;
@@ -125,10 +126,22 @@
   .btnLink:hover {
     color: black;
   }
+  .nav-link-user {
+    height: 35px;
+    font-size: 20px;
+  }
   .btnLink-user {
     background: none;
     border: none;
-    color: white;
+  }
+  .linkNav-user {
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    background-color: black;
+  }
+  .linkNav-user:hover{
+    background-color: rgb(133, 132, 132);
   }
   .nav-menu_visible {
     left: 0;
