@@ -67,7 +67,9 @@ export const TaskList = () => {
     const newTasksNew = newTasks.filter((task) => task.id !== taskId);
     setNewTasks(newTasksNew)
   };
-
+  const handleCancel = () => {
+    navigate("/tasks");
+  }
   useEffect(() => {
     if (params.id) {
       const listFound = tasks.find((list) => list.id === params.id);
@@ -133,7 +135,7 @@ export const TaskList = () => {
           <button className="saveTask" type="submit" onClick={saveList}>
             Save
           </button>
-          <button className="cancelTask" type="submit">
+          <button className="cancelTask" type="button" onClick={handleCancel}>
             Cancel
           </button>
         </div>
