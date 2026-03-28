@@ -108,7 +108,7 @@ export const TaskList = () => {
             value={nameTask}
             onChange={handleNameTaskChange}
           />
-          <button className="addTask" onClick={addTask} type="button">
+          <button className="addTask" onClick={addTask} type="button" title="Add task">
             +
           </button>
         </div>
@@ -119,9 +119,6 @@ export const TaskList = () => {
           <button className="cancelTask" type="submit">
             Cancel
           </button>
-          {/* <NavLink className="cancelTask" to="/tasks">
-            Cancel
-          </NavLink> */}
         </div>
       </form>
     </div>
