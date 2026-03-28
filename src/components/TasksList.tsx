@@ -43,10 +43,10 @@ export const TaskList = () => {
     setlist({ ...list, [e.target.name]: e.target.value });
   };
   const saveList = () => {
-    setNewTasks((list) => [
-      ...list,
-      { name: nameTask, completed: false, id: uuid() },
-    ]);
+    // setNewTasks((list) => [
+    //   ...list,
+    //   { name: nameTask, completed: false, id: uuid() },
+    // ]);
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
