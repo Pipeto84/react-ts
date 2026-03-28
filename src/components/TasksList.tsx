@@ -1,10 +1,9 @@
 import type { TasksList, Task } from "../features/taskSlice";
-import { addTaskList, deleteList,deleteTask } from "../features/taskSlice";
+import { addTaskList, deleteList, deleteTask } from "../features/taskSlice";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
-
 import "../styles/TasksPage.css";
 
 export const TaskList = () => {
@@ -39,7 +38,7 @@ export const TaskList = () => {
     setNameList(e.target.value);
     setlist({ ...list, [e.target.name]: e.target.value });
   };
-  const handleNameTaskChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeTaskName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setNameTask(e.target.value);
     setlist({ ...list, [e.target.name]: e.target.value });
   };
@@ -65,6 +64,8 @@ export const TaskList = () => {
   };
   const handleDeleteTask = (taskId: string) => {
     dispatch(deleteTask(taskId));
+    const newTasksNew = newTasks.filter((task) => task.id !== taskId);
+    setNewTasks(newTasksNew)
   };
 
   useEffect(() => {
@@ -117,7 +118,7 @@ export const TaskList = () => {
             placeholder="Name task..."
             className="nameTask"
             value={nameTask}
-            onChange={handleNameTaskChange}
+            onChange={handleChangeTaskName}
           />
           <button
             className="addTask"
