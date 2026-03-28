@@ -43,20 +43,20 @@ export function User() {
         <div className="contenido-ingresar">
           <h3 className="titulo-ingresar">Sign in</h3>
           <div className="formulario-ingresar">
-            <label className="label-ingresar1">Name</label>
+            <label className="label-ingresar">Name</label>
             <input
               type="text"
               placeholder="Write your name"
-              className="input-ingresar1"
+              className="input-ingresar"
               onChange={handleChange}
               name="userName"
               autoFocus
             />
-            <label className="label-ingresar2">Password</label>
+            <label className="label-ingresar">Password</label>
             <input
               type="text"
               placeholder="Write your password"
-              className="input-ingresar2"
+              className="input-ingresar"
               onChange={handleChange}
               name="password"
             />

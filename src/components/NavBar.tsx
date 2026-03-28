@@ -3,7 +3,7 @@ import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { setActive } from "../features/menuSlice";
-import iconMenu from "../assets/menu2.png";
+import iconMenu from "../assets/menu.png";
 import { useState } from "react";
 import "../styles/NavBar.css";
 
