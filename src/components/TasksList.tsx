@@ -1,6 +1,6 @@
 import type { TasksList, Task } from "../features/taskSlice";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
-import { useNavigate, useParams, NavLink } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { addTaskList, deleteList } from "../features/taskSlice";
 import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
