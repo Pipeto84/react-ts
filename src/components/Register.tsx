@@ -32,6 +32,57 @@ export function Register() {
 
   return (
     <div className="registro">
+      {!added && (
+        <div className="contenido-registro">
+          <h3 className="titulo-registro">New User</h3>
+          <div className="formulario-registro">
+            <label className="label-registro">Name</label>
+            <input
+              type="text"
+              placeholder="Your name"
+              className="input-registro"
+              autoFocus
+            />
+            <label className="label-registro">Last Name</label>
+            <input
+              type="text"
+              placeholder="Your last name"
+              className="input-registro"
+            />
+            <label className="label-registro">Phone</label>
+            <input
+              type="text"
+              placeholder="Your phone number"
+              className="input-registro"
+            />
+            <label className="label-registro">Birth Date</label>
+            <input
+              type="date"
+              placeholder="Your birth date"
+              className="input-registro"
+            />
+            <label className="label-registro">Username</label>
+            <input
+              type="text"
+              placeholder="Your username"
+              className="input-registro"
+              onChange={handleChange}
+              name="userName"
+            />
+            <label className="label-registro">Password</label>
+            <input
+              type="text"
+              placeholder="Your password"
+              className="input-registro"
+              onChange={handleChange}
+              name="password"
+            />
+          </div>
+          <button className="boton-registro" onClick={handleSubmit}>
+            Register
+          </button>
+        </div>
+      )}
       {added && (
         <div className="contenido-agregado">
           <h3 className="titulo-agregado">Welcome</h3>
@@ -41,57 +92,6 @@ export function Register() {
           <NavLink to="/" className="boton-agregado">
             Continue
           </NavLink>
-        </div>
-      )}
-      {!added && (
-        <div className="contenido-registro">
-          <h3 className="titulo-registro">New User</h3>
-          <div className="formulario-registro">
-            <label className="label-registro">Name</label>
-            <input
-              type="text"
-              placeholder="Write your name"
-              className="input-registro"
-              autoFocus
-            />
-            <label className="label-registro">Last Name</label>
-            <input
-              type="text"
-              placeholder="Write your last name"
-              className="input-registro"
-            />
-            <label className="label-registro">Phone</label>
-            <input
-              type="text"
-              placeholder="Write your phone number"
-              className="input-registro"
-            />
-            <label className="label-registro">Birth Date</label>
-            <input
-              type="date"
-              placeholder="Write your birth date"
-              className="input-registro"
-            />
-            <label className="label-registro">Username</label>
-            <input
-              type="text"
-              placeholder="Write your username"
-              className="input-registro"
-              onChange={handleChange}
-              name="userName"
-            />
-            <label className="label-registro">Password</label>
-            <input
-              type="text"
-              placeholder="Write your password"
-              className="input-registro"
-              onChange={handleChange}
-              name="password"
-            />
-          </div>
-          <button className="boton-registro" onClick={handleSubmit}>
-            Register
-          </button>
         </div>
       )}
     </div>

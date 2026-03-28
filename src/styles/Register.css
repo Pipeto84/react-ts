@@ -57,8 +57,8 @@
 }
 .contenido-agregado {
   background-color: #a4b6c5;
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -69,9 +69,9 @@
 .titulo-agregado {
   font-size: 30px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: #4682b4;
   margin-top: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .texto-agregado {
   font-size: 24px;
@@ -80,16 +80,27 @@
   text-align: center;
 }
 .boton-agregado {
-  width: 300px;
+  width: 200px;
   height: 40px;
   border-radius: 5px;
   border: none;
   background-color: #4682b4;
   color: rgb(255, 255, 255);
   font-size: 25px;
-  margin-top: 60px;
+  margin-top: 40px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+}
+@media (max-width: 992px){
+  .contenido-registro{
+    width: 400px;
+  }
+  .input-registro{
+    width: 300px;
+  }
+  .boton-registro{
+    width: 250px;
+  }
 }
