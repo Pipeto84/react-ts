@@ -140,5 +140,18 @@
     margin: 0 auto 20px auto;
   }
 }
-@media screen and (max-width: 37.5rem) {
+@media screen and (max-width: 420px) {
+  .searcher{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .inputSearch{
+    border-radius: 8px;
+  }
+  .btnSearch{
+    border-radius: 8px;
+    margin-top: 20px;
+  }
 }
