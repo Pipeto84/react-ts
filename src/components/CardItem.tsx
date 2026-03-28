@@ -1,8 +1,9 @@
 import React from "react";
 import type { Data, Date } from "../interfaces/index";
 import copy from "../assets/copy.png";
-import {useAppDispatch} from '../app/hooks'
-import {addEmployee} from '../features/employeSlice'
+import trash from '../assets/borrar2.png'
+import { useAppDispatch } from "../app/hooks";
+import { addEmployee } from "../features/employeSlice";
 import "../styles/employeStyle/CardItem.css";
 
 interface Props {
@@ -24,8 +25,8 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
     handleUpdateList(data.id, "");
   };
   const handleCopy = () => {
-    dispatch(addEmployee({...data, id: crypto.randomUUID()}))
-    console.log(data)
+    dispatch(addEmployee({ ...data, id: crypto.randomUUID() }));
+    console.log(data);
   };
 
   return (
@@ -39,15 +40,27 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
       <p>{data.alias}</p>
       <div className="btnsItem">
         <button className="copy" onClick={handleCopy} title="Copy ">
-          <img className="iconCopy" title="Copy item" src={copy} alt="icon copy" />
+          <img
+            className="iconCopy"
+            title="Copy item"
+            src={copy}
+            alt="icon copy"
+          />
         </button>
-        <button
-          className="cancel"
-          onClick={handleOnClick}
-          title="Remove from day"
-        >
-          X
-        </button>
+        {data.date && (
+          <button
+            className="cancel"
+            onClick={handleOnClick}
+            title="Remove from day"
+          >
+            X
+          </button>
+        )}
+        {!data.date && (
+          <button className="btnTrash">
+            <img src={trash} className="iconTrash" alt="Delete item" title="Delete item"/>
+          </button>
+        )}
       </div>
     </div>
   );
