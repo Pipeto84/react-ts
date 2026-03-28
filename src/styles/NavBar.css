@@ -63,6 +63,7 @@
   background: none;
   border: none;
   color: white;
+  font-size: 23px;
 }
 .linkNav-user {
   display: flex;
@@ -87,6 +88,7 @@
   background: none;
   border: none;
   color: white;
+  font-size: 23px;
 }
 @media (max-width: 992px) {
   .topnav {
@@ -133,6 +135,7 @@
   .btnLink-user {
     background: none;
     border: none;
+    font-size: 20px;
   }
   .linkNav-user {
     width: 100px;
@@ -142,6 +145,9 @@
   }
   .linkNav-user:hover{
     background-color: rgb(133, 132, 132);
+  }
+  .btnLinkLogin{
+    font-size: 20px;
   }
   .nav-menu_visible {
     left: 0;
