@@ -30,6 +30,9 @@
   align-items: center;
 }
 @media (max-width: 768px) {
+  .employeesList {
+    width: 400px;
+  }
   .titleList{
     padding: .5rem 0;
   }

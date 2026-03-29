@@ -240,4 +240,7 @@ h1 {
   .tasksPage {
     height: 100vh;
   }
+  .newList {
+    width: 340px;
+  }
 }
