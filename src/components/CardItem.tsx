@@ -18,15 +18,12 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
     e.dataTransfer.setData("text", `${data.id}`);
     handleDragging(true);
   };
-
   const handleDragEnd = () => handleDragging(false);
-
   const handleOnClick = () => {
     handleUpdateList(data.id, "");
   };
   const handleCopy = () => {
     dispatch(addEmployee({ ...data, id: crypto.randomUUID(), date: "" }));
-    console.log(data);
   };
   const handleDelete = (employee: Data) => {
     dispatch(deleteEmployee(employee));
