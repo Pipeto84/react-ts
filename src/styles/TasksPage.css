@@ -238,9 +238,6 @@ h1 {
   .tasksPage {
     height: 800px;
   }
-  .taskList{
-    height: auto;
-  }
   .newList {
     width: 340px;
     margin-top: 30px;
