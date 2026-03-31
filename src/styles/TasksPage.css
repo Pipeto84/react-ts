@@ -1,5 +1,5 @@
 .tasksPage {
-  height: 80vh;
+  height: 81vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -7,7 +7,6 @@
   background-color: rgb(230, 214, 192);
 }
 .tasks {
-  height: 60vh;
   min-width: 300px;
   margin: 20px;
   display: grid;
@@ -17,7 +16,6 @@
   gap: 1.25rem;
   color: black;
   border-radius: 10px;
-  padding-top: 50px;
 }
 h1 {
   margin: 1rem 0 0.5rem 0;
@@ -238,9 +236,14 @@ h1 {
 }
 @media screen and (max-width: 62rem) {
   .tasksPage {
-    height: 100vh;
+    height: 800px;
   }
   .newList {
     width: 340px;
+  }
+}
+@media screen and (max-width: 37.5rem) {
+  .tasksPage {
+    height: 1200px;
   }
 }
