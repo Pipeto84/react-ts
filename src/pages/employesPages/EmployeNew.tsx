@@ -4,7 +4,7 @@ import '../../styles/employeStyle/FormEmployee.css'
 export const New = () => {
   return (
     <div className='container-new-employee'>
-      <FormEmployee data={"New"}/>
+      <FormEmployee data={"New Item"}/>
     </div>
   )
 }

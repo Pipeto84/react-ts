@@ -2,7 +2,7 @@
   font-family: "Arial", sans-serif;
   background-color: black;
   width: 100%;
-  height: 80vh;
+  height: 81vh;
   font-size: 20px;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
   justify-content: center;
 }
 .logo {
-  height: 20rem;
+  height: 12rem;
   padding: 1.5rem;
   will-change: filter;
   transition: filter 300ms;
@@ -43,4 +43,9 @@
 .nav-link-mapa {
   text-decoration: none;
   color: white;
+}
+@media screen and (max-width: 992px) {
+  .mapa {
+    height: auto;
+  }
 }

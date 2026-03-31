@@ -22,8 +22,15 @@ export const Map = () => {
         </li>
         <li>
           <NavLink to="/employes" className="nav-link-mapa">
-            Employes
+            Schedule
           </NavLink>
+          <ul>
+            <li>
+              <NavLink to="/new" className="nav-link-mapa">
+                New item
+              </NavLink>
+            </li>
+          </ul>
         </li>
         <li>
           <NavLink to="/search" className="nav-link-mapa">
@@ -34,6 +41,13 @@ export const Map = () => {
           <NavLink to="/tasks" className="nav-link-mapa">
             Tasks
           </NavLink>
+          <ul>
+            <li>
+              <NavLink to="/new" className="nav-link-mapa">
+                New list
+              </NavLink>
+            </li>
+          </ul>
         </li>
         <li>
           <NavLink to="/user" className="nav-link-mapa">
