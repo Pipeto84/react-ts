@@ -43,7 +43,7 @@ export const Map = () => {
           </NavLink>
           <ul>
             <li>
-              <NavLink to="/new" className="nav-link-mapa">
+              <NavLink to="/newList" className="nav-link-mapa">
                 New list
               </NavLink>
             </li>

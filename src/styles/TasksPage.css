@@ -130,15 +130,15 @@ h1 {
 }
 
 .taskList {
-  height: 80vh;
+  height: 81vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   background-color: white;
 }
 .newList {
-  margin: 20px auto 20px auto;
+  margin: 60px auto 20px auto;
   height: min-content;
   width: 380px;
   background-color: rgb(218, 216, 208);
@@ -238,8 +238,12 @@ h1 {
   .tasksPage {
     height: 800px;
   }
+  .taskList{
+    height: auto;
+  }
   .newList {
     width: 340px;
+    margin-top: 30px;
   }
 }
 @media screen and (max-width: 37.5rem) {
