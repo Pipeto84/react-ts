@@ -1,11 +1,12 @@
 import "../styles/User.css";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { setLogIn } from "../features/user/logInSlice";
 
 export function User() {
   const [acces, setAcces] = useState(false);
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const users = useAppSelector((state) => state.users);
   const [user, setUser] = useState({
@@ -21,15 +22,14 @@ export function User() {
   };
   const handleSubmit = () => {
     const userFinded = users.find(
-      (u) =>
-        u.userName === user.userName && u.password === user.password,
+      (u) => u.userName === user.userName && u.password === user.password,
     );
     if (userFinded) {
       setAcces(true);
       setUser({ ...user, acces: true });
       dispatch(setLogIn({ ...user, acces: true }));
     } else {
-      window.location.href = "/errorUser";
+      navigate("/errorUser");
     }
   };
   const handleCerrar = () => {
