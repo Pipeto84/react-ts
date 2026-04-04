@@ -21,8 +21,8 @@ export const HomePage = () => {
       </a>
       <p className="infoHome">
         This website is designed in React with TypeScript. Here you'll find a
-        store with a shopping cart, employee scheduling with drag and drop, user
-        login and registration, search bars, and a task lists.
+        store with a shopping cart, weekly scheduling with drag and drop, search
+        bars, task lists, registration and user login.
         <br /> Designed by Felipe Jaramillo U. ("Pipeto84" GitHub)
       </p>
     </div>
