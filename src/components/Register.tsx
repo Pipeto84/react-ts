@@ -29,9 +29,15 @@ export function Register() {
       setNewUser({ userName: "", password: "" });
     }
   };
-
+  const handleClass=() => {
+    if(added){
+      return "registrado";
+    }else{
+      return "registro";
+    }
+  }
   return (
-    <div className="registro">
+    <div className={handleClass()}>
       {!added && (
         <div className="contenido-registro">
           <h3 className="titulo-registro">New User</h3>
