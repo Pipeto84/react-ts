@@ -95,16 +95,28 @@
 }
 @media (max-width: 992px){
   .registro{
-    height: auto;
+    height: 82;
   }
   .contenido-registro{
-    width: 400px;
+    width: 340px;
     margin: 30px 0;
   }
+  .formulario-registro{
+  padding: 0 20px 20px;
+    width: 320px;
+  }
   .input-registro{
-    width: 300px;
+    width: 280px;
   }
   .boton-registro{
-    width: 250px;
+    width: 230px;
+  }
+  .contenido-agregado{
+    width: 340px;
+    height: 260px;
+    margin-top: 30px;
+  }
+  .boton-agregado{
+    margin-top: 15px;
   }
 }

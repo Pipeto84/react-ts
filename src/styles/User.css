@@ -164,17 +164,33 @@
 }
 @media screen and (max-width: 992px) {
   .ingresar{
-    height: auto;
+    height: 70vh;
   }
   .contenido-ingresar {
+    margin: 30px 0;
+  }
+  .contenido-ingresoU{
+    margin: 30px 0;
+  }
+  .error{
+    height: 70vh;
+  }
+  .contenido-error{
+    width: 340px;
     margin: 30px 0;
   }
 }
 @media screen and (max-width: 500px) {
   .contenido-ingresar {
-    width: min-content;
+    width: 340px;
   }
   .formulario-ingresar {
     width: min-content;
+  }
+  .input-ingresar {
+    width: 280px;
+  }
+  .contenido-ingresoU{
+    width: 340px;
   }
 }
