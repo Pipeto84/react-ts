@@ -95,7 +95,7 @@
 }
 @media (max-width: 992px){
   .registro{
-    height: 82;
+    height: 110vh;
   }
   .contenido-registro{
     width: 340px;
