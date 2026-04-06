@@ -14,7 +14,7 @@ export const NavBar = () => {
   const menu = useAppSelector((state) => state.menu);
   const dispatch = useAppDispatch();
   const [menuActive, setMenuActive] = useState(menu.active);
-  const {i18n} = useTranslation("home");
+  const {i18n} = useTranslation("global");
 
   const handleOnclik = () => {
     setMenuActive(!menuActive);

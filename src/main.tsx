@@ -5,18 +5,18 @@ import { store } from "./app/store.tsx";
 import { Provider } from "react-redux";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
-import home_en from "./translations/en/home.json";
-import home_es from "./translations/es/home.json";
+import en from "./translations/en.json";
+import es from "./translations/es.json";
 
 i18next.init({
   interpolation: { escapeValue: false },
   lng: "en",
   resources: {
     en: {
-      home: home_en,
+      global: en,
     },
     es: {
-      home: home_es,
+      global: es,
     },
   },
 });
