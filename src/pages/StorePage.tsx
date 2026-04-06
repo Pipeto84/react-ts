@@ -3,11 +3,13 @@ import { Card } from "../components/StoreCard";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { setStore } from "../features/storeSlice";
 import type { ProductosStore } from "../features/storeSlice";
+import { useTranslation } from "react-i18next";
 import "../styles/store/Store.css";
 
 export const StorePage = () => {
   const dispatch = useAppDispatch();
   const products = useAppSelector((state) => state.products);
+  const { t } = useTranslation("global");
 
   const fetchProducts = async () => {
     try {
@@ -21,13 +23,13 @@ export const StorePage = () => {
       console.error("El error es: ", error);
     }
   };
-
+  
   useEffect(() => {
     fetchProducts();
   }, []);
   return (
     <div className="contenedor-compras">
-      <h1 className="tituloProductos">Store</h1>
+      <h1 className="tituloProductos">{t("store.title")}</h1>
       <div className="contenedor-productos">
         {products.map((product) => (
           <Card key={product.id} producto={product}></Card>

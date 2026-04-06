@@ -7,11 +7,13 @@ import {
 import { addProduct } from "../features/storeSlice";
 import type { ProductosStore } from "../features/storeSlice";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "../styles/store/Shopping.css";
 
 export const CarPage = () => {
   const shoppingList = useAppSelector((state) => state.shopping);
   const dispatch = useAppDispatch();
+  const { t } = useTranslation("global");
 
   const handlePrint = () => print();
   localStorage.clear();
@@ -36,7 +38,7 @@ export const CarPage = () => {
   return (
     <div className="carrito">
       <h1 className="tituloCarrito" hidden={shoppingList.length < 1}>
-        Shopping cart
+        {t("store.titleCar")}
       </h1>
       <div className="containerCar" hidden={shoppingList.length > 0}>
         <h3 className="sinCompras" hidden={shoppingList.length > 0}>

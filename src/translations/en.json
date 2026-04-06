@@ -1,6 +1,20 @@
 {
+    "navBar": {
+        "home": "Home",
+        "store": "Store",
+        "schedule": "Schedule",
+        "search": "Search",
+        "tasks": "Tasks",
+        "login": "Login"
+    },
     "home": {
         "welcome": "This website is designed in React with TypeScript. Here you'll find a store with a shopping cart, weekly scheduling with drag and drop, search bars, task lists, registration and user login.",
         "designed": "Designed by"
+    },
+    "store": {
+        "title": "Store",
+        "addToCart": "Add to Cart",
+        "removeFromCart": "Remove from Cart",
+        "titleCar": "Shopping cart"
     }
 }

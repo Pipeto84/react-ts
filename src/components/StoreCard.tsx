@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {useAppDispatch} from '../app/hooks';
+import { useAppDispatch } from "../app/hooks";
+import { useTranslation } from "react-i18next";
 import "../styles/store/CardStore.css";
 
 import { addProduct, type ProductosStore } from "../features/storeSlice";
@@ -11,6 +12,7 @@ interface Props {
 export const Card = ({ producto }: Props) => {
   const [agregado, setAgregado] = useState<boolean>(producto.agregar);
   const dispatch = useAppDispatch();
+  const { t } = useTranslation("global");
 
   const clickAgregar = (product: ProductosStore) => {
     setAgregado(true);
@@ -36,7 +38,7 @@ export const Card = ({ producto }: Props) => {
               type="button"
               onClick={() => clickQuitar(producto)}
             >
-              Remove from cart
+              {t("store.removeFromCart")}
             </button>
           ) : (
             <button
@@ -44,7 +46,7 @@ export const Card = ({ producto }: Props) => {
               type="button"
               onClick={() => clickAgregar(producto)}
             >
-              Add to cart
+              {t("store.addToCart")}
             </button>
           )}
         </div>

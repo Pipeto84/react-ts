@@ -14,7 +14,7 @@ export const NavBar = () => {
   const menu = useAppSelector((state) => state.menu);
   const dispatch = useAppDispatch();
   const [menuActive, setMenuActive] = useState(menu.active);
-  const {i18n} = useTranslation("global");
+  const {t, i18n} = useTranslation("global");
 
   const handleOnclik = () => {
     setMenuActive(!menuActive);
@@ -39,27 +39,27 @@ export const NavBar = () => {
       <div className={activeMenu()}>
         <NavLink className="linkNav" to="/">
           <button className="btnLink" onClick={handleClickLink}>
-            Home
+            {t("navBar.home")}
           </button>
         </NavLink>
         <NavLink className="linkNav" to="/store">
           <button className="btnLink" onClick={handleClickLink}>
-            Store
+            {t("navBar.store")}
           </button>
         </NavLink>
         <NavLink className="linkNav" to="/employes">
           <button className="btnLink" onClick={handleClickLink}>
-            Schedule
+            {t("navBar.schedule")}
           </button>
         </NavLink>
         <NavLink className="linkNav" to="/search">
           <button className="btnLink" onClick={handleClickLink}>
-            Search
+            {t("navBar.search")}
           </button>
         </NavLink>
         <NavLink className="linkNav" to="/tasks">
           <button className="btnLink" onClick={handleClickLink}>
-            Tasks
+            {t("navBar.tasks")}
           </button>
         </NavLink>
         <NavLink to="/car" className="linkNav">
@@ -81,7 +81,7 @@ export const NavBar = () => {
         {!user.acces && (
           <NavLink className="linkNav-user" to="/user">
             <button className="btnLinkLogin" onClick={handleClickLink}>
-              Log in
+              {t("navBar.login")}
             </button>
           </NavLink>
         )}
