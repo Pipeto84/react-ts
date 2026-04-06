@@ -5,6 +5,7 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { setActive } from "../features/menuSlice";
 import iconMenu from "../assets/menu.png";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "../styles/NavBar.css";
 
 export const NavBar = () => {
@@ -13,6 +14,7 @@ export const NavBar = () => {
   const menu = useAppSelector((state) => state.menu);
   const dispatch = useAppDispatch();
   const [menuActive, setMenuActive] = useState(menu.active);
+  const {i18n} = useTranslation("home");
 
   const handleOnclik = () => {
     setMenuActive(!menuActive);
@@ -83,6 +85,10 @@ export const NavBar = () => {
             </button>
           </NavLink>
         )}
+      </div>
+      <div className="btnLanguage">
+        <button onClick={() => i18n.changeLanguage("en")}>EN</button>
+        <button onClick={() => i18n.changeLanguage("es")}>ES</button>
       </div>
     </div>
   );

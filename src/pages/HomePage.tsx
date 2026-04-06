@@ -24,7 +24,7 @@ export const HomePage = () => {
       </a>
       <p className="infoHome">
         {t("home.welcome")}
-        <br /> Designed by Felipe Jaramillo U. ("Pipeto84" GitHub)
+        <br /> {t("home.designed")} Felipe Jaramillo U. ("Pipeto84" GitHub)
       </p>
     </div>
   );
