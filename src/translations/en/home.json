@@ -1,0 +1,5 @@
+{
+    "home": {
+        "welcome": "This website is designed in React with TypeScript. Here you'll find a store with a shopping cart, weekly scheduling with drag and drop, search bars, task lists, registration and user login."
+    }
+}

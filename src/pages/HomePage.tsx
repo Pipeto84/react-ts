@@ -1,9 +1,11 @@
 import reactLogo from "../assets/react.svg";
 import { useAppSelector } from "../app/hooks";
+import { useTranslation } from "react-i18next";
 import "../styles/HomePage.css";
 
 export const HomePage = () => {
   const menu = useAppSelector((state) => state.menu);
+  const [t, i18n] = useTranslation("home");
   const handleClassName = () => {
     if (menu.active) {
       return "logReact";
@@ -11,6 +13,7 @@ export const HomePage = () => {
       return "logo react";
     }
   };
+
   return (
     <div className="contenedorHome">
       <a target="_blank" className="targetLogo">
@@ -20,9 +23,7 @@ export const HomePage = () => {
         <h1 className="h1Home">React</h1>
       </a>
       <p className="infoHome">
-        This website is designed in React with TypeScript. Here you'll find a
-        store with a shopping cart, weekly scheduling with drag and drop, search
-        bars, task lists, registration and user login.
+        {t("home.welcome")}
         <br /> Designed by Felipe Jaramillo U. ("Pipeto84" GitHub)
       </p>
     </div>
