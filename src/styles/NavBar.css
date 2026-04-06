@@ -92,6 +92,20 @@
   color: white;
   font-size: 23px;
 }
+.btnsLanguage {
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+}
+.btnLanguage {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 20px;
+}
 @media (max-width: 992px) {
   .topnav {
     height: 50px;

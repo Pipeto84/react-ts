@@ -86,9 +86,9 @@ export const NavBar = () => {
           </NavLink>
         )}
       </div>
-      <div className="btnLanguage">
-        <button onClick={() => i18n.changeLanguage("en")}>EN</button>
-        <button onClick={() => i18n.changeLanguage("es")}>ES</button>
+      <div className="btnsLanguage">
+        <button className="btnLanguage" onClick={() => i18n.changeLanguage("en")}>en</button>
+        <button className="btnLanguage" onClick={() => i18n.changeLanguage("es")}>es</button>
       </div>
     </div>
   );

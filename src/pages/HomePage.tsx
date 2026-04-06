@@ -5,7 +5,7 @@ import "../styles/HomePage.css";
 
 export const HomePage = () => {
   const menu = useAppSelector((state) => state.menu);
-  const [t, i18n] = useTranslation("home");
+  const {t} = useTranslation("home");
   const handleClassName = () => {
     if (menu.active) {
       return "logReact";
