@@ -40,6 +40,14 @@
         "friday": "Viernes",
         "saturday": "Sábado",
         "sunday": "Domingo",
-        "itemsList": "Lista Elementos"
+        "itemsList": "Lista Elementos",
+        "titleNewItem": "Nuevo",
+        "labelItem": "Elemento:",
+        "inputItem": "Insertar elemento...",
+        "labelDescription": "Descripción:",
+        "inputDescription": "Insertar descripción...",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "titleEditItem": "Editar"
     }
 }

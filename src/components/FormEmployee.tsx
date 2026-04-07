@@ -4,16 +4,18 @@ import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { useParams, useNavigate } from "react-router-dom";
 import { addEmployee, editingEmployee } from "../features/employeSlice";
 import { v4 as uuid } from "uuid";
+import { useTranslation } from "react-i18next";
 import "../styles/employeStyle/FormEmployee.css";
 
 interface Props {
   data: string;
 }
-export const FormEmployee = ({data}: Props) => {
+export const FormEmployee = ({ data }: Props) => {
   const employees = useAppSelector((state) => state.employees);
   const dispatch = useAppDispatch();
   const params = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation("global");
 
   const [employee, setEmployee] = useState<Data>({
     id: "",
@@ -68,7 +70,7 @@ export const FormEmployee = ({data}: Props) => {
     <div className="cardNewEmployee">
       <p className="titleNewEmployee">{data}</p>
       <form className="form" onSubmit={handleSubmit}>
-        <label className="label">Item:</label>
+        <label className="label">{t("schedule.labelItem")}</label>
         <input
           name="alias"
           className="inputText"
@@ -77,16 +79,16 @@ export const FormEmployee = ({data}: Props) => {
           onChange={handleChangeAlias}
           autoComplete="off"
           autoFocus
-          placeholder="Insert item..."
+          placeholder={t("schedule.inputItem")}
         />
-        <label className="label">Description:</label>
+        <label className="label">{t("schedule.labelDescription")}</label>
         <textarea
           name="name"
           className="inputTextDescription"
           value={employee.name}
           onChange={handleChangeName}
           autoComplete="off"
-          placeholder="Insert description..."
+          placeholder={t("schedule.inputDescription")}
           rows={3}
         />
         <div className="buttons">
@@ -95,10 +97,10 @@ export const FormEmployee = ({data}: Props) => {
             onClick={handleSave}
             disabled={employee.alias.length < 1 || employee.name.length < 1}
           >
-            Save
+            {t("schedule.save")}
           </button>
           <button className="cancelButton" onClick={handleCancel}>
-            Cancel
+            {t("schedule.cancel")}
           </button>
         </div>
       </form>

@@ -75,7 +75,7 @@
   margin-top: 10px;
 }
 .saveButton {
-  width: 5.5rem;
+  width: 6rem;
   height: 2.5rem;
   font-size: 1.2rem;
   color: white;
@@ -91,7 +91,7 @@
   opacity: 0.5;
 }
 .cancelButton {
-  width: 5.5rem;
+  width: 6rem;
   height: 2.5rem;
   font-size: 1.2rem;
   color: white;
