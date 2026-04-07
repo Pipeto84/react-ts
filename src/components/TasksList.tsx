@@ -4,9 +4,11 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
+import { useTranslation } from "react-i18next";
 import "../styles/TasksPage.css";
 
 export const TaskList = () => {
+  const { t } = useTranslation("global");
   const dispatch = useAppDispatch();
   const tasks = useAppSelector((state) => state.tasks);
   const navigate = useNavigate();
@@ -85,7 +87,7 @@ export const TaskList = () => {
       <form className="newList" onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Name list..."
+          placeholder={t("tasks.nameList")}
           className="nameList"
           value={nameList}
           onChange={handleChangeListName}
@@ -116,7 +118,7 @@ export const TaskList = () => {
           </div>
           <input
             type="text"
-            placeholder="Name task..."
+            placeholder={t("tasks.nameTask")}
             className="nameTask"
             value={nameTask}
             onChange={handleChangeTaskName}
@@ -125,17 +127,17 @@ export const TaskList = () => {
             className="addTask"
             onClick={addTask}
             type="button"
-            title="Add task"
+            title={t("tasks.addTask")!}
           >
             +
           </button>
         </div>
         <div className="saveCancel">
           <button className="saveTask" type="submit" onClick={saveList}>
-            Save
+            {t("tasks.save")}
           </button>
           <button className="cancelTask" type="button" onClick={handleCancel}>
-            Cancel
+            {t("tasks.cancel")}
           </button>
         </div>
       </form>

@@ -62,5 +62,13 @@
         "info2": "in a city or find information about a ",
         "infoWeather": "Find the current weather in a city.",
         "infoMovie": "Find information about movies"
+    },
+    "tasks": {
+        "newList": "New List",
+        "nameList": "Name of the list...",
+        "nameTask": "Name of the task...",
+        "addTask": "Add Task",
+        "save": "Save",
+        "cancel": "Cancel"
     }
 }

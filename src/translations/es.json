@@ -62,5 +62,13 @@
         "info2": "actual en una ciudad o encuentra información sobre una ",
         "infoWeather": "Encuentra el clima actual en una ciudad.",
         "infoMovie": "Encuentra información sobre películas"
+    },
+    "tasks": {
+        "newList": "Nueva Lista",
+        "nameList": "Nombre de la lista...",
+        "nameTask": "Nombre de la tarea...",
+        "addTask": "Agregar Tarea",
+        "save": "Guardar",
+        "cancel": "Cancelar"
     }
 }

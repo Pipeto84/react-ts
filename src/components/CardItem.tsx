@@ -1,4 +1,3 @@
-import React from "react";
 import type { Data, Date } from "../interfaces/index";
 import copy from "../assets/copy.png";
 import trash from "../assets/borrar2.png";
