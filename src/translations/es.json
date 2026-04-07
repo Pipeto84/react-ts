@@ -5,7 +5,7 @@
         "schedule": "Horario",
         "search": "Buscar",
         "tasks": "Tareas",
-        "login": "Acceder"
+        "login": "Ingresar"
     },
     "footer": {
         "mapa": "Mapa de navegación"
@@ -49,5 +49,18 @@
         "save": "Guardar",
         "cancel": "Cancelar",
         "titleEditItem": "Editar"
+    },
+    "search": {
+        "weather": "Clima",
+        "movie": "Película",
+        "btnSelect": "Selecciona tema",
+        "btnSearch": "Buscar",
+        "selectPlaceholder": "Seleccionar un tema...",
+        "weatherPlaceholder": "Nombre de la ciudad...",
+        "moviePlaceholder": "Nombre de la película...",
+        "info1": "Encuentra el ",
+        "info2": "actual en una ciudad o encuentra información sobre una ",
+        "infoWeather": "Encuentra el clima actual en una ciudad.",
+        "infoMovie": "Encuentra información sobre películas"
     }
 }

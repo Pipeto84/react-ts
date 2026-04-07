@@ -49,5 +49,18 @@
         "save": "Save",
         "cancel": "Cancel",
         "titleEditItem": "Edit Item"
+    },
+    "search": {
+        "weather": "Weather",
+        "movie": "Movie",
+        "btnSelect": "Select a theme",
+        "btnSearch": "Search",
+        "selectPlaceholder": "Select a theme...",
+        "weatherPlaceholder": "Enter a city...",
+        "moviePlaceholder": "Enter a movie...",
+        "info1": "Find the current ",
+        "info2": "in a city or find information about a ",
+        "infoWeather": "Find the current weather in a city.",
+        "infoMovie": "Find information about movies"
     }
 }

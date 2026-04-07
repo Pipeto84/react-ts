@@ -1,13 +1,15 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Weather } from "../components/Weather";
 import { Movie } from "../components/Movie";
 import iconWeatherColor from "../assets/weatherColor.svg";
 import iconThermometer from "../assets/thermometer.svg";
 import iconMovieColor from "../assets/movieColor.svg";
 import iconPopcorn from "../assets/popcorn.svg";
+import { useTranslation } from "react-i18next";
 import "../styles/SearchPage.css";
 
 export const SearchPage = () => {
+  const { t } = useTranslation("global");
   const [selector, setSelector] = useState("Select a theme");
   const [dataInput, setDataInput] = useState("");
   const [send, setSend] = useState("");
@@ -16,35 +18,35 @@ export const SearchPage = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const weather = () => {
-    setSelector("Weather");
+    setSelector(t("search.weather"));
     setThemeIcon(true);
     setSend("");
     setClickSearch(false);
     inputRef.current?.focus();
   };
   const movie = () => {
-    if (selector === "Movie") {
+    if (selector === "Movie" || selector === "Película") {
       setClickSearch(false);
     }
-    setSelector("Movie");
+    setSelector(t("search.movie"));
     setThemeIcon(true);
     setSend("");
     inputRef.current?.focus();
   };
   const infoSearch = (
     <h4 className="textoSearcher">
-      Find the current{" "}
+      {t("search.info1")}
       <a className="toWeather" href="#" onClick={weather}>
-        Weather{" "}
+        {t("search.weather")}{" "}
       </a>
-      in a city or find information about a {""}
+      {t("search.info2")}
       <a className="toMovie" href="#" onClick={movie}>
-        Movie
+        {t("search.movie")}
       </a>
     </h4>
   );
   const iconsSearch = () => {
-    if (selector === "Select a theme") {
+    if (selector === "Select a theme" || selector === "Selecciona tema") {
       return (
         <div>
           <a href="#" onClick={weather}>
@@ -66,10 +68,10 @@ export const SearchPage = () => {
     }
   };
   const iconsInfoTheme = () => {
-    if (selector === "Weather" && themeIcon) {
+    if ((selector === "Weather" || selector === "Clima") && themeIcon) {
       return (
         <>
-          <h4 className="textoTema">Find the current weather in a city</h4>
+          <h4 className="textoTema">{t("search.infoWeather")}</h4>
           <img
             className="iconWeather1"
             src={iconWeatherColor}
@@ -82,10 +84,10 @@ export const SearchPage = () => {
           />
         </>
       );
-    } else if (selector === "Movie" && themeIcon) {
+    } else if ((selector === "Movie" || selector === "Película") && themeIcon) {
       return (
         <>
-          <h4 className="textoTema">Find information about a movie</h4>
+          <h4 className="textoTema">{t("search.infoMovie")}</h4>
           <img className="iconMovie1" src={iconMovieColor} alt="icon movie" />
           <img className="iconMovie2" src={iconPopcorn} alt="icon movie" />
         </>
@@ -99,10 +101,11 @@ export const SearchPage = () => {
     e.preventDefault();
     setSend(dataInput);
     setThemeIcon(false);
-    if (selector === "Weather") {
+    console.log(selector);
+    if (selector === "Weather" || selector === "Clima") {
       setDataInput("");
       setClickSearch(false);
-    } else if (selector === "Movie") {
+    } else if (selector === "Movie" || selector === "Película") {
       setDataInput("");
       setClickSearch(true);
     }
@@ -110,6 +113,7 @@ export const SearchPage = () => {
   const selected = () => {
     switch (selector) {
       case "Select a theme":
+      case "Selecciona tema":
         return infoSearch;
       case "Weather":
         if (send.length > 0) {
@@ -130,11 +134,17 @@ export const SearchPage = () => {
   const handlePlaceHolder = () => {
     switch (selector) {
       case "Select a theme":
-        return " Select a theme...";
+        return `${t("search.selectPlaceholder")}`;
+      case "Selecciona tema":
+        return `${t("search.selectPlaceholder")}`;
       case "Weather":
-        return " Enter a city...";
+        return `${t("search.weatherPlaceholder")}`;
+      case "Clima":
+        return `${t("search.weatherPlaceholder")}`;
       case "Movie":
-        return " Enter movie title...";
+        return `${t("search.moviePlaceholder")}`;
+      case "Película":
+        return `${t("search.moviePlaceholder")}`;
       default:
         return "";
     }
@@ -149,6 +159,10 @@ export const SearchPage = () => {
   const handleClickSearch = () => {
     setClickSearch(true);
   };
+  useEffect(() => {
+      setSelector(`${t("search.btnSelect")}`);
+  }, [`${t("search.btnSearch")}`]);
+
   return (
     <div className={changeHeight()}>
       <form onSubmit={handleSubmit} className="container-search">
@@ -158,10 +172,10 @@ export const SearchPage = () => {
           </button>
           <div className="dropdown-content">
             <a href="#" onClick={weather}>
-              Weather
+              {t("search.weather")}
             </a>
             <a href="#" onClick={movie}>
-              Movies
+              {t("search.movie")}
             </a>
           </div>
         </div>
@@ -171,7 +185,7 @@ export const SearchPage = () => {
             className="btnSearch"
             onClick={handleClickSearch}
           >
-            Search
+            {t("search.btnSearch")}
           </button>
           <input
             type="text"
