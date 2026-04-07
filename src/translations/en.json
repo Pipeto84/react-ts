@@ -84,5 +84,24 @@
         "welcome": "Welcome",
         "welcomeMessage": "Your login was successful!",
         "btnContinue": "Continue"
+    },
+    "register": {
+        "title": "New user",
+        "nameLabel": "Name",
+        "nameInput": "Enter your name...",
+        "lastNameLabel": "Last Name",
+        "lastNameInput": "Enter your last name...",
+        "phoneLabel": "Phone",
+        "phoneInput": "Enter your phone number...",
+        "birthDateLabel": "Birth Date",
+        "birthDateInput": "Enter your birth date...",
+        "userLabel": "Username",
+        "userInput": "Enter your username...",
+        "password": "Password",
+        "passwordInput": "Enter your password...",
+        "btnRegister": "Register",
+        "welcome": "Welcome",
+        "welcomeMessage": "Your registration was successful!",
+        "btnContinue": "Continue"
     }
 }

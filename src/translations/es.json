@@ -81,8 +81,27 @@
         "notAccount": "¿No tienes una cuenta? ",
         "register": "Regístrate",
         "signOut": "Cerrar sesión",
-        "welcome": "Bienvenido",
+        "welcome": "¡Bienvenido!",
         "welcomeMessage": "¡Tu inicio de sesión fue exitoso!",
+        "btnContinue": "Continuar"
+    },
+    "register": {
+        "title": "Nuevo usuario",
+        "nameLabel": "Nombre",
+        "nameInput": "Ingrese su nombre...",
+        "lastNameLabel": "Apellido",
+        "lastNameInput": "Ingrese su apellido...",
+        "phoneLabel": "Teléfono",
+        "phoneInput": "Ingrese su número de teléfono...",
+        "birthDateLabel": "Fecha de Nacimiento",
+        "birthDateInput": "Ingrese su fecha de nacimiento...",
+        "userLabel": "Nombre de Usuario",
+        "userInput": "Ingrese su nombre de usuario...",
+        "password": "Contraseña",
+        "passwordInput": "Ingrese su contraseña...",
+        "btnRegister": "Registrarse",
+        "welcome": "¡Bienvenido!",
+        "welcomeMessage": "¡Tu registro fue exitoso!",
         "btnContinue": "Continuar"
     }
 }
