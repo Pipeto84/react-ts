@@ -15,6 +15,15 @@
         "title": "Tienda",
         "addToCart": "Agregar al Carrito",
         "removeFromCart": "Eliminar del Carrito",
-        "titleCar": "Carrito de Compras"
-    }
+        "titleCar": "Carrito de Compras",
+        "tableName": "Nombre",
+        "tablePrice": "Precio",
+        "tableAmount": "Cantidad",
+        "tableTotal": "Total",
+        "btnDelete": "Eliminar",
+        "btnBuy": "Comprar",
+        "notBuy1": "No tienes",
+        "notBuy2": "productos ",
+        "notBuy3": "en tu carrito"
+}
 }

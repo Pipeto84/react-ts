@@ -55,6 +55,24 @@
   margin-top: 1rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
+.tableNameProduct {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 55.5px;
+}
+.tablePriceProduct {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  
+  /* height: 55px; */
+}
+.tableAmountProduct{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .column {
   text-align: center;
 }

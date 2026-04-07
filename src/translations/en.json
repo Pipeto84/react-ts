@@ -15,6 +15,15 @@
         "title": "Store",
         "addToCart": "Add to Cart",
         "removeFromCart": "Remove from Cart",
-        "titleCar": "Shopping cart"
+        "titleCar": "Shopping cart",
+        "tableName": "Name",
+        "tablePrice": "Price",
+        "tableAmount": "Amount",
+        "tableTotal": "Total",
+        "btnDelete": "Delete",
+        "btnBuy": "Buy",
+        "notBuy1": "You don't have ",
+        "notBuy2": "products ",
+        "notBuy3": "in your shopping cart"
     }
 }

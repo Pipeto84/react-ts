@@ -42,31 +42,31 @@ export const CarPage = () => {
       </h1>
       <div className="containerCar" hidden={shoppingList.length > 0}>
         <h3 className="sinCompras" hidden={shoppingList.length > 0}>
-          You have no{" "}
+          {t("store.notBuy1")}{" "}
           <a
             className="linkCompras"
             hidden={shoppingList.length > 0}
             href="/store"
           >
-            products
+            {t("store.notBuy2")}
           </a>{" "}
-          in your shopping cart
+          {t("store.notBuy3")}
         </h3>
         <NavLink className="btnStore" to="/store">
-          Store
+          {t("store.title")}
         </NavLink>
       </div>
       <table className="table table-striped" hidden={shoppingList.length < 1}>
         <thead>
           <tr>
             <th scope="col" className="column">
-              Name
+              {t("store.tableName")}
             </th>
             <th scope="col" className="column">
-              Price
+              {t("store.tablePrice")}
             </th>
             <th scope="col" className="column">
-              Amount
+              {t("store.tableAmount")}
             </th>
             <th scope="col"></th>
           </tr>
@@ -74,9 +74,9 @@ export const CarPage = () => {
         <tbody>
           {shoppingList.map((compra) => (
             <tr key={compra.id}>
-              <td scope="row">{compra.title}</td>
-              <td>${compra.price}</td>
-              <td>
+              <td className="tableNameProduct" scope="row">{compra.title}</td>
+              <td className="tablePriceProduct">${compra.price}</td>
+              <td className="tableAmountProduct">
                 <button
                   className="btn btn-ouline"
                   type="button"
@@ -101,14 +101,14 @@ export const CarPage = () => {
                   type="button"
                   onClick={() => handleDeleteProduct(compra)}
                 >
-                  Delete
+                  {t("store.btnDelete")}
                 </button>
               </td>
             </tr>
           ))}
           <tr>
             <td></td>
-            <th>Total: </th>
+            <th>{t("store.tableTotal")}: </th>
             <th>$ {handleTotal()}</th>
             <td></td>
           </tr>
@@ -121,7 +121,7 @@ export const CarPage = () => {
           onClick={handlePrint}
           hidden={shoppingList.length < 1}
         >
-          Buy
+          {t("store.btnBuy")}
         </button>
       </div>
     </div>
