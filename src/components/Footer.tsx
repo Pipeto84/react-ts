@@ -3,9 +3,12 @@ import email from '../assets/email.png'
 import phone from '../assets/phone.png'
 import gps from '../assets/gps.png'
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "../styles/Footer.css";
 
 export const Footer = () => {
+  const { t } = useTranslation("global");
+
   return (
     <div className="footer">
       <div className="contact">
@@ -28,7 +31,7 @@ export const Footer = () => {
         </a>
       </div>
       <NavLink to="/map" className="mapa-link">
-        Navigation Map
+        {t("footer.mapa")}
       </NavLink>
     </div>
   );

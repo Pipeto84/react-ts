@@ -7,6 +7,9 @@
         "tasks": "Tareas",
         "login": "Acceder"
     },
+    "footer": {
+        "mapa": "Mapa de navegación"
+    },
     "home": {
         "welcome": "Este sitio web está diseñado en React con TypeScript. Aquí encontrarás una tienda con carrito de compras, programación semanal mediante arrastrar y soltar, barras de búsqueda, listas de tareas, registro e inicio de sesión de usuarios.",
         "designed": "Diseñado por"
