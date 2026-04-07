@@ -83,7 +83,10 @@
         "signOut": "Sign Out",
         "welcome": "Welcome",
         "welcomeMessage": "Your login was successful!",
-        "btnContinue": "Continue"
+        "btnContinue": "Continue",
+        "errorTitle": "Login Error",
+        "errorMessage": "Invalid username or password. Please try again.",
+        "btnTryAgain": "Try Again"
     },
     "register": {
         "title": "New user",

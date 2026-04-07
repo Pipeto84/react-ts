@@ -83,7 +83,11 @@
         "signOut": "Cerrar sesión",
         "welcome": "¡Bienvenido!",
         "welcomeMessage": "¡Tu inicio de sesión fue exitoso!",
-        "btnContinue": "Continuar"
+        "btnContinue": "Continuar",
+        "errorTitle": "Error",
+        "errorMessage": "Nombre de usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.",
+        "btnTryAgain": "Intentar de nuevo"
+
     },
     "register": {
         "title": "Nuevo usuario",
