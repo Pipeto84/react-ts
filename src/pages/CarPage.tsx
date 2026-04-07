@@ -73,8 +73,8 @@ export const CarPage = () => {
         </thead>
         <tbody>
           {shoppingList.map((compra) => (
-            <tr key={compra.id}>
-              <td className="tableNameProduct" scope="row">{compra.title}</td>
+            <tr className="tableProduct" key={compra.id}>
+              <td className="tableNameProduct">{compra.title}</td>
               <td className="tablePriceProduct">${compra.price}</td>
               <td className="tableAmountProduct">
                 <button
@@ -88,14 +88,14 @@ export const CarPage = () => {
                   {compra.amount}
                 </button>
                 <button
-                  className="btn btn-ouline"
+                  className="btn btn-ouline more"
                   type="button"
                   onClick={() => handleMoreProduct(compra)}
                 >
                   +
                 </button>
               </td>
-              <td>
+              <td className="tableDeleteProduct">
                 <button
                   className="btn btn-danger shadowButton"
                   type="button"
@@ -106,10 +106,10 @@ export const CarPage = () => {
               </td>
             </tr>
           ))}
-          <tr>
+          <tr >
+            <th className="totalProducts">{t("store.tableTotal")}: ${handleTotal()} </th>
             <td></td>
-            <th>{t("store.tableTotal")}: </th>
-            <th>$ {handleTotal()}</th>
+            <td></td>
             <td></td>
           </tr>
         </tbody>

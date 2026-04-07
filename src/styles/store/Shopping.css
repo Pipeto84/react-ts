@@ -1,6 +1,6 @@
 .carrito {
   max-width: 50rem;
-  height: 74vh;
+  height: 75vh;
   margin: 1.875rem auto;
 }
 .containerCar {
@@ -59,25 +59,35 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  height: 55.5px;
+  height: 56px;
 }
 .tablePriceProduct {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  
-  /* height: 55px; */
+  text-align: center;
+  vertical-align: middle;
+  height: 56px;
 }
-.tableAmountProduct{
+.tableAmountProduct {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 56px;
+}
+.more {
+  padding-left: 8px;
+}
+.tableDeleteProduct {
+  text-align: center;
+  vertical-align: middle;
+  height: 56px;
 }
 .column {
   text-align: center;
 }
 .shadowButton {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.totalProducts {
+  text-align: right;
 }
 .btnBuy {
   background-color: rgb(88, 88, 88);
