@@ -5,7 +5,7 @@ import { useAppDispatch } from "../app/hooks";
 import "../styles/employeStyle/ContainerCards.css";
 
 interface Props {
-  id?: string;
+  day: Date;
   date: Date;
   items: Data[];
   isDragging: boolean;
@@ -14,7 +14,7 @@ interface Props {
 }
 
 export const ContainerCards = ({
-  id,
+  day,
   items = [],
   date,
   isDragging,
@@ -30,7 +30,7 @@ export const ContainerCards = ({
     e.preventDefault();
     const updateEployee = {
       id: e.dataTransfer.getData("text"),
-      date: date,
+      date: day,
     };
     dispatch(dragEmployee(updateEployee));
     handleDragging(false);
@@ -45,7 +45,7 @@ export const ContainerCards = ({
       <p>{date}</p>
       {items.map(
         (item) =>
-          date === item.date && (
+          day === item.date && (
             <CardItem
               data={item}
               key={item.id}

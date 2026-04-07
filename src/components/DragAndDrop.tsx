@@ -29,6 +29,7 @@ export const DragAndDrop = () => {
       <div className="grid">
         <ContainerCards
           date={t("schedule.monday") as Date}
+          day={"monday"}
           key={"monday"}
           items={employees}
           isDragging={isDragging}
@@ -37,6 +38,7 @@ export const DragAndDrop = () => {
         />
         <ContainerCards
           date={t("schedule.tuesday") as Date}
+          day={"tuesday"}
           key={"tuesday"}
           items={employees}
           isDragging={isDragging}
@@ -45,6 +47,7 @@ export const DragAndDrop = () => {
         />
         <ContainerCards
           date={t("schedule.wednesday") as Date}
+          day={"wednesday"}
           key={"wednesday"}
           items={employees}
           isDragging={isDragging}
@@ -53,6 +56,7 @@ export const DragAndDrop = () => {
         />
         <ContainerCards
           date={t("schedule.thursday") as Date}
+          day={"thursday"}
           key={"thursday"}
           items={employees}
           isDragging={isDragging}
@@ -61,6 +65,7 @@ export const DragAndDrop = () => {
         />
         <ContainerCards
           date={t("schedule.friday") as Date}
+          day={"friday"}
           key={"friday"}
           items={employees}
           isDragging={isDragging}
@@ -69,6 +74,7 @@ export const DragAndDrop = () => {
         /> 
         <ContainerCards
           date={t("schedule.saturday") as Date}
+          day={"saturday"}
           key={"saturday"}
           items={employees}
           isDragging={isDragging}
@@ -77,6 +83,7 @@ export const DragAndDrop = () => {
         />
         <ContainerCards
           date={t("schedule.sunday") as Date}
+          day={"sunday"}
           key={"sunday"}
           items={employees}
           isDragging={isDragging}
