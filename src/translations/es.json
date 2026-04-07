@@ -70,5 +70,19 @@
         "addTask": "Agregar Tarea",
         "save": "Guardar",
         "cancel": "Cancelar"
+    },
+    "signIn": {
+        "title": "Ingresar",
+        "userLabel": "Usuario",
+        "userInput": "Nombre de usuario...",
+        "password": "Contraseña",
+        "passwordInput": "Contraseña...",
+        "btnSignIn": "Ingresar",
+        "notAccount": "¿No tienes una cuenta? ",
+        "register": "Regístrate",
+        "signOut": "Cerrar sesión",
+        "welcome": "Bienvenido",
+        "welcomeMessage": "¡Tu inicio de sesión fue exitoso!",
+        "btnContinue": "Continuar"
     }
 }

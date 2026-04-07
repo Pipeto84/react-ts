@@ -1,10 +1,12 @@
-import "../styles/User.css";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { setLogIn } from "../features/user/logInSlice";
+import { useTranslation } from "react-i18next";
+import "../styles/User.css";
 
 export function User() {
+  const { t } = useTranslation("global");
   const [acces, setAcces] = useState(false);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
@@ -41,43 +43,43 @@ export function User() {
     <div className="ingresar">
       {!acces && (
         <div className="contenido-ingresar">
-          <h3 className="titulo-ingresar">Sign in</h3>
+          <h3 className="titulo-ingresar">{t("signIn.title")}</h3>
           <div className="formulario-ingresar">
-            <label className="label-ingresar">Name</label>
+            <label className="label-ingresar">{t("signIn.userLabel")}</label>
             <input
               type="text"
-              placeholder="Your name"
+              placeholder={t("signIn.userInput")}
               className="input-ingresar"
               onChange={handleChange}
               name="userName"
               autoFocus
             />
-            <label className="label-ingresar">Password</label>
+            <label className="label-ingresar">{t("signIn.password")}</label>
             <input
               type="text"
-              placeholder="Your password"
+              placeholder={t("signIn.passwordInput")}
               className="input-ingresar"
               onChange={handleChange}
               name="password"
             />
           </div>
           <button className="boton-ingresar" onClick={handleSubmit}>
-            Sign in
+            {t("signIn.btnSignIn")}
           </button>
           <NavLink to="/register" className="registro-link">
-            Register
+            {t("signIn.register")}
           </NavLink>
           <button className="boton-cerrar" onClick={handleCerrar}>
-            Sign out
+            {t("signIn.signOut")}
           </button>
         </div>
       )}
       {acces && (
         <div className="contenido-ingresoU">
-          <h3 className="titulo-ingresoU">Welcome</h3>
-          <p className="texto-ingresoU">Your login was successful</p>
+          <h3 className="titulo-ingresoU">{t("signIn.welcome")}</h3>
+          <p className="texto-ingresoU">{t("signIn.welcomeMessage")}</p>
           <NavLink to="/" className="boton-ingresoU">
-            Continue
+            {t("signIn.btnContinue")}
           </NavLink>
         </div>
       )}

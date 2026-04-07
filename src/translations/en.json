@@ -70,5 +70,19 @@
         "addTask": "Add Task",
         "save": "Save",
         "cancel": "Cancel"
+    },
+    "signIn": {
+        "title": "Sign In",
+        "userLabel": "User",
+        "userInput": "Enter your username...",
+        "password": "Password",
+        "passwordInput": "Enter your password...",
+        "btnSignIn": "Sign In",
+        "notAccount": "Don't have an account? ",
+        "register": "Register",
+        "signOut": "Sign Out",
+        "welcome": "Welcome",
+        "welcomeMessage": "Your login was successful!",
+        "btnContinue": "Continue"
     }
 }
