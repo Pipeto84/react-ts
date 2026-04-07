@@ -28,5 +28,18 @@
         "notBuy1": "No tienes",
         "notBuy2": "productos ",
         "notBuy3": "en tu carrito"
-}
+    },
+    "schedule": {
+        "title": "Horario Semanal",
+        "newItem": "Nuevo",
+        "items": "Elementos",
+        "monday": "Lunes",
+        "tuesday": "Martes",
+        "wednesday": "Miércoles",
+        "thursday": "Jueves",
+        "friday": "Viernes",
+        "saturday": "Sábado",
+        "sunday": "Domingo",
+        "itemsList": "Lista Elementos"
+    }
 }

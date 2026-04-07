@@ -54,7 +54,7 @@ export const employeeSlice = createSlice({
     },
     deleteEmployee: (state, action: PayloadAction<Data>) => {
       const employeeFound = state.find(
-        (employee) => employee.id === action.payload.id
+        (employee) => employee.id === action.payload.id,
       );
       if (employeeFound) {
         state.splice(state.indexOf(employeeFound), 1);

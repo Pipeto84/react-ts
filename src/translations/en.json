@@ -10,7 +10,7 @@
     "footer": {
         "mapa": "Navigation Map"
     },
-"home": {
+    "home": {
         "welcome": "This website is designed in React with TypeScript. Here you'll find a store with a shopping cart, weekly scheduling with drag and drop, search bars, task lists, registration and user login.",
         "designed": "Designed by"
     },
@@ -28,5 +28,18 @@
         "notBuy1": "You don't have ",
         "notBuy2": "products ",
         "notBuy3": "in your shopping cart"
+    },
+    "schedule": {
+        "title": "Weekly Schedule",
+        "newItem": "New Item",
+        "items": "Items",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "itemsList": "Items List"
     }
 }

@@ -1,5 +1,6 @@
 import type { Data, Date } from "../interfaces";
 import { CardItem } from "./CardItem";
+import { useTranslation } from "react-i18next";
 import "../styles/employeStyle/ContainerEmployees.css";
 
 interface Props {
@@ -13,9 +14,10 @@ export const ContainerEmployees = ({
   hanleDragging,
   hanleUpdateList,
 }: Props) => {
+  const { t } = useTranslation("global");
   return (
     <div className="containerEmployees">
-      <p className="titleEmployees">Items</p>
+      <p className="titleEmployees">{t("schedule.items")}</p>
       <div className="all">
         {items.map(
           (item) =>
@@ -26,7 +28,7 @@ export const ContainerEmployees = ({
                 handleDragging={hanleDragging}
                 handleUpdateList={hanleUpdateList}
               />
-            )
+            ),
         )}
       </div>
     </div>

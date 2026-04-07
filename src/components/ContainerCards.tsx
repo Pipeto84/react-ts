@@ -5,6 +5,7 @@ import { useAppDispatch } from "../app/hooks";
 import "../styles/employeStyle/ContainerCards.css";
 
 interface Props {
+  id?: string;
   date: Date;
   items: Data[];
   isDragging: boolean;
@@ -13,6 +14,7 @@ interface Props {
 }
 
 export const ContainerCards = ({
+  id,
   items = [],
   date,
   isDragging,
@@ -50,7 +52,7 @@ export const ContainerCards = ({
               handleDragging={handleDragging}
               handleUpdateList={handleUpdateList}
             />
-          )
+          ),
       )}
     </div>
   );
