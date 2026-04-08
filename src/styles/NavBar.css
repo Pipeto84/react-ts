@@ -97,14 +97,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  vertical-align: middle;
   margin: 0 20px;
 }
 .btnLanguage {
+  width: 30px;
+  height: 30px;
   background: none;
   border: none;
   color: black;
   font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
 }
 @media (max-width: 992px) {
   .topnav {
@@ -167,5 +171,11 @@
   }
   .nav-menu_visible {
     left: 0;
+  }
+  .btnsLanguage {
+    height: 50px;
+    gap: 2px;
+  }.btnLanguage{
+    height: 20px;
   }
 }
