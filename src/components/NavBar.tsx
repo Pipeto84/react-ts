@@ -16,7 +16,7 @@ export const NavBar = () => {
   const menu = useAppSelector((state) => state.menu);
   const dispatch = useAppDispatch();
   const [menuActive, setMenuActive] = useState(menu.active);
-  const [languagesActive, setlanguagesActive] = useState(false)
+  const [languagesActive, setlanguagesActive] = useState(false);
   const { t, i18n } = useTranslation("global");
 
   const handleOnclikMenu = () => {
@@ -47,11 +47,11 @@ export const NavBar = () => {
   const handleClickEn = () => {
     i18n.changeLanguage("en");
     setlanguagesActive(false);
-  }
+  };
   const handleClickEs = () => {
     i18n.changeLanguage("es");
     setlanguagesActive(false);
-  }
+  };
 
   return (
     <div className="topnav">
@@ -92,32 +92,38 @@ export const NavBar = () => {
           </button>
         </NavLink>
       </div>
-      <div className="navUser">
-        {user.acces && (
-          <NavLink to="/user" className="nav-link-user">
-            <button className="btnLink-user" onClick={handleClickLink}>
-              {user.userName}
-            </button>
-          </NavLink>
-        )}
-        {!user.acces && (
-          <NavLink className="linkNav-user" to="/user">
-            <button className="btnLinkLogin" onClick={handleClickLink}>
-              {t("navBar.login")}
-            </button>
-          </NavLink>
-        )}
-      </div>
-      <button className="btnTranslate" onClick={handleOnclikTranslate}>
-        <img
-          className="iconTranslate"
-          src={iconTranslate}
-          alt="icono translate"
-        />
-      </button>
-      <div className={activeLanguage()}>
-        <a className="language" href="#" onClick={handleClickEn}>English</a>
-        <a className="language" href="#" onClick={handleClickEs}>Español</a>
+      <div className="user-trans">
+        <div className="navUser">
+          {user.acces && (
+            <NavLink to="/user" className="nav-link-user">
+              <button className="btnLink-user" onClick={handleClickLink}>
+                {user.userName}
+              </button>
+            </NavLink>
+          )}
+          {!user.acces && (
+            <NavLink className="linkNav-user" to="/user">
+              <button className="btnLinkLogin" onClick={handleClickLink}>
+                {t("navBar.login")}
+              </button>
+            </NavLink>
+          )}
+        </div>
+        <button className="btnTranslate" onClick={handleOnclikTranslate}>
+          <img
+            className="iconTranslate"
+            src={iconTranslate}
+            alt="icono translate"
+          />
+        </button>
+        <div className={activeLanguage()}>
+          <a className="language" href="#" onClick={handleClickEn}>
+            English
+          </a>
+          <a className="language" href="#" onClick={handleClickEs}>
+            Español
+          </a>
+        </div>
       </div>
     </div>
   );

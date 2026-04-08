@@ -41,6 +41,11 @@
 .btnLink:hover {
   color: white;
 }
+.user-trans {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .nav-link-user {
   height: 45px;
   text-decoration: none;
@@ -101,7 +106,7 @@
   height: 40px;
   width: 40px;
 }
-.languages{
+.languages {
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -124,6 +129,21 @@
 .language:hover {
   background-color: #34495e;
   border-radius: 0 0 0 8px;
+}
+@media screen and (max-width: 1100px) {
+  .topnav {
+    height: 60px;
+  }
+  .linkNav {
+    font-size: 25px;
+  }
+  .linkNav-user {
+    width: 100px;
+    height: 33px;
+  }
+  .btnLinkLogin {
+    font-size: 21px;
+  }
 }
 @media (max-width: 992px) {
   .topnav {
@@ -151,6 +171,9 @@
     overflow-y: auto;
     left: 100%;
     border-radius: 0 0 10px 0;
+  }
+  .nav-menu_visible {
+    left: 0;
   }
   .linkNav {
     font-size: 20px;
@@ -183,9 +206,6 @@
   .btnLinkLogin {
     font-size: 18px;
   }
-  .nav-menu_visible {
-    left: 0;
-  }
   .btnsLanguage {
     height: 50px;
     gap: 2px;
@@ -201,7 +221,7 @@
     height: 85px;
     top: 50px;
   }
-  .language{
+  .language {
     font-size: 15px;
   }
 }
