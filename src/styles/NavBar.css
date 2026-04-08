@@ -137,6 +137,12 @@
   .linkNav {
     font-size: 25px;
   }
+  .nav-link-user {
+    height: 33px;
+  }
+  .btnLink-user {
+    font-size: 21px;
+  }
   .linkNav-user {
     width: 100px;
     height: 33px;
@@ -187,13 +193,13 @@
     color: black;
   }
   .nav-link-user {
-    height: 35px;
+    height: 30px;
     font-size: 20px;
   }
   .btnLink-user {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
   }
   .linkNav-user {
     width: 84px;

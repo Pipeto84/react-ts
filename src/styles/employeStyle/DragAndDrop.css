@@ -66,8 +66,12 @@
   }
   .titleFont{
     font-size: 30px;
+    margin-top: 15px;
   }
   .btnNewEmployee {
+    width: 7.8rem;
+    height: 2.5rem;
     padding: 5px;
+    font-size: 1.3rem;
   }
 }
