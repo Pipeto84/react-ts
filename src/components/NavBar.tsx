@@ -3,7 +3,9 @@ import { Badge } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useAppSelector, useAppDispatch } from "../app/hooks";
 import { setActive } from "../features/menuSlice";
+import { setActiveTrans } from "../features/translateSlice";
 import iconMenu from "../assets/menu.png";
+import iconTranslate from "../assets/translate.png";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../styles/NavBar.css";
@@ -14,9 +16,10 @@ export const NavBar = () => {
   const menu = useAppSelector((state) => state.menu);
   const dispatch = useAppDispatch();
   const [menuActive, setMenuActive] = useState(menu.active);
-  const {t, i18n} = useTranslation("global");
+  const [languagesActive, setlanguagesActive] = useState(false)
+  const { t, i18n } = useTranslation("global");
 
-  const handleOnclik = () => {
+  const handleOnclikMenu = () => {
     setMenuActive(!menuActive);
     dispatch(setActive(!menuActive));
   };
@@ -30,10 +33,29 @@ export const NavBar = () => {
   const handleClickLink = () => {
     setMenuActive(false);
   };
+  const handleOnclikTranslate = () => {
+    setlanguagesActive(!languagesActive);
+    dispatch(setActiveTrans(!languagesActive));
+  };
+  const activeLanguage = () => {
+    if (languagesActive) {
+      return "languages languages_visible";
+    } else {
+      return "languages";
+    }
+  };
+  const handleClickEn = () => {
+    i18n.changeLanguage("en");
+    setlanguagesActive(false);
+  }
+  const handleClickEs = () => {
+    i18n.changeLanguage("es");
+    setlanguagesActive(false);
+  }
 
   return (
     <div className="topnav">
-      <button className="nav-toggle" onClick={handleOnclik}>
+      <button className="nav-toggle" onClick={handleOnclikMenu}>
         <img className="iconMenu" src={iconMenu} alt="icono menu" />
       </button>
       <div className={activeMenu()}>
@@ -86,9 +108,16 @@ export const NavBar = () => {
           </NavLink>
         )}
       </div>
-      <div className="btnsLanguage">
-        <button className="btnLanguage" onClick={() => i18n.changeLanguage("en")}>en</button>
-        <button className="btnLanguage" onClick={() => i18n.changeLanguage("es")}>es</button>
+      <button className="btnTranslate" onClick={handleOnclikTranslate}>
+        <img
+          className="iconTranslate"
+          src={iconTranslate}
+          alt="icono translate"
+        />
+      </button>
+      <div className={activeLanguage()}>
+        <a className="language" href="#" onClick={handleClickEn}>English</a>
+        <a className="language" href="#" onClick={handleClickEs}>Español</a>
       </div>
     </div>
   );

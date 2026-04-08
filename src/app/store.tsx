@@ -6,6 +6,7 @@ import shoppingReducer from "../features/shoppingSlice";
 import logInReducer from "../features/user/logInSlice";
 import usersReducer from "../features/user/usersSlice";
 import menuReducer from "../features/menuSlice";
+import translateReducer from "../features/translateSlice";
 
 export const store = configureStore({
   reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
     logIn: logInReducer,
     users: usersReducer,
     menu: menuReducer,
+    translate: translateReducer,
   },
 });
 
