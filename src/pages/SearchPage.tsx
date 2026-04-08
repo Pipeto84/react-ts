@@ -115,12 +115,14 @@ export const SearchPage = () => {
       case "Select a theme":
       case "Selecciona tema":
         return infoSearch;
+      case "Clima":
       case "Weather":
         if (send.length > 0) {
           return <Weather dataInput={send} />;
         } else {
           return;
         }
+      case "Película":
       case "Movie":
         if (send.length > 0) {
           return <Movie dataInput={send} />;
@@ -135,14 +137,11 @@ export const SearchPage = () => {
     switch (selector) {
       case "Select a theme":
         return `${t("search.selectPlaceholder")}`;
-      case "Selecciona tema":
         return `${t("search.selectPlaceholder")}`;
       case "Weather":
-        return `${t("search.weatherPlaceholder")}`;
       case "Clima":
         return `${t("search.weatherPlaceholder")}`;
       case "Movie":
-        return `${t("search.moviePlaceholder")}`;
       case "Película":
         return `${t("search.moviePlaceholder")}`;
       default:
@@ -160,7 +159,7 @@ export const SearchPage = () => {
     setClickSearch(true);
   };
   useEffect(() => {
-      setSelector(`${t("search.btnSelect")}`);
+    setSelector(`${t("search.btnSelect")}`);
   }, [`${t("search.btnSearch")}`]);
 
   return (
