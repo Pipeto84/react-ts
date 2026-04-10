@@ -23,7 +23,7 @@ export const StorePage = () => {
       console.error("El error es: ", error);
     }
   };
-  
+
   useEffect(() => {
     fetchProducts();
   }, []);
