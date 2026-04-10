@@ -107,5 +107,18 @@
         "welcome": "¡Bienvenido!",
         "welcomeMessage": "¡Tu registro fue exitoso!",
         "btnContinue": "Continuar"
+    },
+    "map": {
+        "title": "Mapa de Navegación",
+        "home": "Inicio",
+        "store": "Tienda",
+        "schedule": "Horario",
+        "newItem": "Nuevo Elemento",
+        "search": "Buscar",
+        "tasks": "Tareas",
+        "newList": "Nueva Lista",
+        "login": "Iniciar Sesión",
+        "register": "Registrarse",
+        "cart": "Carrito de Compras"
     }
 }

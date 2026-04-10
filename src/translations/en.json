@@ -106,5 +106,18 @@
         "welcome": "Welcome",
         "welcomeMessage": "Your registration was successful!",
         "btnContinue": "Continue"
+    },
+    "map": {
+        "title": "Navigation Map",
+        "home": "Home",
+        "store": "Store",
+        "schedule": "Schedule",
+        "newItem": "New Item",
+        "search": "Search",
+        "tasks": "Tasks",
+        "newList": "New List",
+        "login": "Login",
+        "register": "Register",
+        "cart": "Shopping Cart"
     }
 }
