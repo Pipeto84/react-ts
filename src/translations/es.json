@@ -22,7 +22,7 @@
         "tableName": "Nombre",
         "tablePrice": "Precio",
         "tableAmount": "Cantidad",
-        "tableTotal": "Total",
+        "tableTotal": "Total: ",
         "btnDelete": "Eliminar",
         "btnBuy": "Comprar",
         "notBuy1": "No tienes",

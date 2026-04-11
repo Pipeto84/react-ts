@@ -56,7 +56,7 @@ export const CarPage = () => {
           {t("store.title")}
         </NavLink>
       </div>
-      <table className="table table-striped" hidden={shoppingList.length < 1}>
+      <table className="tables" hidden={shoppingList.length < 1}>
         <thead>
           <tr>
             <th scope="col" className="column">
@@ -68,7 +68,7 @@ export const CarPage = () => {
             <th scope="col" className="column">
               {t("store.tableAmount")}
             </th>
-            <th scope="col"></th>
+            <th scope="col" className="column"></th>
           </tr>
         </thead>
         <tbody>
@@ -107,9 +107,9 @@ export const CarPage = () => {
             </tr>
           ))}
           <tr >
+            <th className="totalProductsLabel">{t("store.tableTotal")}</th>
+            <th className="totalProductsValue"> ${handleTotal()} </th>
             <td></td>
-            <th className="totalProductsLabel">{t("store.tableTotal")}: </th>
-            <th className="totalProductsValue">${handleTotal()} </th>
             <td></td>
           </tr>
         </tbody>

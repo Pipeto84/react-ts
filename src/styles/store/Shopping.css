@@ -1,7 +1,12 @@
 .carrito {
-  max-width: 50rem;
+  max-width: 670px;
   height: 75vh;
   margin: 1.875rem auto;
+}
+.tituloCarrito {
+  text-align: center;
+  color: rgb(88, 88, 88);
+  margin-bottom: 1rem;
 }
 .containerCar {
   background-color: white;
@@ -15,10 +20,9 @@
   justify-content: center;
   align-items: center;
 }
-.tituloCarrito {
+.sinCompras {
+  color: rgb(0, 0, 0);
   text-align: center;
-  color: rgb(88, 88, 88);
-  margin-bottom: 1rem;
 }
 .linkCompras {
   font-size: 26px;
@@ -28,10 +32,6 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
-}
-.sinCompras {
-  color: rgb(0, 0, 0);
-  text-align: center;
 }
 .btnStore {
   background-color: rgb(88, 88, 88);
@@ -49,19 +49,36 @@
 .btnStore:hover {
   background-color: rgba(88, 88, 88, 0.705);
 }
-.table {
+.tables {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  border-radius: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+.column {
+  text-align: center;
+  color: black;
+  padding: 15px;
+  background-color: #cfcfcf;
+}
+.tableProduct{
+  padding: 20px;
+  background-color: white;
 }
 .tableNameProduct {
+  color: black;
   display: flex;
   align-items: center;
   justify-content: start;
-  height: 56px;
+  min-height: 56px;
+  max-width: 370px;
+  padding-left: 20px;
 }
 .tablePriceProduct {
+  color: black;
   text-align: center;
   vertical-align: middle;
   height: 56px;
@@ -70,7 +87,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
+  min-height: 56px;
 }
 .more {
   padding-left: 8px;
@@ -79,18 +96,19 @@
   text-align: center;
   vertical-align: middle;
   height: 56px;
-}
-.column {
-  text-align: center;
+  padding-right: 20px;
 }
 .shadowButton {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .totalProductsLabel {
   text-align: right;
+  color: black;
+  padding: 5px;
 }
 .totalProductsValue {
   text-align: left;
+  color: black;
 }
 .btnBuy {
   background-color: rgb(88, 88, 88);
@@ -101,4 +119,5 @@
   width: 100%;
   font-size: 20px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
 }
