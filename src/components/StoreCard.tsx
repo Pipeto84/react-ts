@@ -26,7 +26,7 @@ export const Card = ({ producto }: Props) => {
   };
   return (
     <div className="tarjeta">
-      <img className="tarjeta-imagen" src={producto.image} alt="imagen" />
+      <img className="tarjeta-imagen" src={producto.images[0]} alt="imagen" />
       <div className="tarjeta-contenido">
         <h3 className="tarjeta-titulo">{producto.title}</h3>
         <p className="tarjeta-descripcion">{producto.description}</p>

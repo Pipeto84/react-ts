@@ -13,11 +13,12 @@ export const StorePage = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch("https://fakestoreapi.com/products");
-      const data: ProductosStore[] = await response.json();
-      data.map((item) => ((item.agregar = false), (item.amount = 0)));
+      const response = await fetch("https://dummyjson.com/products");
+      const data: { products: ProductosStore[] } = await response.json();
+      console.log(data.products);
+      data.products.map((item) => ((item.agregar = false), (item.amount = 0)));
       if (products.length === 0) {
-        dispatch(setStore(data));
+        dispatch(setStore(data.products));
       }
     } catch (error) {
       console.error("El error es: ", error);
