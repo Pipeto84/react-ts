@@ -107,9 +107,9 @@ export const CarPage = () => {
             </tr>
           ))}
           <tr >
-            <th className="totalProducts">{t("store.tableTotal")}: ${handleTotal()} </th>
             <td></td>
-            <td></td>
+            <th className="totalProductsLabel">{t("store.tableTotal")}: </th>
+            <th className="totalProductsValue">${handleTotal()} </th>
             <td></td>
           </tr>
         </tbody>
