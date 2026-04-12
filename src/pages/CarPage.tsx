@@ -37,9 +37,9 @@ export const CarPage = () => {
   };
   return (
     <div className="carrito">
-      <h1 className="tituloCarrito" hidden={shoppingList.length < 1}>
+      <p className="tituloCarrito" hidden={shoppingList.length < 1}>
         {t("store.titleCar")}
-      </h1>
+      </p>
       <div className="containerCar" hidden={shoppingList.length > 0}>
         <h3 className="sinCompras" hidden={shoppingList.length > 0}>
           {t("store.notBuy1")}{" "}
@@ -78,7 +78,7 @@ export const CarPage = () => {
               <td className="tablePriceProduct">${compra.price}</td>
               <td className="tableAmountProduct">
                 <button
-                  className="btn btn-ouline"
+                  className="btn btn-ouline less"
                   type="button"
                   onClick={() => handleLessProduct(compra)}
                 >
@@ -114,7 +114,7 @@ export const CarPage = () => {
           </tr>
         </tbody>
       </table>
-      <div className="d-grid gap-2">
+      <div className="contBtnBuy" hidden={shoppingList.length < 1}>
         <button
           className="btnBuy"
           type="button"

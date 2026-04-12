@@ -15,7 +15,6 @@ export const StorePage = () => {
     try {
       const response = await fetch("https://dummyjson.com/products");
       const data: { products: ProductosStore[] } = await response.json();
-      console.log(data.products);
       data.products.map((item) => ((item.agregar = false), (item.amount = 0)));
       if (products.length === 0) {
         dispatch(setStore(data.products));
