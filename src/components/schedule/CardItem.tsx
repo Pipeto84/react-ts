@@ -24,8 +24,8 @@ export const CardItem = ({ data, handleDragging, handleUpdateList }: Props) => {
   const handleCopy = () => {
     dispatch(addItem({ ...data, id: crypto.randomUUID(), date: "" }));
   };
-  const handleDelete = (item: ItemSchedule) => {
-    dispatch(deleteItem(item));
+  const handleDelete = (employee: ItemSchedule) => {
+    dispatch(deleteItem(employee));
   };
 
   return (

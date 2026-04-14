@@ -1,6 +1,7 @@
 import {useTranslation} from 'react-i18next'
 import {NavLink} from 'react-router-dom'
 import {DragAndDrop} from '../components/schedule/DragAndDrop'
+import {ItemsList} from '../components/schedule/ItemsList'
 
 import "../styles/schedule/SchedulePage.css"
 
@@ -16,7 +17,7 @@ export const SchedulePage = () => {
         </NavLink>
       </div>
       <DragAndDrop />
-
+      <ItemsList />
     </div>
   )
 }
