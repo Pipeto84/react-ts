@@ -1,7 +1,4 @@
-.employeesList {
-  background-color: rgb(255, 255, 255);
-  border: 0.125rem solid #ffffff8c;
-  border-radius: 5px;
+.ItemsList {
   transition: all 0.3s linear;
   height: auto;
   width: 500px;
@@ -11,10 +8,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .titleList {
-  width: 100%;
+  min-width: 400px;
   border-radius: 0.3125rem;
   background-color: #35a583;
   text-align: center;
@@ -23,14 +19,14 @@
   text-transform: capitalize;
   font-size: 1.5rem;
 }
-.employees {
+.items {
   width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 @media (max-width: 768px) {
-  .employeesList {
+  .itemsList {
     width: 400px;
   }
   .titleList{

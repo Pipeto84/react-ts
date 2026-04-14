@@ -1,7 +1,7 @@
 import { CardList } from "../../components/schedule/CardList";
 import { useAppSelector } from "../../app/hooks";
 import {useTranslation} from 'react-i18next'
-import "../../styles/employeStyle/ListEmployees.css";
+import "../../styles/schedule/ItemsList.css";
 
 export const ItemsList = () => {
   const employeesList = useAppSelector((state) => state.itemsSchedule);
