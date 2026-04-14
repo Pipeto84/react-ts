@@ -69,7 +69,7 @@ export const NavBar = () => {
             {t("navBar.store")}
           </button>
         </NavLink>
-        <NavLink className="linkNav" to="/employes">
+        <NavLink className="linkNav" to="/schedule">
           <button className="btnLink" onClick={handleClickLink}>
             {t("navBar.schedule")}
           </button>

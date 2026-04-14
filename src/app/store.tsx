@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import taskReducer from "../features/taskSlice";
-import employeReducer from "../features/employeSlice";
+import itemsReducer from "../features/scheduleSlice";
 import storeReducer from "../features/storeSlice";
 import shoppingReducer from "../features/shoppingSlice";
 import logInReducer from "../features/user/logInSlice";
@@ -11,7 +11,7 @@ import translateReducer from "../features/translateSlice";
 export const store = configureStore({
   reducer: {
     tasks: taskReducer,
-    employees: employeReducer,
+    itemsSchedule: itemsReducer,
     products: storeReducer,
     shopping: shoppingReducer,
     logIn: logInReducer,

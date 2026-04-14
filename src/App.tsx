@@ -6,7 +6,7 @@ import { ErrorUser } from "./components/ErrorUser";
 import { Register } from "./components/Register";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./pages/HomePage";
-import { Scheduling } from "./pages/employesPages/EmployeScheduling";
+import {SchedulePage} from './pages/SchedulePage'
 import { New } from "./pages/employesPages/EmployeNew";
 import { Edit } from "./pages/employesPages/EmployeEdit";
 import { StorePage } from "./pages/StorePage";
@@ -26,7 +26,7 @@ function App() {
           <Route path="/tasks" element={<TasksPage />} />
           <Route path="/newList" element={<TaskList />} />
           <Route path="/editList/:id" element={<TaskList />} />
-          <Route path="/employes" element={<Scheduling />} />
+          <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/new" element={<New />} />
           <Route path="/edit/:id" element={<Edit />} />
           <Route path="/store" element={<StorePage />} />

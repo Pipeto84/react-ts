@@ -8,6 +8,12 @@ export type Date =
   | "sunday"
   | "";
 
+export interface ItemSchedule {
+  id: string;
+  name: string;
+  description: string;
+  date: Date;
+}
 export interface Data {
   id: string;
   alias: string;

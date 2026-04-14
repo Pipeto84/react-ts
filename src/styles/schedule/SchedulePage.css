@@ -1,0 +1,68 @@
+.schedulePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: rgb(206, 221, 235);
+}
+.start-schedule {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0 20px;
+  width: 100%;
+  padding: 0 2rem;
+}
+.titleSchedule {
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+}
+.btnNewItem {
+  width: 9rem;
+  height: 2.875rem;
+  background-color: #35959c;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 5px;
+}
+.btnNewItem:hover {
+  background-color: #35959cb7;
+}
+@media screen and (max-width: 992px) {
+  .btnNewItem {
+    height: auto;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .start-schedule {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+    gap: 10px;
+
+  }
+  .titleSchedule {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .btnNewItem {
+    width: 7.8rem;
+    height: 2.5rem;
+    padding: 5px;
+    font-size: 1.3rem;
+  }
+}
+
+
