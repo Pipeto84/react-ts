@@ -16,7 +16,7 @@ export const ContainerStart = ({
 }: Props) => {
   const { t } = useTranslation("global");
   return (
-    <div className="containerItems">
+    <div className="containerStart">
       <p className="titleItems">{t("schedule.items")}</p>
       <div className="cardsStart">
         {items.map(

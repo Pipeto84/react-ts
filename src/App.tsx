@@ -7,8 +7,8 @@ import { Register } from "./components/Register";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./pages/HomePage";
 import {SchedulePage} from './pages/SchedulePage'
-import { New } from "./pages/employesPages/EmployeNew";
-import { Edit } from "./pages/employesPages/EmployeEdit";
+import { ItemNew } from "./components/schedule/ItemNew";
+import { ItemEdit } from "./components/schedule/ItemEdit";
 import { StorePage } from "./pages/StorePage";
 import { CarPage } from "./pages/CarPage";
 import { SearchPage } from "./pages/SearchPage";
@@ -27,8 +27,8 @@ function App() {
           <Route path="/newList" element={<TaskList />} />
           <Route path="/editList/:id" element={<TaskList />} />
           <Route path="/schedule" element={<SchedulePage />} />
-          <Route path="/new" element={<New />} />
-          <Route path="/edit/:id" element={<Edit />} />
+          <Route path="/new" element={<ItemNew />} />
+          <Route path="/edit/:id" element={<ItemEdit />} />
           <Route path="/store" element={<StorePage />} />
           <Route path="/car" element={<CarPage />} />
           <Route path="/search" element={<SearchPage />} />

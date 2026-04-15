@@ -29,7 +29,10 @@
   .itemsList {
     width: 400px;
   }
-  .titleList{
-    padding: .5rem 0;
+  .titleList {
+    min-width: 350px;
+    font-size: 22px;
+    padding: 0.5rem 0;
+    margin-bottom: 4px;
   }
 }

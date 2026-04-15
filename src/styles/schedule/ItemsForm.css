@@ -1,0 +1,104 @@
+.container-new-item {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.25rem;
+}
+.container-edit-item {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.25rem;
+}
+.cardNewItem {
+  width: 21rem;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  background-color: #35959c;
+  border-radius: 0.625rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+.titleNewItem{
+  font-size: 32px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.label {
+  width: 15.625rem;
+  height: 1.25rem;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+.inputText {
+  width: 15.625rem;
+  height: 2.5rem;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  background-color: rgb(243, 240, 240);
+  border: solid 0.0625rem black;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.inputTextDescription {
+  width: 15.625rem;
+  height: auto;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  background-color: rgb(243, 240, 240);
+  border: solid 0.0625rem black;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+  text-align: left;
+}
+.buttons {
+  width: 15.625rem;
+  height: 4.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.saveButton {
+  width: 6rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 0.5rem;
+  background-color: #4682b4;
+  border: 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-weight: 500;
+}
+.saveButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.cancelButton {
+  width: 6rem;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 0.5rem;
+  background-color: #db5865;
+  border: 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  font-weight: 500;
+}

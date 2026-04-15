@@ -1,4 +1,4 @@
-.containerItems {
+.containerStart {
   background-color: rgb(216, 212, 212);
   border: 0.125rem solid #ffffff8c;
   border-radius: 5px;
@@ -26,6 +26,7 @@
 }
 @media screen and (max-width: 768px) {
   .titleItems {
+    font-size: 22px;
     padding: .5rem 0 ;
   }
   .cardsStart {

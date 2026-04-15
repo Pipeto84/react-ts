@@ -8,12 +8,15 @@
   gap: 1rem;
   background-color: rgb(206, 221, 235);
 }
+.container-schedule {
+}
 .start-schedule {
   display: flex;
   flex-direction: column;
   margin: 25px 0 20px;
-  width: 100%;
+  max-width: 1560px;
   padding: 0 2rem;
+
 }
 .titleSchedule {
   color: black;
@@ -51,8 +54,8 @@
     flex-direction: column;
     justify-content: center;
     margin-top: 0;
+    margin-bottom: 10px;
     gap: 10px;
-
   }
   .titleSchedule {
     font-size: 30px;
@@ -65,5 +68,3 @@
     font-size: 1.3rem;
   }
 }
-
-
