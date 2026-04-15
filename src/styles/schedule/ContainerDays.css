@@ -10,7 +10,7 @@
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .layout-cards > p {
-  border-radius: 0.3125rem;
+  border-radius: 8px 8px 0 0;
   background-color: #4682b4;
   text-align: center;
   padding: 1rem 0;

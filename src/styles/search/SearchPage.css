@@ -149,6 +149,12 @@
   }
 }
 @media screen and (max-width: 420px) {
+  .container-search{
+    align-items: center;
+  }
+  .dropdown{
+    display: contents;
+  }
   .searcher{
     display: flex;
     flex-direction: column-reverse;
