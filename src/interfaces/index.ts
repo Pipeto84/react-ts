@@ -14,12 +14,6 @@ export interface ItemSchedule {
   description: string;
   date: Date;
 }
-export interface Data {
-  id: string;
-  alias: string;
-  name: string;
-  date: Date;
-}
 export type infoWeather = {
   base: string;
   clouds: { all: number };

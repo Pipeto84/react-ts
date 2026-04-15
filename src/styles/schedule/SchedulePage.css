@@ -8,8 +8,6 @@
   gap: 1rem;
   background-color: rgb(206, 221, 235);
 }
-.container-schedule {
-}
 .start-schedule {
   display: flex;
   flex-direction: column;
