@@ -149,22 +149,22 @@
   }
 }
 @media screen and (max-width: 420px) {
-  .container-search{
+  .container-search {
     align-items: center;
   }
-  .dropdown{
+  .dropdown {
     display: contents;
   }
-  .searcher{
+  .searcher {
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
   }
-  .inputSearch{
+  .inputSearch {
     border-radius: 8px;
   }
-  .btnSearch{
+  .btnSearch {
     border-radius: 8px;
     margin-top: 20px;
   }

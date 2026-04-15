@@ -19,7 +19,7 @@ export const SchedulePage = () => {
         </div>
         <DragAndDrop />
       </div>
-        <ItemsList />
+      <ItemsList />
     </div>
   );
 };

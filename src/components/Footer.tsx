@@ -1,7 +1,7 @@
 import github from "../assets/github.png";
-import email from '../assets/email.png'
-import phone from '../assets/phone.png'
-import gps from '../assets/gps.png'
+import email from "../assets/email.png";
+import phone from "../assets/phone.png";
+import gps from "../assets/gps.png";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "../styles/Footer.css";
