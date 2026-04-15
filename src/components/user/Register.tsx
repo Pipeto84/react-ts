@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { useAppDispatch } from "../app/hooks";
+import { useAppDispatch } from "../../app/hooks";
 import { NavLink } from "react-router-dom";
-import { addUser } from "../features/user/usersSlice";
-import { setLogIn } from "../features/user/logInSlice";
+import { addUser } from "../../features/user/usersSlice";
+import { setLogIn } from "../../features/user/logInSlice";
 import { useTranslation } from "react-i18next";
-import "../styles/Register.css";
+import "../../styles/user/Register.css";
 
 export function Register() {
   const { t } = useTranslation("global");

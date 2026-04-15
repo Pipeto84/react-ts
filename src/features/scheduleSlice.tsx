@@ -1,13 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../app/store";
-import type { ItemSchedule, Date } from "../interfaces/index";
-import {itemsSchedule} from '../assets/index'
-
-type idData = {
-  id: string;
-  date: Date;
-};
+import type { ItemSchedule, idData } from "../interfaces/index";
+import { itemsSchedule } from "../assets/index";
 
 export const initialState: ItemSchedule[] = itemsSchedule;
 
@@ -35,9 +30,7 @@ export const scheduleSlice = createSlice({
       state.push(action.payload);
     },
     deleteItem: (state, action: PayloadAction<ItemSchedule>) => {
-      const itemFound = state.find(
-        (item) => item.id === action.payload.id,
-      );
+      const itemFound = state.find((item) => item.id === action.payload.id);
       if (itemFound) {
         state.splice(state.indexOf(itemFound), 1);
       }

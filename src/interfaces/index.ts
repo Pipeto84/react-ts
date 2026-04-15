@@ -78,3 +78,19 @@ export type users = {
 export type menu = {
   active: boolean
 }
+export interface Task {
+  id: string;
+  name: string;
+  completed: boolean;
+}
+export interface TasksList {
+  id: string;
+  name: string;
+  items: Task[];
+}
+export type idData = {
+  id: string;
+  date: Date;
+};
+
+

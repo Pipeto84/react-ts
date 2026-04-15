@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { useAppDispatch } from "../app/hooks";
+import { useAppDispatch } from "../../app/hooks";
 import { useTranslation } from "react-i18next";
-import "../styles/store/CardStore.css";
-
-import { addProduct, type ProductosStore } from "../features/storeSlice";
-import { addToShopping, removeToShopping } from "../features/shoppingSlice";
+import "../../styles/store/CardStore.css";
+import { addProduct, type ProductosStore } from "../../features/storeSlice";
+import { addToShopping, removeToShopping } from "../../features/shoppingSlice";
 interface Props {
   producto: ProductosStore;
 }

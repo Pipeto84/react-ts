@@ -1,39 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import type { RootState } from "../app/store";
-import { v4 as uuid } from "uuid";
+import type { TasksList } from "../interfaces/index";
+import { initialTasksState } from "../assets/index";
 
-export interface Task {
-  id: string;
-  name: string;
-  completed: boolean;
-}
-export interface TasksList {
-  id: string;
-  name: string;
-  items: Task[];
-}
-const initialState: TasksList[] = [
-  {
-    id: uuid(),
-    name: "Daily Tasks",
-    items: [
-      { name: "Task 1", completed: false, id: uuid() },
-      { name: "Task 2", completed: false, id: uuid() },
-      { name: "Task 3", completed: false, id: uuid() },
-    ],
-  },
-  {
-    id: uuid(),
-    name: "Work Tasks",
-    items: [
-      { name: "Task A", completed: false, id: uuid() },
-      { name: "Task B", completed: false, id: uuid() },
-      { name: "Task C", completed: false, id: uuid() },
-      { name: "Task D", completed: false, id: uuid() },
-    ],
-  },
-];
+const initialState: TasksList[] = initialTasksState;
 
 export const taskSlice = createSlice({
   name: "tasks",

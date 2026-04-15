@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Card } from "../components/StoreCard";
+import { Card } from "../components/store/StoreCard";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { setStore } from "../features/storeSlice";
 import type { ProductosStore } from "../features/storeSlice";

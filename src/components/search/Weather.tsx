@@ -1,6 +1,6 @@
-import type { infoWeather } from "../interfaces/index";
+import type { infoWeather } from "../../interfaces/index";
 import { useEffect, useState } from "react";
-import "../styles/SearchPage.css";
+import "../../styles/search/Weather.css";
 
 interface Props {
   dataInput: string;

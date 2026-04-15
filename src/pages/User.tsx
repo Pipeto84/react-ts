@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { setLogIn } from "../features/user/logInSlice";
 import { useTranslation } from "react-i18next";
-import "../styles/User.css";
+import "../styles/user/User.css";
 
 export function User() {
   const { t } = useTranslation("global");

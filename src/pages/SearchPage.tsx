@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect } from "react";
-import { Weather } from "../components/Weather";
-import { Movie } from "../components/Movie";
+import { Weather } from "../components/search/Weather";
+import { Movie } from "../components/search/Movie";
 import iconWeatherColor from "../assets/weatherColor.svg";
 import iconThermometer from "../assets/thermometer.svg";
 import iconMovieColor from "../assets/movieColor.svg";
 import iconPopcorn from "../assets/popcorn.svg";
 import { useTranslation } from "react-i18next";
-import "../styles/SearchPage.css";
+import "../styles/search/SearchPage.css";
 
 export const SearchPage = () => {
   const { t } = useTranslation("global");

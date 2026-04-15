@@ -1,4 +1,4 @@
-import { TasksCard } from "../components/TasksCard";
+import { TasksCard } from "../components/tasks/TasksCard";
 import { useAppSelector } from "../app/hooks";
 import { NavLink } from "react-router-dom";
 import { v4 as uuid } from "uuid";

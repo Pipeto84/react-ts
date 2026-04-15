@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import type { infoMovie } from "../interfaces/index";
-import "../styles/SearchPage.css";
+import type { infoMovie } from "../../interfaces/index";
+import "../../styles/search/Movie.css";
 
 interface Props {
   dataInput: string

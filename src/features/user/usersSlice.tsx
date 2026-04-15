@@ -1,17 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { users } from '../../interfaces/index'
+import type { users } from "../../interfaces/index";
+import { initialStateUsers } from "../../assets/index";
 
-const initialState: users[] = [
-  {
-    userName: "Felipe",
-    password: "12345",
-  },
-  {
-    userName: "q",
-    password: "1",
-  },
-];
-
+const initialState: users[] = initialStateUsers;
 export const usersSlice = createSlice({
   name: "users",
   initialState,

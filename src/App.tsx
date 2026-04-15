@@ -1,9 +1,9 @@
 import { NavBar } from "./components/NavBar";
 import { Navigate, Route, Routes, BrowserRouter } from "react-router-dom";
 import { TasksPage } from "./pages/TasksPage";
-import { TaskList } from "./components/TasksList";
-import { ErrorUser } from "./components/ErrorUser";
-import { Register } from "./components/Register";
+import { TaskList } from "./components/tasks/TasksList";
+import { ErrorUser } from "./components/user/ErrorUser";
+import { Register } from "./components/user/Register";
 import { Footer } from "./components/Footer";
 import { HomePage } from "./pages/HomePage";
 import {SchedulePage} from './pages/SchedulePage'

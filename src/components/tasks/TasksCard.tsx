@@ -1,11 +1,11 @@
-import type { TasksList } from "../features/taskSlice";
-import { clickTask, deleteTask, deleteList } from "../features/taskSlice";
-import { useAppDispatch } from "../app/hooks";
+import type { TasksList } from "../../interfaces/index";
+import { clickTask, deleteTask, deleteList } from "../../features/taskSlice";
+import { useAppDispatch } from "../../app/hooks";
 import { v4 as uuid } from "uuid";
 import { NavLink } from "react-router-dom";
-import trash from "../assets/borrar2.png";
-import edit from "../assets/edit3.png";
-import "../styles/TasksPage.css";
+import trash from "../../assets/borrar2.png";
+import edit from "../../assets/edit3.png";
+import "../../styles/TasksPage.css";
 
 export const TasksCard = (list: TasksList) => {
   const dispatch = useAppDispatch();

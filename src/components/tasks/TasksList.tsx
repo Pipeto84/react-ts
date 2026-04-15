@@ -1,11 +1,11 @@
-import type { TasksList, Task } from "../features/taskSlice";
-import { addTaskList, deleteList } from "../features/taskSlice";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import type { TasksList, Task } from "../../interfaces/index";
+import { addTaskList, deleteList } from "../../features/taskSlice";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { useNavigate, useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import { useTranslation } from "react-i18next";
-import "../styles/TasksPage.css";
+import "../../styles/TasksPage.css";
 
 export const TaskList = () => {
   const { t } = useTranslation("global");
