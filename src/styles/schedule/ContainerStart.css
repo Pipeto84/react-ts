@@ -36,7 +36,7 @@
 }
 @media screen and (max-width: 450px) {
   .containerStart{
-    width: 360px;
+    width: 340px;
   }
   .cardsStart {
     grid-template-columns: 1fr;
