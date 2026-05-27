@@ -3,6 +3,6 @@ store with a shopping cart, weekly scheduling with drag and drop, search
 bars, task lists, registration and user login.
 Designed by Felipe Jaramillo U. ("Pipeto84" GitHub)
 
-# React + TypeScript + Redux + Drag & Drop + Vite
+# React + Vite + TypeScript + Redux + Drag & Drop 
 
 https://react-ts-pipeto84.netlify.app/
