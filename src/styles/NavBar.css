@@ -37,6 +37,7 @@
 .btnLink {
   background: none;
   border: none;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 .btnLink:hover {
   color: white;
