@@ -30,9 +30,13 @@ export const Weather = ({ dataInput }: Props) => {
     <div>
       {infoCity && (
         <div className="infoWeather">
-          <h1 className="Ciudad">{infoCity.name + ", " + infoCity.sys.country}</h1>
-          <h4 className="Descripcion">Temperature: {(infoCity.main.temp - Kelvin).toFixed(0)} ॰C</h4>
-          <h4 className="Descripcion">Meteorological description: {infoCity.weather[0].description}</h4>
+          <h1 className="Ciudad">
+            {infoCity.name + ", " + infoCity.sys.country}
+          </h1>
+          <h4 className="Descripcion">
+            {(infoCity.main.temp - Kelvin).toFixed(0)} ॰C
+          </h4>
+          <h4 className="Descripcion"> {infoCity.weather[0].description}</h4>
           <img src={`${urlImg}${infoCity.weather[0].icon}@2x.png`} />
         </div>
       )}

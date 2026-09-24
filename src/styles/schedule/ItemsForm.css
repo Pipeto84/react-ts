@@ -5,6 +5,9 @@
   justify-content: start;
   align-items: center;
   gap: 1.25rem;
+  background-image: url("../../assets/globo.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .container-edit-item {
   height: 81vh;
@@ -13,6 +16,9 @@
   justify-content: start;
   align-items: center;
   gap: 1.25rem;
+  background-image: url("../../assets/globo.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .cardNewItem {
   width: 21rem;

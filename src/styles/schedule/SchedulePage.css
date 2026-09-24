@@ -6,7 +6,9 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  background-color: rgb(206, 221, 235);
+  background-image: url("../../assets/globo.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .start-schedule {
   display: flex;
@@ -14,14 +16,13 @@
   margin: 25px 0 20px;
   max-width: 1560px;
   padding: 0 2rem;
-
 }
 .titleSchedule {
-  color: black;
+  color: rgb(255, 254, 254);
   text-align: center;
   font-size: 40px;
   margin: 0;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 4px 4px 4px rgba(129, 129, 129, 0.7);
 }
 .btnNewItem {
   width: 9rem;
@@ -34,7 +35,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 4px rgba(88, 88, 88, 0.7);
   text-align: center;
   padding: 5px;
 }
