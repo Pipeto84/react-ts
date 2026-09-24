@@ -92,14 +92,24 @@
   padding-left: 10px;
 }
 .textoSearcher {
+  font-size: 1.9rem;
+  font-weight: 500;
   max-width: 37.5rem;
   margin: auto;
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.7);
 }
 .toWeather,
 .toMovie {
   color: #000000;
   text-decoration: none;
   font-weight: 550;
+}
+.textoTema {
+  font-size: 1.9rem;
+  font-weight: 500;
+  max-width: 37.5rem;
+  margin: auto;
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.7);
 }
 .iconWeather1 {
   max-width: 5rem;

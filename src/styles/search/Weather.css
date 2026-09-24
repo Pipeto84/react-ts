@@ -1,3 +1,15 @@
+
 .infoClima {
   padding-top: 1.5rem;
+  /* text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.7); */
+}
+.Ciudad {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-shadow: 3px 3px 3px rgba(255, 252, 252, 0.7);
+}
+.Descripcion {
+  font-size: 2rem;
+  font-weight: 500;
+  text-shadow: 4px 4px 4px rgba(255, 252, 252, 0.7);
 }
