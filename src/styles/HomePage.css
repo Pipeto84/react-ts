@@ -19,6 +19,7 @@
 .h1Home {
   font-size: 3.2em;
   color: gray;
+  text-shadow: 4px 4px 4px rgba(119, 119, 119, 0.4);
 }
 .h1Home:hover {
   filter: drop-shadow(0 0 2em #fff);
