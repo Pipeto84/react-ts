@@ -5,6 +5,9 @@
   height: 81vh;
   color: rgb(36, 36, 36);
   padding-top: 3rem;
+  background-image: url("../../assets/pared.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .searchMovie {
   text-align: center;
@@ -117,6 +120,7 @@
   margin-top: 1rem;
 }
 .infoWeather {
+  font-size: 2rem;
   padding-top: 1.5rem;
 }
 .movieList {

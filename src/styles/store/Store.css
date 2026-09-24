@@ -1,13 +1,19 @@
 .contenedor-compras {
-  max-width: 76.25rem;
-  margin: auto;
+  background-image: url("../../assets/apple1.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .tituloProductos {
   text-align: center;
   margin: 1.25rem;
-  color: black;
+  color: rgb(211, 206, 206);
   font-size: 3rem;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+  text-shadow: 3px 3px 3px rgba(255, 252, 252, 0.4);
 }
 .contenedor-productos {
   max-width: 76.25rem;

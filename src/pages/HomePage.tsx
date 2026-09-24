@@ -1,11 +1,11 @@
-import reactLogo from "../assets/react.svg";
+import reactLogo from "../assets/react-black.svg";
 import { useAppSelector } from "../app/hooks";
 import { useTranslation } from "react-i18next";
 import "../styles/HomePage.css";
 
 export const HomePage = () => {
   const menu = useAppSelector((state) => state.menu);
-  const {t} = useTranslation("global");
+  const { t } = useTranslation("global");
   const handleClassName = () => {
     if (menu.active) {
       return "logReact";
@@ -16,6 +16,7 @@ export const HomePage = () => {
 
   return (
     <div className="contenedorHome">
+      {/* <img src={wallpaper} className="wallpaper" alt="wallpaper" /> */}
       <a target="_blank" className="targetLogo">
         <img src={reactLogo} className={handleClassName()} alt="React logo" />
       </a>

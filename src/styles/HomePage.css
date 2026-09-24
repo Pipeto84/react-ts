@@ -5,7 +5,9 @@
   text-align: center;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-image: url("../assets/cubo.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .aTitulo {
   text-decoration-line: none;
@@ -18,8 +20,8 @@
 }
 .h1Home {
   font-size: 3.2em;
-  color: gray;
-  text-shadow: 4px 4px 4px rgba(119, 119, 119, 0.4);
+  color: rgb(0, 0, 0);
+  text-shadow: 4px 4px 4px rgba(255, 255, 255, 0.4);
 }
 .h1Home:hover {
   filter: drop-shadow(0 0 2em #fff);
