@@ -19,6 +19,12 @@
   align-items: center;
   opacity: 0.95;
 }
+.logoNavbar {
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  animation: logo-spin infinite 10s linear;
+}
 .linkNav {
   display: flex;
   align-items: center;

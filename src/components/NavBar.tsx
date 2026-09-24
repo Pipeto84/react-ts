@@ -8,6 +8,7 @@ import iconMenu from "../assets/menu.png";
 import iconTranslate from "../assets/translate.png";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import reactLogo from "../assets/react-black.svg";
 import "../styles/NavBar.css";
 
 export const NavBar = () => {
@@ -59,6 +60,9 @@ export const NavBar = () => {
         <img className="iconMenu" src={iconMenu} alt="icono menu" />
       </button>
       <div className={activeMenu()}>
+        <a target="_blank" className="targetLogo">
+          <img src={reactLogo} className="logoNavbar" />
+        </a>
         <NavLink className="linkNav" to="/">
           <button className="btnLink" onClick={handleClickLink}>
             {t("navBar.home")}

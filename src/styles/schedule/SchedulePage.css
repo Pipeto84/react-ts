@@ -21,6 +21,7 @@
   text-align: center;
   font-size: 40px;
   margin: 0;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
 }
 .btnNewItem {
   width: 9rem;
