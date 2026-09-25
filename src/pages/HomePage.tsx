@@ -16,9 +16,8 @@ export const HomePage = () => {
 
   return (
     <div className="contenedorHome">
-      {/* <img src={wallpaper} className="wallpaper" alt="wallpaper" /> */}
       <a target="_blank" className="targetLogo">
-        <img src={reactLogo} className={handleClassName()} alt="React logo" />
+        <img src={reactLogo} className={`${handleClassName()}`} alt="React logo" />
       </a>
       <a href="https://github.com/Pipeto84" target="_blank" className="aTitulo">
         <h1 className="h1Home">React</h1>

@@ -30,6 +30,7 @@
   height: 25rem;
   width: 25rem;
   padding: 1.5rem;
+  filter: drop-shadow(0 0 2em #fff);
 }
 @media screen and (max-width: 992px) {
   .contenedorHome {
