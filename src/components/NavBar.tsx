@@ -60,13 +60,10 @@ export const NavBar = () => {
         <img className="iconMenu" src={iconMenu} alt="icono menu" />
       </button>
       <div className={activeMenu()}>
-        <a target="_blank" className="targetLogo">
-          <img src={reactLogo} className="logoNavbar" />
-        </a>
         <NavLink className="linkNav" to="/">
-          <button className="btnLink" onClick={handleClickLink}>
-            {t("navBar.home")}
-          </button>
+          <a target="_blank" className="targetLogo">
+            <img src={reactLogo} className="logoNavbar" />
+          </a>
         </NavLink>
         <NavLink className="linkNav" to="/store">
           <button className="btnLink" onClick={handleClickLink}>

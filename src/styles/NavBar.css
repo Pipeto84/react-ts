@@ -1,5 +1,7 @@
 .topnav {
-  background-color: #c9c9c9;
+  background-image: url("../assets/cafe.jpg");
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
   width: 100vw;
   height: 70px;
